@@ -1,3 +1,12 @@
 {
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-07-11",
+      "odometer": 152283,
+      "source": "macrodroid",
+      "liters": 50.02,
+      "cost": 99.99,
+      "id": "fa263b2a83fe"
+    }
+  ]
 }

@@ -1,14 +1,25 @@
 {
-  "source_files": [],
-  "entries_count": 0,
-  "current_odo": 151700,
+  "updated_at": "2026-07-19T06:06:10Z",
+  "source_files": [
+    "macrodroid"
+  ],
+  "entries_count": 1,
+  "current_odo": 152283,
   "trip_start_odo": 144243,
-  "trip_distance_km": 7457,
-  "latest_entry": null,
+  "trip_distance_km": 8040,
+  "latest_entry": {
+    "date": "2026-07-11",
+    "odometer": 152283,
+    "liters": 50.02,
+    "cost": 99.99,
+    "source": "macrodroid",
+    "id": "fa263b2a83fe"
+  },
   "fuel": {
-    "fills": 0,
-    "liters": null,
-    "cost": null,
-    "average_l_per_100km": null
+    "fills": 1,
+    "liters": 50.02,
+    "cost": 99.99,
+    "average_l_per_100km": null,
+    "distance_km": null
   }
 }
