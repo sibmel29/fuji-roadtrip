@@ -11,6 +11,9 @@ Static trip map data and processing scripts for an Australia road trip.
 - `car/gpx/` is the upload folder for new car GPX tracks.
 - `car/archive/` stores processed car GPX tracks by month.
 - `odo.json` stores the current and starting odometer values.
+- `fuelio_log.json` stores fuel-up entries sent from MacroDroid.
+- `fuelio/exports/` stores Fuelio CSV exports.
+- `fuelio_stats.json` stores calculated fuel, cost, and consumption stats.
 - `geojson_merge.py` converts GPX tracks into `route_live.geojson`.
 
 ## How updates work
@@ -42,6 +45,63 @@ python geojson_merge.py
 ```
 
 Then open `index.html` in a browser or serve the directory locally.
+
+## Fuelio sync
+
+Fuelio is the source of truth for odometer and fuel stats. The site reads:
+
+- `odo.json` for the current odometer and trip distance
+- `fuelio_stats.json` for latest fill-up, litres, total fuel cost, and average consumption
+
+### Fully automated MacroDroid flow
+
+MacroDroid can send a small JSON payload to GitHub after a Fuelio fill-up. GitHub
+Actions adds it to `fuelio_log.json`, recalculates `odo.json` and
+`fuelio_stats.json`, commits the result, and publishes the updated site.
+
+Create a fine-grained GitHub token for this repository with **Contents: Read and
+write** permission. Store it only in MacroDroid as a local variable.
+
+MacroDroid HTTP request:
+
+```text
+POST https://api.github.com/repos/sibmel29/ozzy-trip-data/dispatches
+```
+
+Headers:
+
+```text
+Accept: application/vnd.github+json
+Authorization: Bearer <your-github-token>
+Content-Type: application/json
+X-GitHub-Api-Version: 2022-11-28
+```
+
+Body:
+
+```json
+{
+  "event_type": "fuelio_entry",
+  "client_payload": {
+    "date": "2026-07-19",
+    "odometer": 151900,
+    "liters": 72.4,
+    "cost": 158.25,
+    "station": "Roadhouse",
+    "note": "Optional note"
+  }
+}
+```
+
+At minimum, send `odometer`. Add `date`, `liters`, `cost`, `station`, and `note`
+when MacroDroid can collect them. The workflow can also be run manually from the
+Actions tab for testing.
+
+### Manual CSV fallback
+
+If the MacroDroid path is not available, export CSV from Fuelio and upload the
+CSV file to `fuelio/exports/` in GitHub. The **Process Fuelio** action will run
+automatically and update the same site files.
 
 ## Points of interest
 

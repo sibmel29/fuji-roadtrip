@@ -74,6 +74,20 @@ body { margin:0; font-family: system-ui; }
   line-height: 1.35;
 }
 
+.odo-fuel {
+  display: grid;
+  gap: 2px;
+  margin-top: 7px;
+  padding-top: 7px;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  font-size: 12px;
+  color: #333;
+}
+
+.odo-fuel strong {
+  color: #111;
+}
+
 .analog-gallery-launch {
   width: 100%;
   aspect-ratio: 1.66 / 1;
@@ -1726,13 +1740,27 @@ document.querySelectorAll('.map-btn').forEach(btn => {
 // === ODO
 Promise.all([
   fetch('odo.json').then(res => res.json()),
-  fetch('route_meta.json').then(res => res.ok ? res.json() : {})
-]).then(([data, meta]) => {
-  let trip = data.current_odo - data.trip_start_odo;
-  let lastUpdated = meta.latest_time ? new Date(meta.latest_time).toLocaleString() : "No GPS update yet";
+  fetch('route_meta.json').then(res => res.ok ? res.json() : {}),
+  fetch('fuelio_stats.json').then(res => res.ok ? res.json() : null).catch(() => null)
+]).then(([data, meta, fuelio]) => {
+  const currentOdo = fuelio?.current_odo || data.current_odo;
+  const tripStartOdo = fuelio?.trip_start_odo || data.trip_start_odo;
+  const trip = fuelio?.trip_distance_km ?? (currentOdo - tripStartOdo);
+  const gpsUpdated = meta.latest_time ? new Date(meta.latest_time).toLocaleString() : "No GPS update yet";
+  const latestFuelio = fuelio?.latest_entry?.date ? `Fuelio ${fuelio.latest_entry.date}` : null;
+  const fuel = fuelio?.fuel || {};
+  const fuelRows = [];
+
+  if (latestFuelio) fuelRows.push(`<span>⛽ <strong>Latest:</strong> ${escapeHTML(latestFuelio)}</span>`);
+  if (fuel.average_l_per_100km != null) fuelRows.push(`<span>📉 <strong>${Number(fuel.average_l_per_100km).toLocaleString()}</strong> L/100 km</span>`);
+  if (fuel.liters != null) fuelRows.push(`<span>🧾 <strong>${Number(fuel.liters).toLocaleString()}</strong> L logged</span>`);
+  if (fuel.cost != null) fuelRows.push(`<span>💸 <strong>$${Number(fuel.cost).toLocaleString()}</strong> fuel</span>`);
 
   document.querySelector("#odoTile .odo-values").innerHTML =
-    `🚐 ${data.current_odo.toLocaleString()} km<br>🗺 ${trip.toLocaleString()} km trip<br>⏱ ${escapeHTML(lastUpdated)}`;
+    `🚐 ${Number(currentOdo).toLocaleString()} km<br>` +
+    `🗺 ${Number(trip).toLocaleString()} km trip<br>` +
+    `⏱ ${escapeHTML(gpsUpdated)}` +
+    (fuelRows.length ? `<div class="odo-fuel">${fuelRows.join("")}</div>` : "");
 });
 
 // === LOAD ROUTES

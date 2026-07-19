@@ -1,0 +1,14 @@
+{
+  "source_files": [],
+  "entries_count": 0,
+  "current_odo": 151700,
+  "trip_start_odo": 144243,
+  "trip_distance_km": 7457,
+  "latest_entry": null,
+  "fuel": {
+    "fills": 0,
+    "liters": null,
+    "cost": null,
+    "average_l_per_100km": null
+  }
+}

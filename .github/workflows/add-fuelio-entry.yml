@@ -1,0 +1,64 @@
+name: Add Fuelio Entry
+
+on:
+  repository_dispatch:
+    types: [fuelio_entry]
+  workflow_dispatch:
+    inputs:
+      date:
+        description: Fill-up date, YYYY-MM-DD.
+        required: true
+      odometer:
+        description: Odometer in km.
+        required: true
+      liters:
+        description: Litres filled.
+        required: false
+      cost:
+        description: Total fuel cost.
+        required: false
+      station:
+        description: Station or place.
+        required: false
+      note:
+        description: Optional note.
+        required: false
+
+permissions:
+  contents: write
+
+jobs:
+  add-entry:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Add Fuelio entry
+        env:
+          CLIENT_PAYLOAD: ${{ toJson(github.event.client_payload) }}
+          FUELIO_DATE: ${{ github.event.inputs.date }}
+          FUELIO_ODOMETER: ${{ github.event.inputs.odometer }}
+          FUELIO_LITERS: ${{ github.event.inputs.liters }}
+          FUELIO_COST: ${{ github.event.inputs.cost }}
+          FUELIO_STATION: ${{ github.event.inputs.station }}
+          FUELIO_NOTE: ${{ github.event.inputs.note }}
+        run: python scripts/add_fuelio_entry.py
+
+      - name: Recalculate Fuelio stats
+        run: python scripts/process_fuelio.py
+
+      - name: Commit Fuelio entry
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add fuelio_log.json odo.json fuelio_stats.json
+          git diff --cached --quiet && echo "No Fuelio entry changes to commit" && exit 0
+          git commit -m "Add Fuelio entry"
+          git push
