@@ -74,18 +74,22 @@ body { margin:0; font-family: system-ui; }
   line-height: 1.35;
 }
 
-.odo-fuel {
-  display: grid;
-  gap: 2px;
-  margin-top: 7px;
-  padding-top: 7px;
-  border-top: 1px solid rgba(0,0,0,0.12);
+.odo-history-button {
+  display: none;
+  width: 100%;
+  margin-top: 8px;
+  padding: 7px 8px;
+  border: none;
+  border-radius: 8px;
+  background: #111827;
+  color: white;
+  cursor: pointer;
   font-size: 12px;
-  color: #333;
+  font-weight: 800;
 }
 
-.odo-fuel strong {
-  color: #111;
+.odo-history-button.visible {
+  display: block;
 }
 
 .analog-gallery-launch {
@@ -363,6 +367,34 @@ body { margin:0; font-family: system-ui; }
   color: #0369a1;
 }
 
+.contact-panel {
+  position: fixed;
+  top: 340px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.contact-button {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: #b45309;
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  cursor: pointer;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.contact-button:hover,
+.contact-button:focus-visible {
+  background: #92400e;
+  outline: none;
+}
+
 .map-btn {
   display: block;
   margin: 5px 0;
@@ -499,6 +531,68 @@ body { margin:0; font-family: system-ui; }
   border-radius: 12px;
   box-shadow: 0 12px 40px rgba(0,0,0,0.3);
   display: none;
+}
+
+.fuel-window {
+  position: fixed;
+  left: 20px;
+  top: 196px;
+  width: min(340px, calc(100vw - 40px));
+  max-height: calc(100vh - 230px);
+  overflow: auto;
+  z-index: 1600;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+  display: none;
+}
+
+.fuel-window.visible {
+  display: block;
+}
+
+.fuel-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 8px 16px 12px;
+}
+
+.fuel-summary div {
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.06);
+  padding: 8px;
+  font-size: 12px;
+}
+
+.fuel-summary strong {
+  display: block;
+  margin-top: 2px;
+  color: #111827;
+  font-size: 15px;
+}
+
+.fuel-history {
+  display: grid;
+  gap: 8px;
+  padding: 0 16px 16px;
+}
+
+.fuel-history-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4px 10px;
+  padding: 8px 0;
+  border-top: 1px solid rgba(15, 23, 42, 0.1);
+  font-size: 12px;
+}
+
+.fuel-history-row strong {
+  font-size: 13px;
+}
+
+.fuel-history-row span {
+  color: #475569;
 }
 
 .story-window.visible {
@@ -880,7 +974,9 @@ body { margin:0; font-family: system-ui; }
   background: white;
   padding: 20px;
   border-radius: 16px;
-  max-width: 320px;
+  width: min(380px, calc(100vw - 36px));
+  max-height: calc(100vh - 36px);
+  overflow: auto;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   animation: fadeIn 0.3s ease;
@@ -890,6 +986,28 @@ body { margin:0; font-family: system-ui; }
   width: 100%;
   border-radius: 10px;
   margin-bottom: 10px;
+}
+
+.popup-content p {
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+.popup-list {
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 7px;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.popup-list li {
+  padding: 8px 9px;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.06);
 }
 
 .popup button {
@@ -920,6 +1038,7 @@ body { margin:0; font-family: system-ui; }
   <div class="odo" id="odoTile">
     <img src="fuji-logo.png" class="odo-logo" alt="Fuji logo" />
     <div class="odo-values">🚐 Loading...</div>
+    <button class="odo-history-button" id="fuelHistoryButton" type="button">Fuel history</button>
   </div>
   <button class="analog-gallery-launch" id="analogGalleryLaunch" type="button" aria-label="View analog photo gallery">
     <img src="analog-gallery-button.png" alt="" />
@@ -980,6 +1099,10 @@ body { margin:0; font-family: system-ui; }
   </div>
 </div>
 
+<div class="contact-panel">
+  <a class="contact-button" href="mailto:fujiroadtrip@gmail.com" aria-label="Email Fuji Road Trip">✉</a>
+</div>
+
 <div id="popup" class="popup">
   <div class="popup-content">
     <img src="sticker.png" class="popup-img" alt="Fuji Road Trip sticker" />
@@ -987,15 +1110,23 @@ body { margin:0; font-family: system-ui; }
     <h2>🚐 Fuji Road Trip</h2>
 
     <p>
-      Follow our journey across Australia.<br><br>
-      Use the slider at the bottom to travel through time and see where we've been.
+      Follow our journey across Australia. Use the slider to travel through the route over time, and tap markers to open stories from the road.
     </p>
+
+    <ul class="popup-list">
+      <li><strong>Hikes:</strong> open the walking icon to toggle hiking routes and trail stats.</li>
+      <li><strong>Surf:</strong> open the blue wave icon to show surf spots we have logged.</li>
+      <li><strong>Fishing:</strong> open the fishing icon to see catches, species totals, and fishing notes.</li>
+      <li><strong>Fuel history:</strong> tap the car tile's Fuel history button for ODO, fuel cost, and consumption logs.</li>
+      <li><strong>Analog photos:</strong> tap the camera button under the car tile for the film photo gallery.</li>
+    </ul>
 
     <button id="closePopup">Start exploring</button>
   </div>
 </div>
 
 <article id="storyWindow" class="story-window" aria-live="polite"></article>
+<article id="fuelWindow" class="fuel-window" aria-live="polite"></article>
 <div id="lightbox" class="lightbox">
   <button class="lightbox-close" type="button" id="lightboxClose" aria-label="Close image">×</button>
   <button class="lightbox-nav lightbox-prev" type="button" id="lightboxPrevious" aria-label="Previous image">‹</button>
@@ -1030,6 +1161,8 @@ closePopup.onclick = () => {
 
 // === POI STORIES
 const storyWindow = document.getElementById("storyWindow");
+const fuelWindow = document.getElementById("fuelWindow");
+const fuelHistoryButton = document.getElementById("fuelHistoryButton");
 const lightbox = document.getElementById("lightbox");
 const lightboxImage = document.getElementById("lightboxImage");
 const lightboxClose = document.getElementById("lightboxClose");
@@ -1042,6 +1175,7 @@ let touchStartX = null;
 let lightboxItems = [];
 let lightboxIndex = 0;
 let lightboxTouchStartX = null;
+let fuelioStats = null;
 
 function escapeHTML(value) {
   return String(value ?? "").replace(/[&<>"']/g, char => ({
@@ -1172,6 +1306,56 @@ function closeStory() {
   activeStory = null;
   storyWindow.classList.remove("visible");
   storyWindow.innerHTML = "";
+}
+
+function formatNumber(value, suffix = "") {
+  if (value == null || value === "") return "n/a";
+  return `${Number(value).toLocaleString()}${suffix}`;
+}
+
+function renderFuelHistory() {
+  if (!fuelioStats) return;
+  const fuel = fuelioStats.fuel || {};
+  const history = fuelioStats.history || [];
+  const historyRows = history.map(entry => {
+    const details = [
+      entry.liters != null ? `${formatNumber(entry.liters, " L")}` : null,
+      entry.cost != null ? `$${formatNumber(entry.cost)}` : null,
+      entry.consumption_l_per_100km != null ? `${formatNumber(entry.consumption_l_per_100km, " L/100")}` : null
+    ].filter(Boolean).join(" · ");
+    return `
+      <div class="fuel-history-row">
+        <strong>${escapeHTML(entry.date || "Unknown date")}</strong>
+        <strong>${formatNumber(entry.odometer, " km")}</strong>
+        <span>${escapeHTML(details || "ODO update")}</span>
+        <span>${escapeHTML(entry.station || entry.note || "")}</span>
+      </div>`;
+  }).join("");
+
+  fuelWindow.innerHTML = `
+    <div class="story-header">
+      <div>
+        <h2>Fuel History</h2>
+        <div class="story-date">${escapeHTML(fuelioStats.entries_count || 0)} entries logged</div>
+      </div>
+      <button class="story-close" type="button" aria-label="Close fuel history">×</button>
+    </div>
+    <div class="fuel-summary">
+      <div>Average<strong>${formatNumber(fuel.average_l_per_100km, " L/100")}</strong></div>
+      <div>Litres<strong>${formatNumber(fuel.liters, " L")}</strong></div>
+      <div>Fuel cost<strong>${fuel.cost != null ? `$${formatNumber(fuel.cost)}` : "n/a"}</strong></div>
+      <div>Last fill<strong>${escapeHTML(fuelioStats.latest_entry?.date || "n/a")}</strong></div>
+    </div>
+    <div class="fuel-history">
+      ${historyRows || "<span>No fuel history yet</span>"}
+    </div>`;
+  fuelWindow.classList.add("visible");
+  fuelWindow.querySelector(".story-close").onclick = closeFuelHistory;
+}
+
+function closeFuelHistory() {
+  fuelWindow.classList.remove("visible");
+  fuelWindow.innerHTML = "";
 }
 
 function renderLightboxImage() {
@@ -1710,6 +1894,7 @@ document.addEventListener("keydown", event => {
   if (event.key === "Escape") {
     closeLightbox();
     closeStory();
+    closeFuelHistory();
   }
 });
 
@@ -1743,24 +1928,21 @@ Promise.all([
   fetch('route_meta.json').then(res => res.ok ? res.json() : {}),
   fetch('fuelio_stats.json').then(res => res.ok ? res.json() : null).catch(() => null)
 ]).then(([data, meta, fuelio]) => {
+  fuelioStats = fuelio;
   const currentOdo = fuelio?.current_odo || data.current_odo;
   const tripStartOdo = fuelio?.trip_start_odo || data.trip_start_odo;
   const trip = fuelio?.trip_distance_km ?? (currentOdo - tripStartOdo);
   const gpsUpdated = meta.latest_time ? new Date(meta.latest_time).toLocaleString() : "No GPS update yet";
-  const latestFuelio = fuelio?.latest_entry?.date ? `Fuelio ${fuelio.latest_entry.date}` : null;
-  const fuel = fuelio?.fuel || {};
-  const fuelRows = [];
-
-  if (latestFuelio) fuelRows.push(`<span>⛽ <strong>Latest:</strong> ${escapeHTML(latestFuelio)}</span>`);
-  if (fuel.average_l_per_100km != null) fuelRows.push(`<span>📉 <strong>${Number(fuel.average_l_per_100km).toLocaleString()}</strong> L/100 km</span>`);
-  if (fuel.liters != null) fuelRows.push(`<span>🧾 <strong>${Number(fuel.liters).toLocaleString()}</strong> L logged</span>`);
-  if (fuel.cost != null) fuelRows.push(`<span>💸 <strong>$${Number(fuel.cost).toLocaleString()}</strong> fuel</span>`);
 
   document.querySelector("#odoTile .odo-values").innerHTML =
     `🚐 ${Number(currentOdo).toLocaleString()} km<br>` +
     `🗺 ${Number(trip).toLocaleString()} km trip<br>` +
-    `⏱ ${escapeHTML(gpsUpdated)}` +
-    (fuelRows.length ? `<div class="odo-fuel">${fuelRows.join("")}</div>` : "");
+    `⏱ ${escapeHTML(gpsUpdated)}`;
+
+  if (fuelio?.entries_count) {
+    fuelHistoryButton.classList.add("visible");
+    fuelHistoryButton.onclick = renderFuelHistory;
+  }
 });
 
 // === LOAD ROUTES

@@ -3,7 +3,7 @@ import csv
 import json
 import os
 import re
-from datetime import datetime
+from datetime import UTC, datetime
 from pathlib import Path
 
 
@@ -17,6 +17,7 @@ LOG_PATH = ROOT / "fuelio_log.json"
 FIELD_ALIASES = {
     "date": [
         "date",
+        "data",
         "datetime",
         "time",
         "fill date",
@@ -68,6 +69,7 @@ FIELD_ALIASES = {
         "petrol station",
         "place",
         "location",
+        "city",
     ],
     "note": [
         "note",
@@ -167,6 +169,17 @@ def parse_bool(value):
 
 def read_csv(path):
     raw = path.read_text(encoding="utf-8-sig", errors="replace")
+    lines = raw.splitlines()
+    for index, line in enumerate(lines):
+        if line.strip().strip('"').lower() == "## log":
+            section = []
+            for section_line in lines[index + 1:]:
+                if section_line.strip().strip('"').startswith("## "):
+                    break
+                if section_line.strip():
+                    section.append(section_line)
+            raw = "\n".join(section)
+            break
     sample = raw[:4096]
     try:
         dialect = csv.Sniffer().sniff(sample, delimiters=",;\t")
@@ -310,13 +323,14 @@ def calculate_stats(entries, odo):
         return {key: value for key, value in entry.items() if not key.startswith("_") and value not in {"", None}}
 
     return {
-        "updated_at": datetime.utcnow().replace(microsecond=0).isoformat() + "Z",
+        "updated_at": datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z"),
         "source_files": sorted({entry["source"] for entry in entries}),
         "entries_count": len(entries),
         "current_odo": current_odo,
         "trip_start_odo": trip_start,
         "trip_distance_km": distance,
         "latest_entry": public_entry(latest),
+        "history": [public_entry(entry) for entry in reversed(entries[-24:])],
         "fuel": {
             "fills": len(fuel_entries),
             "liters": round(liters, 2) if fuel_entries else None,

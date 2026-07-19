@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-07-19T06:06:10Z",
+  "updated_at": "2026-07-19T06:37:27Z",
   "source_files": [
-    "macrodroid"
+    "fuelio/exports/vehicle-1-sync.csv"
   ],
-  "entries_count": 1,
+  "entries_count": 42,
   "current_odo": 152283,
   "trip_start_odo": 144243,
   "trip_distance_km": 8040,
@@ -11,15 +11,234 @@
     "date": "2026-07-11",
     "odometer": 152283,
     "liters": 50.02,
+    "consumption_l_per_100km": 13.08,
     "cost": 99.99,
-    "source": "macrodroid",
-    "id": "fa263b2a83fe"
+    "full_tank": true,
+    "source": "fuelio/exports/vehicle-1-sync.csv"
   },
+  "history": [
+    {
+      "date": "2026-07-11",
+      "odometer": 152283,
+      "liters": 50.02,
+      "consumption_l_per_100km": 13.08,
+      "cost": 99.99,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-06-16",
+      "odometer": 152032,
+      "liters": 40.0,
+      "consumption_l_per_100km": 13.65,
+      "cost": 67.0,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-06-15",
+      "odometer": 151595,
+      "liters": 37.72,
+      "consumption_l_per_100km": 13.28,
+      "cost": 63.18,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-06-11",
+      "odometer": 151311,
+      "liters": 50.84,
+      "consumption_l_per_100km": 13.78,
+      "cost": 88.44,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-06-04",
+      "odometer": 150942,
+      "liters": 48.19,
+      "consumption_l_per_100km": 12.99,
+      "cost": 84.28,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-05-30",
+      "odometer": 150571,
+      "liters": 58.08,
+      "consumption_l_per_100km": 13.67,
+      "cost": 104.49,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-05-29",
+      "odometer": 150357,
+      "liters": 20.0,
+      "consumption_l_per_100km": 16.59,
+      "cost": 38.0,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-05-23",
+      "odometer": 150000,
+      "liters": 50.1,
+      "consumption_l_per_100km": 12.13,
+      "cost": 89.63,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-05-20",
+      "odometer": 149587,
+      "liters": 37.49,
+      "consumption_l_per_100km": 13.78,
+      "cost": 66.17,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-05-18",
+      "odometer": 149315,
+      "liters": 37.94,
+      "consumption_l_per_100km": 11.97,
+      "cost": 68.25,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-05-14",
+      "odometer": 148998,
+      "liters": 17.95,
+      "consumption_l_per_100km": 12.38,
+      "cost": 31.14,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-05-13",
+      "odometer": 148853,
+      "liters": 38.76,
+      "consumption_l_per_100km": 14.36,
+      "cost": 69.19,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-05-12",
+      "odometer": 148583,
+      "liters": 31.8,
+      "consumption_l_per_100km": 13.65,
+      "cost": 54.37,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-05-08",
+      "odometer": 148350,
+      "liters": 40.82,
+      "consumption_l_per_100km": 12.48,
+      "cost": 70.0,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-05-04",
+      "odometer": 148023,
+      "liters": 47.23,
+      "consumption_l_per_100km": 14.37,
+      "cost": 83.55,
+      "note": "Jacobs well",
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-05-04",
+      "odometer": 147870,
+      "liters": 20.0,
+      "consumption_l_per_100km": 14.2,
+      "cost": 50.8,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-05-02",
+      "odometer": 147717,
+      "liters": 20.0,
+      "consumption_l_per_100km": 19.45,
+      "cost": 51.6,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-04-12",
+      "odometer": 147416,
+      "liters": 41.38,
+      "consumption_l_per_100km": 12.58,
+      "cost": 92.65,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-04-08",
+      "odometer": 147087,
+      "liters": 46.97,
+      "consumption_l_per_100km": 12.04,
+      "cost": 98.6,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-03-31",
+      "odometer": 146697,
+      "liters": 18.31,
+      "consumption_l_per_100km": 11.97,
+      "cost": 44.58,
+      "note": "crossing Queensland",
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-03-30",
+      "odometer": 146544,
+      "liters": 33.96,
+      "consumption_l_per_100km": 15.87,
+      "cost": 86.24,
+      "note": "casino",
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-03-27",
+      "odometer": 146330,
+      "liters": 35.65,
+      "consumption_l_per_100km": 13.11,
+      "cost": 90.87,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-03-23",
+      "odometer": 146058,
+      "liters": 49.92,
+      "consumption_l_per_100km": 16.16,
+      "cost": 122.75,
+      "note": "uki",
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    },
+    {
+      "date": "2026-03-17",
+      "odometer": 145749,
+      "liters": 47.2,
+      "consumption_l_per_100km": 14.25,
+      "cost": 108.32,
+      "full_tank": true,
+      "source": "fuelio/exports/vehicle-1-sync.csv"
+    }
+  ],
   "fuel": {
-    "fills": 1,
-    "liters": 50.02,
-    "cost": 99.99,
-    "average_l_per_100km": null,
+    "fills": 29,
+    "liters": 1108.6,
+    "cost": 2165.26,
+    "average_l_per_100km": 14.12,
     "distance_km": null
   }
 }
