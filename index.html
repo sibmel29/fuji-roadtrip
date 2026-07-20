@@ -78,8 +78,18 @@ body { margin:0; font-family: system-ui; }
   width: 108px;
   max-width: 100%;
   height: auto;
-  margin: 0 auto 8px;
+  margin: 0 auto 4px;
   border-radius: 6px;
+}
+
+.fuji-van-drawing {
+  display: block;
+  width: 118px;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 9px;
+  border-radius: 6px;
+  opacity: 0.9;
 }
 
 .odo-values {
@@ -88,20 +98,34 @@ body { margin:0; font-family: system-ui; }
 
 .odo-history-button {
   display: none;
-  width: 100%;
-  margin-top: 8px;
-  padding: 7px 8px;
+  width: 32px;
+  height: 32px;
+  margin: 8px auto 0;
+  padding: 6px;
   border: none;
-  border-radius: 8px;
-  background: #111827;
-  color: white;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.72);
+  box-shadow: inset 0 0 0 1px rgba(15, 23, 42, 0.14), 0 2px 7px rgba(0,0,0,0.12);
   cursor: pointer;
-  font-size: 12px;
-  font-weight: 800;
+  transition: transform 0.16s ease, background 0.16s ease;
 }
 
 .odo-history-button.visible {
   display: block;
+}
+
+.odo-history-button:hover,
+.odo-history-button:focus-visible {
+  transform: translateY(-1px);
+  background: white;
+  outline: none;
+}
+
+.odo-history-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .analog-gallery-launch {
@@ -438,24 +462,32 @@ body { margin:0; font-family: system-ui; }
 }
 
 .contact-button {
-  width: 50px;
-  height: 50px;
-  display: grid;
-  place-items: center;
-  border: 3px solid white;
-  border-radius: 50%;
-  background: #b45309;
-  color: white;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  display: block;
+  width: 124px;
+  height: 39px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  filter: drop-shadow(0 4px 9px rgba(0,0,0,0.24));
   cursor: pointer;
-  font-size: 18px;
+  overflow: hidden;
   text-decoration: none;
+  transition: transform 0.16s ease, filter 0.16s ease;
 }
 
 .contact-button:hover,
 .contact-button:focus-visible {
-  background: #92400e;
+  transform: translateY(-1px);
+  filter: drop-shadow(0 6px 11px rgba(0,0,0,0.3));
   outline: none;
+}
+
+.contact-button img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
 }
 
 .map-btn {
@@ -569,17 +601,26 @@ body { margin:0; font-family: system-ui; }
   font-size: 16px;
 }
 
+.poi-marker.image-marker,
 .hike-marker {
-  width: 26px;
-  height: 26px;
+  width: 34px;
+  height: 34px;
   display: grid;
   place-items: center;
-  background: #166534;
+  background: #fffaf0;
   border: 3px solid white;
   border-radius: 50%;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.35);
-  color: white;
-  font-size: 15px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.35), inset 0 0 0 1px rgba(15,23,42,0.18);
+  overflow: hidden;
+}
+
+.poi-marker.image-marker img,
+.hike-marker img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .story-window {
@@ -1001,6 +1042,10 @@ body { margin:0; font-family: system-ui; }
     width: 92px;
   }
 
+  .fuji-van-drawing {
+    width: 108px;
+  }
+
   .analog-gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 16px 10px;
@@ -1100,8 +1145,11 @@ body { margin:0; font-family: system-ui; }
 <div class="left-stack">
   <div class="odo" id="odoTile">
     <img src="fuji-logo.png" class="odo-logo" alt="Fuji logo" />
+    <img src="fuji-van-drawing.png" class="fuji-van-drawing" alt="Drawing of Fuji the Delica" />
     <div class="odo-values">🚐 Loading...</div>
-    <button class="odo-history-button" id="fuelHistoryButton" type="button">Fuel history</button>
+    <button class="odo-history-button" id="fuelHistoryButton" type="button" aria-label="Fuel history" title="Fuel history">
+      <img src="icon-fuel.png" alt="" />
+    </button>
   </div>
   <button class="analog-gallery-launch" id="analogGalleryLaunch" type="button" aria-label="View analog photo gallery">
     <img src="analog-gallery-button.png" alt="" />
@@ -1163,7 +1211,9 @@ body { margin:0; font-family: system-ui; }
 </div>
 
 <div class="contact-panel">
-  <a class="contact-button" href="mailto:fujiroadtrip@gmail.com" aria-label="Email Fuji Road Trip">✉</a>
+  <a class="contact-button" href="mailto:fujiroadtrip@gmail.com" aria-label="Email Fuji Road Trip">
+    <img src="contact-us-button.png" alt="Contact us" />
+  </a>
 </div>
 
 <div id="popup" class="popup">
@@ -1573,8 +1623,8 @@ function addPOIMarkers(points) {
     food: "+",
     forest: "♣",
     mountain: "▲",
-    fish: "🎣",
-    surf: "≈"
+    fish: '<img src="icon-fish.png" alt="">',
+    surf: '<img src="icon-surf.png" alt="">'
   };
 
   function iconForPOI(poi) {
@@ -1583,9 +1633,9 @@ function addPOIMarkers(points) {
 
     return L.divIcon({
     className: "",
-      html: `<div class="poi-marker ${marker}">${markerTypes[marker]}</div>`,
-    iconSize: [26, 26],
-    iconAnchor: [13, 13]
+      html: `<div class="poi-marker ${marker} ${["fish", "surf"].includes(marker) ? "image-marker" : ""}">${markerTypes[marker]}</div>`,
+    iconSize: ["fish", "surf"].includes(marker) ? [34, 34] : [26, 26],
+    iconAnchor: ["fish", "surf"].includes(marker) ? [17, 17] : [13, 13]
   });
   }
 
@@ -1717,9 +1767,9 @@ function addFishingMarkers(entries) {
     let marker = L.marker([coords[1], coords[0]], {
       icon: L.divIcon({
         className: "",
-        html: `<div class="poi-marker fish">🎣</div>`,
-        iconSize: [26, 26],
-        iconAnchor: [13, 13]
+        html: '<div class="poi-marker fish image-marker"><img src="icon-fish.png" alt=""></div>',
+        iconSize: [34, 34],
+        iconAnchor: [17, 17]
       }),
       title: fishLabel(entry),
       zIndexOffset: 950
@@ -1803,9 +1853,9 @@ function addSurfMarkers(entries) {
     let marker = L.marker([coords[1], coords[0]], {
       icon: L.divIcon({
         className: "",
-        html: `<div class="poi-marker surf">≈</div>`,
-        iconSize: [26, 26],
-        iconAnchor: [13, 13]
+        html: '<div class="poi-marker surf image-marker"><img src="icon-surf.png" alt=""></div>',
+        iconSize: [34, 34],
+        iconAnchor: [17, 17]
       }),
       title: surfLabel(entry),
       zIndexOffset: 950
@@ -1881,9 +1931,9 @@ function renderHikeStats(stats) {
 function addHikes(data, storiesById = {}) {
   let hikeIcon = L.divIcon({
     className: "",
-    html: '<div class="hike-marker">🚶</div>',
-    iconSize: [26, 26],
-    iconAnchor: [13, 13]
+    html: '<div class="hike-marker"><img src="icon-hike.png" alt=""></div>',
+    iconSize: [34, 34],
+    iconAnchor: [17, 17]
   });
 
   (data.features || []).forEach(feature => {
