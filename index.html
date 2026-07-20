@@ -150,27 +150,50 @@ body { margin:0; font-family: system-ui; }
 }
 
 .hike-menu-button {
-  width: 42px;
-  height: 42px;
+  position: relative;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2px;
   border: 3px solid white;
   border-radius: 50%;
-  background: #166534;
-  color: white;
+  background: #f7f1df;
+  color: #243018;
   box-shadow: 0 4px 15px rgba(0,0,0,0.25);
   cursor: pointer;
-  font-weight: 800;
+  padding: 0;
 }
 
 .hike-menu-icon {
-  font-size: 17px;
-  line-height: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.hike-menu-icon img,
+.fish-menu-icon img,
+.surf-menu-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hike-menu-arrow {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.85);
+  color: white;
   font-size: 12px;
   line-height: 1;
   transition: transform 0.18s ease;
@@ -184,7 +207,7 @@ body { margin:0; font-family: system-ui; }
   display: none;
   position: absolute;
   top: 0;
-  right: 52px;
+  right: 66px;
   width: 142px;
   background: rgba(255,255,255,0.94);
   padding: 8px 10px;
@@ -217,34 +240,48 @@ body { margin:0; font-family: system-ui; }
 
 .fish-panel {
   position: fixed;
-  top: 232px;
+  top: 244px;
   right: 20px;
   z-index: 1000;
   font-size: 12px;
 }
 
 .fish-menu-button {
-  width: 42px;
-  height: 42px;
+  position: relative;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2px;
   border: 3px solid white;
   border-radius: 50%;
-  background: #0f766e;
-  color: white;
+  background: #f7f1df;
+  color: #0e4050;
   box-shadow: 0 4px 15px rgba(0,0,0,0.25);
   cursor: pointer;
-  font-weight: 800;
+  padding: 0;
 }
 
 .fish-menu-icon {
-  font-size: 17px;
-  line-height: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .fish-menu-arrow {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.85);
+  color: white;
   font-size: 12px;
   line-height: 1;
   transition: transform 0.18s ease;
@@ -258,7 +295,7 @@ body { margin:0; font-family: system-ui; }
   display: none;
   position: absolute;
   top: 0;
-  right: 52px;
+  right: 66px;
   width: 156px;
   max-height: 210px;
   overflow: auto;
@@ -299,34 +336,48 @@ body { margin:0; font-family: system-ui; }
 
 .surf-panel {
   position: fixed;
-  top: 286px;
+  top: 310px;
   right: 20px;
   z-index: 1000;
   font-size: 12px;
 }
 
 .surf-menu-button {
-  width: 42px;
-  height: 42px;
+  position: relative;
+  width: 56px;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2px;
   border: 3px solid white;
   border-radius: 50%;
-  background: #0369a1;
-  color: white;
+  background: #f7f1df;
+  color: #0e4050;
   box-shadow: 0 4px 15px rgba(0,0,0,0.25);
   cursor: pointer;
-  font-weight: 800;
+  padding: 0;
 }
 
 .surf-menu-icon {
-  font-size: 18px;
-  line-height: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .surf-menu-arrow {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.85);
+  color: white;
   font-size: 12px;
   line-height: 1;
   transition: transform 0.18s ease;
@@ -340,7 +391,7 @@ body { margin:0; font-family: system-ui; }
   display: none;
   position: absolute;
   top: 0;
-  right: 52px;
+  right: 66px;
   width: 156px;
   max-height: 210px;
   overflow: auto;
@@ -381,14 +432,14 @@ body { margin:0; font-family: system-ui; }
 
 .contact-panel {
   position: fixed;
-  top: 340px;
+  top: 376px;
   right: 20px;
   z-index: 1000;
 }
 
 .contact-button {
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
   display: grid;
   place-items: center;
   border: 3px solid white;
@@ -1065,7 +1116,7 @@ body { margin:0; font-family: system-ui; }
 
 <div class="hike-panel" id="hikePanel">
   <button class="hike-menu-button" id="hikeMenuButton" type="button" aria-label="Hike layer" aria-expanded="false" aria-controls="hikeMenuContent">
-    <span class="hike-menu-icon">🚶</span>
+    <span class="hike-menu-icon"><img src="icon-hike.png" alt=""></span>
     <span class="hike-menu-arrow">⌄</span>
   </button>
   <div class="hike-menu-content" id="hikeMenuContent">
@@ -1081,7 +1132,7 @@ body { margin:0; font-family: system-ui; }
 
 <div class="fish-panel" id="fishPanel">
   <button class="fish-menu-button" id="fishMenuButton" type="button" aria-label="Fishing log layer" aria-expanded="false" aria-controls="fishMenuContent">
-    <span class="fish-menu-icon">🎣</span>
+    <span class="fish-menu-icon"><img src="icon-fish.png" alt=""></span>
     <span class="fish-menu-arrow">⌄</span>
   </button>
   <div class="fish-menu-content" id="fishMenuContent">
@@ -1097,7 +1148,7 @@ body { margin:0; font-family: system-ui; }
 
 <div class="surf-panel" id="surfPanel">
   <button class="surf-menu-button" id="surfMenuButton" type="button" aria-label="Surf log layer" aria-expanded="false" aria-controls="surfMenuContent">
-    <span class="surf-menu-icon">≈</span>
+    <span class="surf-menu-icon"><img src="icon-surf.png" alt=""></span>
     <span class="surf-menu-arrow">⌄</span>
   </button>
   <div class="surf-menu-content" id="surfMenuContent">
