@@ -1,38 +1,39 @@
-# Ozzy Trip Data
+# Fuji Road Trip
 
-Static trip map data and processing scripts for an Australia road trip.
+Interactive public map for [fujiroadtrip.com](https://fujiroadtrip.com/): live road-trip route tracking, always-visible travel POIs, optional hike/fishing/surf overlays, Fuelio stats, and an analog photo gallery.
 
-## What is here
+## What Is Here
 
-- `index.html` renders the map with Leaflet.
-- `route_past.geojson` stores the historic route.
-- `route_live.geojson` stores the current GPX-derived route.
-- `route_meta.json` stores the latest car GPS update metadata.
+- `index.html` renders the Leaflet map and floating UI.
+- `route_past.geojson` stores the historic Google Timeline route.
+- `route_live.geojson` stores the current GPX-derived car route.
+- `route_meta.json` stores the latest GPS update metadata shown on the site.
 - `car/gpx/` is the upload folder for new car GPX tracks.
 - `car/archive/` stores processed car GPX tracks by month.
-- `odo.json` stores the current and starting odometer values.
-- `fuelio_log.json` stores fuel-up entries sent from MacroDroid.
-- `fuelio/exports/` stores Fuelio CSV exports.
-- `fuelio_stats.json` stores calculated fuel, cost, and consumption stats.
-- `geojson_merge.py` converts GPX tracks into `route_live.geojson`.
+- `odo.json`, `fuelio_log.json`, and `fuelio_stats.json` power odometer, trip distance, fuel cost, and consumption stats.
+- `poi.json` stores always-visible story points.
+- `hikes.geojson`, `hikes_stats.json`, and `hike_stories.json` power the hiking overlay.
+- `fishing-log.json` and `surf-log.json` power the fishing and surf overlay menus.
+- `analog-gallery/gallery.json` powers the analog photo gallery.
+- `favicon.png`, `favicon-32.png`, `favicon-192.png`, and `apple-touch-icon.png` are the browser/app icons.
 
-## How updates work
+## Car Route Updates
 
 When a car GPX file is pushed to `car/gpx/`, GitHub Actions runs `geojson_merge.py`.
+
 The script:
 
 1. Reads GPX files in the repository root, `car/gpx/`, and `car/archive/`.
 2. Keeps points that move at least 150 metres from the previous accepted point.
 3. Bridges short, physically plausible GPS signal gaps and splits impossible jumps or long pauses.
-4. Writes the result to `route_live.geojson` and latest GPS metadata to `route_meta.json`.
+4. Writes `route_live.geojson` and updates `route_meta.json`.
 5. Moves processed files from `car/gpx/` into `car/archive/YYYY-MM/`.
 
-If the GPX data does not include enough movement to draw a line, the script writes
-an empty GeoJSON feature collection and exits successfully.
+If the GPX data does not include enough movement to draw a line, the script writes an empty GeoJSON feature collection and exits successfully.
 
-## Local processing
+## Local Testing
 
-Install the dependency:
+Install GPX dependencies when needed:
 
 ```sh
 pip install gpxpy
@@ -41,31 +42,39 @@ pip install gpxpy
 Regenerate the live route:
 
 ```sh
-python geojson_merge.py
+python3 geojson_merge.py
 ```
 
-Then open `index.html` in a browser or serve the directory locally.
+Regenerate the hike overlay:
 
-## Fuelio sync
+```sh
+python3 process_hikes.py
+```
+
+Serve the site locally so Chrome can load JSON files through `fetch()`:
+
+```sh
+python3 -m http.server 8001
+```
+
+Then open `http://127.0.0.1:8001/index.html`.
+
+## Fuelio Sync
 
 Fuelio is the source of truth for odometer and fuel stats. The site reads:
 
-- `odo.json` for the current odometer and trip distance
-- `fuelio_stats.json` for latest fill-up, litres, total fuel cost, and average consumption
+- `odo.json` for current odometer and trip distance
+- `fuelio_log.json` for individual fill-up entries
+- `fuelio_stats.json` for latest fill-up, litres, cost, and average consumption
 
-### Fully automated MacroDroid flow
+MacroDroid can send a small JSON payload to GitHub after a Fuelio fill-up. GitHub Actions appends the entry, recalculates the stats, commits the result, and publishes the updated site.
 
-MacroDroid can send a small JSON payload to GitHub after a Fuelio fill-up. GitHub
-Actions adds it to `fuelio_log.json`, recalculates `odo.json` and
-`fuelio_stats.json`, commits the result, and publishes the updated site.
-
-Create a fine-grained GitHub token for this repository with **Contents: Read and
-write** permission. Store it only in MacroDroid as a local variable.
+Create a fine-grained GitHub token for this repository with **Contents: Read and write** permission. Store it only in MacroDroid.
 
 MacroDroid HTTP request:
 
 ```text
-POST https://api.github.com/repos/sibmel29/ozzy-trip-data/dispatches
+POST https://api.github.com/repos/sibmel29/fuji-roadtrip/dispatches
 ```
 
 Headers:
@@ -93,226 +102,67 @@ Body:
 }
 ```
 
-At minimum, send `odometer`. Add `date`, `liters`, `cost`, `station`, and `note`
-when MacroDroid can collect them. The workflow can also be run manually from the
-Actions tab for testing.
+At minimum, send `odometer`. Add `date`, `liters`, `cost`, `station`, and `note` when available. The workflow can also be run manually from the Actions tab.
 
-### Manual CSV fallback
+As a fallback, export CSV from Fuelio and upload it to `fuelio/exports/`; the **Process Fuelio** workflow will update the same generated files.
 
-If the MacroDroid path is not available, export CSV from Fuelio and upload the
-CSV file to `fuelio/exports/` in GitHub. The **Process Fuelio** action will run
-automatically and update the same site files.
+## Points Of Interest
 
-## Points of interest
+Published entries in `poi.json` are always shown on the map. Draft POIs can stay in the file with `"published": false`.
 
-`poi.json` stores clickable map stories. Each entry includes:
+Each POI can include:
 
 - `title`
 - `date`
 - `coordinates` as `[longitude, latitude]`
-- `marker`, optionally: `info`, `sun`, `star`, `camera`, `camp`, `food`, `forest`, `mountain`, `fish`, or `surf`
+- `marker`: `info`, `sun`, `star`, `camera`, `camp`, `food`, `forest`, `mountain`, `fish`, or `surf`
 - `summary`
-- `body` paragraphs
+- `body`
 - `images`
 - `tags`
-- `published`, optionally set to `false` for drafts hidden from the map
+- `published`
 
-Example:
+Use the GitHub issue forms from a phone instead of editing JSON manually:
 
-```json
-{
-  "id": "byron-stop",
-  "title": "First Byron Stop",
-  "date": "2026-04-20",
-  "coordinates": [153.49925, -28.55479],
-  "marker": "sun",
-  "summary": "A short note from the road near Byron Bay.",
-  "body": ["Story text goes here."],
-  "images": [{ "src": "sticker.png", "alt": "Fuji Road Trip sticker" }],
-  "tags": ["coast"],
-  "published": true
-}
-```
+- **Add POI** creates a new story marker.
+- **Update POI** edits an existing POI by id.
 
-Published POIs are always shown on the map. Draft POIs stay in `poi.json` but
-are hidden from the map until published.
+The POI forms accept coordinates or a Google Maps link. Uploaded/linked images are downloaded, resized to a maximum width of 1600px, stripped of metadata, compressed to JPG, and saved under `poi-media/<poi-id>/`.
 
-### Add a POI from your phone
+## Hikes
 
-Use the GitHub issue form instead of editing JSON manually:
+Use the **Add hike** issue form. Add the hike details and media in the form. Because GitHub issue forms do not reliably accept GPX attachments, GPX files can also be uploaded to `hikes/gpx/`.
 
-1. Open the repository on your phone.
-2. Go to **Issues**.
-3. Tap **New issue**.
-4. Choose **Add POI**.
-5. Fill in the title, date, marker, text, tags, optional images, and either coordinates or a Google Maps link.
-6. Submit the issue.
+The workflow stores hike text/photos in `hike_stories.json` and `hike-media/`, regenerates `hikes.geojson` and `hikes_stats.json`, commits the result, and closes the issue when possible.
 
-GitHub Actions will validate the form, add the POI to `poi.json`, commit the
-change, comment on the issue, and close it.
+The hiking layer is hidden by default behind the hiking menu. Toggling it shows hike routes, stats, and clickable hike markers.
 
-In the image field, you can paste GitHub uploaded image links, normal image
-URLs, or existing repo paths. Remote images are downloaded, resized to a maximum
-width of 1600px, stripped of metadata, compressed to JPG, and saved under:
+## Fishing And Surf Logs
 
-```text
-poi-media/<poi-id>/1.jpg
-poi-media/<poi-id>/2.jpg
-```
+Fishing and surf entries are stored separately from normal POIs so the main map stays clean:
 
-For Australian coordinates, the automation will turn a positive latitude into a
-negative one if the longitude is clearly in Australia.
+- `fishing-log.json` and `fishing-media/`
+- `surf-log.json` and `surf-media/`
 
-Each POI issue also creates `poi-media/<poi-id>/.gitkeep`, so you can add more
-images to that folder later.
+Use the **Add fishing log** and **Add surf spot** issue forms. Both forms accept a Google Maps link or coordinates, story text, tags, and optional images.
 
-### Update a POI from your phone
+Fishing entries can include several species in one session. The fishing menu shows aggregate species totals, and the map markers open catch details with species, size, count, timestamp, notes, and photos.
 
-Use the **Update POI** issue form when an existing POI needs edits.
+Surf is a fixed spot log rather than a session-by-session log. Adding the same surf spot again updates that spot instead of creating duplicate markers.
 
-1. Open the repository on your phone.
-2. Go to **Issues**.
-3. Tap **New issue**.
-4. Choose **Update POI**.
-5. Enter the existing POI id, such as `hat-head` or `blue-mountains`.
-6. Fill only the fields you want to replace.
+## Analog Photo Gallery
 
-Blank fields keep the current value. If you fill the image field, the current
-image list is replaced; if you leave it blank, existing images stay unchanged.
+The camera button below the ODO tile opens the full-screen analog photo gallery. The manifest lives at `analog-gallery/gallery.json`.
 
-## Fishing and surf logs
-
-Fishing catches and surf spots are stored separately from normal POIs:
-
-- `fishing-log.json`
-- `surf-log.json`
-- `fishing-media/`
-- `surf-media/`
-
-Use the **Add fishing log** and **Add surf spot** issue forms from your phone.
-Each form accepts a Google Maps link or coordinates, story text, tags, optional
-images, and log-specific details. The fishing form has four catch slots, so one
-session can include several species, each with its own count and size. The surf
-form stores fixed surf spots, with details such as wave size, wind, tide, board,
-and rating.
-
-GitHub Actions writes the entry to the matching JSON file, downloads and
-compresses attached images, commits the update, comments on the issue, and
-closes it. Fishing and surf entries live behind their own floating toggle menus,
-so normal POIs stay always visible and activity logs do not clutter the map.
-The fishing menu shows species totals like `Tailor 10`, `Bream 6`, and `GT 2`;
-toggling it shows each catch marker with its species, size, and timestamp in the
-marker tooltip and popup details. The surf menu shows the fixed list of surf
-spots, and toggling it shows each surf marker with spot, wave size, and rating.
-Adding the same surf spot again updates that spot instead of creating a second
-session marker.
-
-## Analog photo gallery
-
-The camera button below the ODO tile opens a separate full-screen analog photo
-gallery. The gallery manifest is stored in `analog-gallery/gallery.json`.
-
-### Add photos from your phone
-
-1. Open the repository and go to **Issues**.
-2. Tap **New issue** and choose **Add analog photos**.
-3. Enter a collection title and optional date.
-4. Upload several original photos in **Photo uploads**.
-5. Optionally add one caption per line, in the same order as the photos.
-6. Submit the issue.
-
-The GitHub Action downloads each original temporarily and commits only two
-optimized copies:
+Use the **Add analog photos** issue form from a phone. The workflow downloads originals temporarily and commits optimized copies only:
 
 ```text
 analog-gallery/thumbs/issue-<number>-<photo>.jpg
 analog-gallery/web/issue-<number>-<photo>.jpg
 ```
 
-Thumbnails are capped at 600px and load lazily only after the gallery opens.
-Viewing copies are capped at 2000px and load only when a photograph is opened.
-Editing or reopening the same issue replaces that issue's gallery entries rather
-than creating duplicates. The large phone originals are not stored in the repo.
+Thumbnails are capped at 600px. Full viewing copies are capped at 2000px. Large phone originals are not stored in the repo.
 
-`fish_species_nsw.json` is a small reference list derived from the NSW DPI fish
-species index. It stores species names and freshwater/saltwater category only,
-with the official source URL kept in the file for deeper lookup.
+## Reference Data
 
-Use a local web server when testing in Chrome so `fetch()` can load JSON files:
-
-```sh
-python3 -m http.server 8001
-```
-
-## Hike overlay
-
-The easiest way to add a hike from your phone is the **Add hike** issue form.
-Attach the GPX file in the form, add optional text and photos, then submit. The
-workflow saves the GPX to `hikes/gpx/`, stores text/photos in `hike_stories.json`
-and `hike-media/`, regenerates `hikes.geojson` and `hikes_stats.json`, commits
-the result, and closes the issue.
-
-Raw hike GPX files still live in `hikes/gpx/`. Regenerate the hike overlay with:
-
-```sh
-python3 process_hikes.py
-```
-
-That creates:
-
-- `hikes.geojson` for the map overlay
-- `hikes_stats.json` for the floating hike summary panel
-
-The map can toggle hikes on and off separately from the main road-trip route.
-Each hike route is clickable and opens the same story window used by POIs.
-
-Custom hike popup text and photos live in `hike_stories.json`. Use the hike id
-from `hikes.geojson`, then add any fields you want to override:
-
-```json
-{
-  "goonengerry-national-park-loop": {
-    "summary": "Short custom intro for the popup.",
-    "body": ["Longer recap text goes here."],
-    "images": [
-      { "src": "hike-media/goonengerry-national-park-loop/photo-1.jpg", "alt": "View from the trail" }
-    ],
-    "tags": ["hike", "national park"]
-  }
-}
-```
-
-To list the current hike ids:
-
-```sh
-node -e "const fs=require('fs'); const data=JSON.parse(fs.readFileSync('hikes.geojson','utf8')); for (const f of data.features) console.log(f.properties.id + ' | ' + f.properties.title)"
-```
-
-The route, distance, ascent, descent, and start point still come from the GPX
-file. Do not hand-edit `hikes.geojson`; it is regenerated by automation.
-
-When a hike GPX is processed, `process_hikes.py` automatically creates a media
-folder for that hike:
-
-```text
-hike-media/goonengerry-national-park-loop/
-```
-
-Upload compressed web images into that folder with simple numbered names:
-
-```text
-hike-media/goonengerry-national-park-loop/1.jpg
-hike-media/goonengerry-national-park-loop/2.jpg
-hike-media/goonengerry-national-park-loop/3.jpg
-```
-
-The automation scans `.jpg`, `.jpeg`, `.png`, and `.webp` files in each hike
-media folder and adds them to that hike popup automatically. You only need to
-edit `hike_stories.json` when you want custom text, tags, title, or date. If you
-add an `images` list in `hike_stories.json`, that manual list overrides the
-auto-detected folder images for that hike.
-
-## Privacy note
-
-This repository is public and contains trip location data. Review GPX and GeoJSON
-precision before publishing if any locations should stay private.
+`fish_species_nsw.json` is a small reference list derived from the NSW DPI fish species index. It stores species names and freshwater/saltwater category only, with the official source URL kept in the file for deeper lookup.
