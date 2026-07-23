@@ -1,0 +1,150 @@
+name: Add 4WD segment
+description: Add a 4WD track segment to the map.
+title: "[4WD] "
+labels: ["fourwd-segment"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill this in from your phone. The best future workflow is to use a MacroDroid start/end trigger, then paste the two timestamps here.
+  - type: input
+    id: title
+    attributes:
+      label: 4WD track title
+      placeholder: "Noosa North Shore to Rainbow Beach"
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date
+      placeholder: "2026-05-12"
+    validations:
+      required: false
+  - type: input
+    id: time_hint
+    attributes:
+      label: Time hint
+      description: Optional human note if exact timestamps are not known.
+      placeholder: "Around 11:00"
+    validations:
+      required: false
+  - type: input
+    id: start_timestamp
+    attributes:
+      label: Start timestamp
+      description: ISO timestamp from MacroDroid or GeoTracker. Use timezone if possible.
+      placeholder: "2026-05-12T09:57:56+10:00"
+    validations:
+      required: false
+  - type: input
+    id: end_timestamp
+    attributes:
+      label: End timestamp
+      description: ISO timestamp from MacroDroid or GeoTracker. Use timezone if possible.
+      placeholder: "2026-05-12T15:09:01+10:00"
+    validations:
+      required: false
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: Difficulty
+      options:
+        - easy
+        - medium
+        - hard
+        - sketchy
+      default: 1
+    validations:
+      required: false
+  - type: dropdown
+    id: rating
+    attributes:
+      label: Rating
+      options:
+        - "5"
+        - "4"
+        - "3"
+        - "2"
+        - "1"
+      default: 0
+    validations:
+      required: false
+  - type: input
+    id: conditions
+    attributes:
+      label: Conditions
+      placeholder: "Beach sand, dry, corrugations, creek crossing..."
+    validations:
+      required: false
+  - type: textarea
+    id: summary
+    attributes:
+      label: Short summary
+      placeholder: One sentence shown at the top of the popup.
+    validations:
+      required: false
+  - type: textarea
+    id: story
+    attributes:
+      label: Story text
+      placeholder: Write the recap here.
+    validations:
+      required: false
+  - type: textarea
+    id: images
+    attributes:
+      label: Image paths
+      description: Optional. Paste uploaded GitHub issue image links, one per line.
+      placeholder: https://github.com/user-attachments/assets/...
+    validations:
+      required: false
+  - type: input
+    id: tags
+    attributes:
+      label: Tags
+      placeholder: "4wd, beach, sand"
+    validations:
+      required: false
+  - type: dropdown
+    id: published
+    attributes:
+      label: Published
+      options:
+        - "yes"
+        - "draft"
+      default: 0
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        Advanced backfill only: Codex can fill these fields when carving an old route by source feature/index.
+  - type: input
+    id: source_file
+    attributes:
+      label: Source route file
+      placeholder: "route_live.geojson"
+    validations:
+      required: false
+  - type: input
+    id: feature_index
+    attributes:
+      label: Source feature index
+      placeholder: "6"
+    validations:
+      required: false
+  - type: input
+    id: start_index
+    attributes:
+      label: Source start point index
+      placeholder: "8"
+    validations:
+      required: false
+  - type: input
+    id: end_index
+    attributes:
+      label: Source end point index
+      placeholder: "23"
+    validations:
+      required: false

@@ -19,6 +19,8 @@ on:
       - 'hike-media/**/*.WEBP'
       - 'hike_stories.json'
       - 'geojson_merge.py'
+      - 'fourwd_segments.json'
+      - 'process_fourwd.py'
 
 permissions:
   contents: write
@@ -45,11 +47,14 @@ jobs:
       - name: Process hike routes
         run: python process_hikes.py
 
+      - name: Process 4WD routes
+        run: python process_fourwd.py
+
       - name: Commit updated route data
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add route_live.geojson route_meta.json car hikes.geojson hikes_stats.json hike-media
+          git add route_live.geojson route_meta.json car hikes.geojson hikes_stats.json hike-media fourwd-tracks.geojson fourwd_stats.json
           git diff --cached --quiet && echo "No generated route changes to commit" && exit 0
           git commit -m "Update route data"
           git push

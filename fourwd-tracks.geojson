@@ -1,0 +1,285 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "worimi-beach-tracks",
+        "title": "Worimi Beach Tracks",
+        "date": "2026-03-03",
+        "difficulty": "easy",
+        "rating": 5,
+        "conditions": "Beach sand",
+        "distance_km": 81.89,
+        "summary": "Full beach drive through the Worimi National Park section.",
+        "body": [
+          "Backfilled from the historic route. The old Timeline data is low-resolution, so this segment is an approximate slice of the Worimi beach drive."
+        ],
+        "images": [],
+        "tags": [
+          "4wd",
+          "beach",
+          "sand"
+        ],
+        "published": true,
+        "details": {
+          "Difficulty": "easy",
+          "Rating": 5,
+          "Conditions": "Beach sand",
+          "Distance": "81.89 km",
+          "Time hint": "Afternoon around 14:00"
+        },
+        "start": [
+          151.7959523,
+          -32.8613729
+        ],
+        "end": [
+          151.8874389,
+          -32.8367812
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            151.7959523,
+            -32.8613729
+          ],
+          [
+            151.9627835,
+            -32.7880261
+          ],
+          [
+            151.9907393,
+            -32.8004151
+          ],
+          [
+            152.0803761,
+            -32.7767122
+          ],
+          [
+            152.0832034,
+            -32.7341209
+          ],
+          [
+            152.0620404,
+            -32.7014161
+          ],
+          [
+            152.1360225,
+            -32.7197348
+          ],
+          [
+            152.1853477,
+            -32.7157909
+          ],
+          [
+            152.1823706,
+            -32.7185581
+          ],
+          [
+            152.1494726,
+            -32.7235693
+          ],
+          [
+            152.1292927,
+            -32.7367425
+          ],
+          [
+            152.0787332,
+            -32.7841603
+          ],
+          [
+            151.8874389,
+            -32.8367812
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "hat-head-forest-track",
+        "title": "Hat Head Forest Track",
+        "date": "2026-03-10",
+        "difficulty": "medium",
+        "rating": 4,
+        "conditions": "Forest road",
+        "distance_km": 35.56,
+        "summary": "Cool forest section around Hat Head Road.",
+        "body": [
+          "Backfilled from the historic route. The old Timeline data is low-resolution, so this segment is an approximate slice around Hat Head."
+        ],
+        "images": [],
+        "tags": [
+          "4wd",
+          "forest"
+        ],
+        "published": true,
+        "details": {
+          "Difficulty": "medium",
+          "Rating": 4,
+          "Conditions": "Forest road",
+          "Distance": "35.56 km",
+          "Time hint": "Around 12:30"
+        },
+        "start": [
+          152.8391591,
+          -31.1021001
+        ],
+        "end": [
+          153.0443773,
+          -31.0518833
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            152.8391591,
+            -31.1021001
+          ],
+          [
+            152.9759459,
+            -31.1935515
+          ],
+          [
+            152.9779591,
+            -31.1921208
+          ],
+          [
+            152.9752102,
+            -31.1887489
+          ],
+          [
+            152.9741067,
+            -31.1901554
+          ],
+          [
+            153.008787,
+            -31.1019889
+          ],
+          [
+            153.0543127,
+            -31.0561056
+          ],
+          [
+            153.0443773,
+            -31.0515516
+          ],
+          [
+            153.0443773,
+            -31.0518833
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "noosa-north-shore-rainbow-beach",
+        "title": "Noosa North Shore to Rainbow Beach",
+        "date": "2026-05-12",
+        "difficulty": "medium",
+        "rating": 5,
+        "conditions": "Beach sand",
+        "distance_km": 64.7,
+        "summary": "The long beach drive from the Noosa North Shore entrance towards Rainbow Beach.",
+        "body": [
+          "Backfilled from the detailed GeoTracker route recorded on 12 May 2026."
+        ],
+        "images": [],
+        "tags": [
+          "4wd",
+          "beach",
+          "sand"
+        ],
+        "published": true,
+        "details": {
+          "Difficulty": "medium",
+          "Rating": 5,
+          "Conditions": "Beach sand",
+          "Distance": "64.7 km",
+          "Time hint": "Around 11:00"
+        },
+        "start": [
+          153.06193,
+          -26.31265
+        ],
+        "end": [
+          153.09036,
+          -25.9053
+        ]
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            153.06193,
+            -26.31265
+          ],
+          [
+            153.07067,
+            -26.25375
+          ],
+          [
+            153.09376,
+            -26.1646
+          ],
+          [
+            153.10476,
+            -26.13023
+          ],
+          [
+            153.11662,
+            -26.09654
+          ],
+          [
+            153.12964,
+            -26.06183
+          ],
+          [
+            153.14498,
+            -26.02394
+          ],
+          [
+            153.18388,
+            -25.94275
+          ],
+          [
+            153.17542,
+            -25.94563
+          ],
+          [
+            153.17418,
+            -25.95497
+          ],
+          [
+            153.16185,
+            -25.98641
+          ],
+          [
+            153.14082,
+            -25.98956
+          ],
+          [
+            153.13517,
+            -25.95223
+          ],
+          [
+            153.10431,
+            -25.95371
+          ],
+          [
+            153.08201,
+            -25.93788
+          ],
+          [
+            153.09036,
+            -25.9053
+          ]
+        ]
+      }
+    }
+  ]
+}

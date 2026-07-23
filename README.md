@@ -1,6 +1,6 @@
 # Fuji Road Trip
 
-Interactive public map for [fujiroadtrip.com](https://fujiroadtrip.com/): live road-trip route tracking, always-visible travel POIs, optional hike/fishing/surf overlays, Fuelio stats, and an analog photo gallery.
+Interactive public map for [fujiroadtrip.com](https://fujiroadtrip.com/): live road-trip route tracking, always-visible travel POIs, optional hike/fishing/surf/4WD overlays, Fuelio stats, and an analog photo gallery.
 
 ## What Is Here
 
@@ -14,6 +14,7 @@ Interactive public map for [fujiroadtrip.com](https://fujiroadtrip.com/): live r
 - `poi.json` stores always-visible story points.
 - `hikes.geojson`, `hikes_stats.json`, and `hike_stories.json` power the hiking overlay.
 - `fishing-log.json` and `surf-log.json` power the fishing and surf overlay menus.
+- `fourwd_segments.json`, `fourwd-tracks.geojson`, and `fourwd_stats.json` power the 4WD tracks overlay.
 - `analog-gallery/gallery.json` powers the analog photo gallery.
 - `favicon.png`, `favicon-32.png`, `favicon-192.png`, and `apple-touch-icon.png` are the browser/app icons.
 
@@ -49,6 +50,12 @@ Regenerate the hike overlay:
 
 ```sh
 python3 process_hikes.py
+```
+
+Regenerate the 4WD overlay:
+
+```sh
+python3 process_fourwd.py
 ```
 
 Serve the site locally so Chrome can load JSON files through `fetch()`:
@@ -149,6 +156,68 @@ Use the **Add fishing log** and **Add surf spot** issue forms. Both forms accept
 Fishing entries can include several species in one session. The fishing menu shows aggregate species totals, and the map markers open catch details with species, size, count, timestamp, notes, and photos.
 
 Surf is a fixed spot log rather than a session-by-session log. Adding the same surf spot again updates that spot instead of creating duplicate markers.
+
+## 4WD Tracks
+
+The 4WD layer highlights special off-road sections without changing the normal car route. Segment definitions live in:
+
+```text
+fourwd_segments.json
+```
+
+The generated map layer and stats live in:
+
+```text
+fourwd-tracks.geojson
+fourwd_stats.json
+```
+
+Run this after editing segment definitions:
+
+```sh
+python3 process_fourwd.py
+```
+
+Each segment can be generated from a time range:
+
+```json
+{
+  "title": "Beach track",
+  "source": {
+    "type": "time_range",
+    "start_time": "2026-05-12T09:57:56+10:00",
+    "end_time": "2026-05-12T15:09:01+10:00"
+  }
+}
+```
+
+Old tracks can also be backfilled from a known source route feature and point range:
+
+```json
+{
+  "source": {
+    "type": "feature_range",
+    "file": "route_live.geojson",
+    "feature_index": 6,
+    "start_index": 8,
+    "end_index": 23
+  }
+}
+```
+
+Use the **Add 4WD segment** issue form from a phone. The normal future workflow is:
+
+1. GeoTracker keeps recording the main trip route as usual.
+2. MacroDroid saves a 4WD start timestamp when the track begins.
+3. MacroDroid saves a 4WD end timestamp when the track finishes.
+4. Create an **Add 4WD segment** issue with title, timestamps, difficulty, rating, conditions, story, and photos.
+5. GitHub Actions updates `fourwd_segments.json`, regenerates `fourwd-tracks.geojson` and `fourwd_stats.json`, commits the result, comments on the issue, and closes it.
+
+Media for 4WD stories is stored under:
+
+```text
+fourwd-media/<segment-id>/
+```
 
 ## Analog Photo Gallery
 

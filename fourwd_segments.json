@@ -1,0 +1,68 @@
+[
+  {
+    "id": "worimi-beach-tracks",
+    "title": "Worimi Beach Tracks",
+    "date": "2026-03-03",
+    "time_hint": "Afternoon around 14:00",
+    "difficulty": "easy",
+    "rating": 5,
+    "conditions": "Beach sand",
+    "summary": "Full beach drive through the Worimi National Park section.",
+    "body": [
+      "Backfilled from the historic route. The old Timeline data is low-resolution, so this segment is an approximate slice of the Worimi beach drive."
+    ],
+    "tags": ["4wd", "beach", "sand"],
+    "source": {
+      "type": "feature_range",
+      "file": "route_past.geojson",
+      "feature_index": 23,
+      "start_index": 12,
+      "end_index": 24
+    },
+    "published": true
+  },
+  {
+    "id": "hat-head-forest-track",
+    "title": "Hat Head Forest Track",
+    "date": "2026-03-10",
+    "time_hint": "Around 12:30",
+    "difficulty": "medium",
+    "rating": 4,
+    "conditions": "Forest road",
+    "summary": "Cool forest section around Hat Head Road.",
+    "body": [
+      "Backfilled from the historic route. The old Timeline data is low-resolution, so this segment is an approximate slice around Hat Head."
+    ],
+    "tags": ["4wd", "forest"],
+    "source": {
+      "type": "feature_range",
+      "file": "route_past.geojson",
+      "feature_index": 24,
+      "start_index": 5,
+      "end_index": 13
+    },
+    "published": true
+  },
+  {
+    "id": "noosa-north-shore-rainbow-beach",
+    "title": "Noosa North Shore to Rainbow Beach",
+    "date": "2026-05-12",
+    "time_hint": "Around 11:00",
+    "difficulty": "medium",
+    "rating": 5,
+    "conditions": "Beach sand",
+    "summary": "The long beach drive from the Noosa North Shore entrance towards Rainbow Beach.",
+    "body": [
+      "Backfilled from the detailed GeoTracker route recorded on 12 May 2026."
+    ],
+    "tags": ["4wd", "beach", "sand"],
+    "source": {
+      "type": "feature_range",
+      "file": "route_live.geojson",
+      "feature_index": 6,
+      "start_index": 8,
+      "end_index": 23
+    },
+    "published": true
+  }
+]

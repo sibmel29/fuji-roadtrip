@@ -5,17 +5,17 @@
 <title>Fuji Road Trip | Australia Travel Map</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Follow Fuji Road Trip across Australia with live route tracking, hikes, surf spots, fishing logs, fuel history, stories, and analog photos.">
+<meta name="description" content="Follow Fuji Road Trip across Australia with live route tracking, hikes, 4WD tracks, surf spots, fishing logs, fuel history, stories, and analog photos.">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://fujiroadtrip.com/">
 <meta property="og:title" content="Fuji Road Trip">
-<meta property="og:description" content="An interactive Australia road-trip map with routes, stories, hikes, surf, fishing, fuel logs, and analog photos.">
+<meta property="og:description" content="An interactive Australia road-trip map with routes, stories, hikes, 4WD tracks, surf, fishing, fuel logs, and analog photos.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fujiroadtrip.com/">
 <meta property="og:image" content="https://fujiroadtrip.com/sticker.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Fuji Road Trip">
-<meta name="twitter:description" content="An interactive Australia road-trip map with routes, stories, hikes, surf, fishing, fuel logs, and analog photos.">
+<meta name="twitter:description" content="An interactive Australia road-trip map with routes, stories, hikes, 4WD tracks, surf, fishing, fuel logs, and analog photos.">
 <meta name="twitter:image" content="https://fujiroadtrip.com/sticker.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
@@ -202,7 +202,8 @@ body { margin:0; font-family: system-ui; }
 
 .hike-menu-icon img,
 .fish-menu-icon img,
-.surf-menu-icon img {
+.surf-menu-icon img,
+.fourwd-menu-icon img {
   display: block;
   width: 100%;
   height: 100%;
@@ -457,9 +458,105 @@ body { margin:0; font-family: system-ui; }
   color: #0369a1;
 }
 
-.contact-panel {
+.fourwd-panel {
   position: fixed;
   top: 376px;
+  right: 20px;
+  z-index: 1000;
+  font-size: 12px;
+}
+
+.fourwd-menu-button {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: #f7f1df;
+  color: #78350f;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  cursor: pointer;
+  padding: 0;
+}
+
+.fourwd-menu-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.fourwd-menu-arrow {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.85);
+  color: white;
+  font-size: 12px;
+  line-height: 1;
+  transition: transform 0.18s ease;
+}
+
+.fourwd-panel.open .fourwd-menu-arrow {
+  transform: rotate(180deg);
+}
+
+.fourwd-menu-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 66px;
+  width: 168px;
+  max-height: 230px;
+  overflow: auto;
+  background: rgba(255,255,255,0.94);
+  padding: 8px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.fourwd-panel.open .fourwd-menu-content {
+  display: block;
+}
+
+.fourwd-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.fourwd-stats {
+  display: grid;
+  gap: 3px;
+  margin-top: 7px;
+  color: #333;
+}
+
+.fourwd-stats span {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.fourwd-stats strong {
+  color: #92400e;
+}
+
+.contact-panel {
+  position: fixed;
+  top: 442px;
   right: 20px;
   z-index: 1000;
 }
@@ -605,7 +702,8 @@ body { margin:0; font-family: system-ui; }
 }
 
 .poi-marker.image-marker,
-.hike-marker {
+.hike-marker,
+.fourwd-marker {
   width: 34px;
   height: 34px;
   display: grid;
@@ -619,7 +717,8 @@ body { margin:0; font-family: system-ui; }
 }
 
 .poi-marker.image-marker img,
-.hike-marker img {
+.hike-marker img,
+.fourwd-marker img {
   display: block;
   width: 100% !important;
   height: 100% !important;
@@ -1214,6 +1313,22 @@ body { margin:0; font-family: system-ui; }
   </div>
 </div>
 
+<div class="fourwd-panel" id="fourwdPanel">
+  <button class="fourwd-menu-button" id="fourwdMenuButton" type="button" aria-label="4WD tracks layer" aria-expanded="false" aria-controls="fourwdMenuContent">
+    <span class="fourwd-menu-icon"><img src="icon-4wd.png" alt=""></span>
+    <span class="fourwd-menu-arrow">⌄</span>
+  </button>
+  <div class="fourwd-menu-content" id="fourwdMenuContent">
+    <label class="fourwd-toggle">
+      <input type="checkbox" id="fourwdToggle">
+      <span>4WD tracks</span>
+    </label>
+    <div class="fourwd-stats" id="fourwdStats">
+      <span>No 4WD tracks loaded</span>
+    </div>
+  </div>
+</div>
+
 <div class="contact-panel">
   <a class="contact-button" href="mailto:fujiroadtrip@gmail.com" aria-label="Email Fuji Road Trip">
     <img src="contact-us-button.png" alt="Contact us" />
@@ -1234,6 +1349,7 @@ body { margin:0; font-family: system-ui; }
       <li><strong>Hikes:</strong> open the walking icon to toggle hiking routes and trail stats.</li>
       <li><strong>Surf:</strong> open the blue wave icon to show surf spots we have logged.</li>
       <li><strong>Fishing:</strong> open the fishing icon to see catches, species totals, and fishing notes.</li>
+      <li><strong>4WD tracks:</strong> open the Delica track icon to show the best beach and forest drives.</li>
       <li><strong>Fuel history:</strong> tap the car tile's Fuel history button for ODO, fuel cost, and consumption logs.</li>
       <li><strong>Analog photos:</strong> tap the camera button under the car tile for the film photo gallery.</li>
     </ul>
@@ -1677,6 +1793,8 @@ fishMenuButton.onclick = () => {
     hikeMenuButton.setAttribute("aria-expanded", "false");
     surfPanel.classList.remove("open");
     surfMenuButton.setAttribute("aria-expanded", "false");
+    fourwdPanel.classList.remove("open");
+    fourwdMenuButton.setAttribute("aria-expanded", "false");
   }
 };
 
@@ -1816,6 +1934,8 @@ surfMenuButton.onclick = () => {
     hikeMenuButton.setAttribute("aria-expanded", "false");
     fishPanel.classList.remove("open");
     fishMenuButton.setAttribute("aria-expanded", "false");
+    fourwdPanel.classList.remove("open");
+    fourwdMenuButton.setAttribute("aria-expanded", "false");
   }
 };
 
@@ -1883,6 +2003,140 @@ surfToggle.onchange = () => {
     }
   } else {
     surfLayer.removeFrom(map);
+  }
+};
+
+// === 4WD TRACKS
+const fourwdPanel = document.getElementById("fourwdPanel");
+const fourwdMenuButton = document.getElementById("fourwdMenuButton");
+const fourwdToggle = document.getElementById("fourwdToggle");
+const fourwdStats = document.getElementById("fourwdStats");
+const fourwdLayer = L.featureGroup();
+
+fourwdMenuButton.onclick = () => {
+  let isOpen = fourwdPanel.classList.toggle("open");
+  fourwdMenuButton.setAttribute("aria-expanded", String(isOpen));
+
+  if (isOpen) {
+    hikePanel.classList.remove("open");
+    hikeMenuButton.setAttribute("aria-expanded", "false");
+    fishPanel.classList.remove("open");
+    fishMenuButton.setAttribute("aria-expanded", "false");
+    surfPanel.classList.remove("open");
+    surfMenuButton.setAttribute("aria-expanded", "false");
+  }
+};
+
+function fourwdFeatureToStory(feature) {
+  let properties = feature.properties || {};
+  return {
+    id: properties.id,
+    title: properties.title,
+    date: properties.date,
+    summary: properties.summary,
+    body: properties.body || [],
+    images: properties.images || [],
+    tags: properties.tags || ["4wd"],
+    details: properties.details || {}
+  };
+}
+
+function renderFourwdStats(stats, features) {
+  let difficultyCounts = stats.difficulty_counts || {};
+  let difficultySummary = Object.entries(difficultyCounts)
+    .map(([difficulty, count]) => `${difficulty} ${count}`)
+    .join(" / ");
+
+  let rows = [
+    `<span><span>Tracks</span><strong>${Number(stats.track_count || 0).toLocaleString()}</strong></span>`,
+    `<span><span>Off-road km</span><strong>${Number(stats.distance_km || 0).toLocaleString()}</strong></span>`
+  ];
+
+  if (stats.top_track) {
+    rows.push(`<span><span>Best</span><strong>${escapeHTML(stats.top_track)}</strong></span>`);
+  }
+
+  if (difficultySummary) {
+    rows.push(`<span><span>Difficulty</span><strong>${escapeHTML(difficultySummary)}</strong></span>`);
+  }
+
+  let ranked = (features || [])
+    .map(feature => feature.properties || {})
+    .filter(properties => properties.published !== false)
+    .sort((a, b) => Number(b.rating || 0) - Number(a.rating || 0))
+    .slice(0, 4)
+    .map(properties => `<span><span>${escapeHTML(properties.title || "4WD track")}</span><strong>${"★".repeat(Number(properties.rating || 0))}</strong></span>`);
+
+  fourwdStats.innerHTML = rows.concat(ranked).join("") || "<span>No 4WD tracks loaded</span>";
+}
+
+function addFourwdTracks(data, stats = {}) {
+  fourwdLayer.clearLayers();
+
+  let fourwdIcon = L.divIcon({
+    className: "",
+    html: '<div class="fourwd-marker"><img src="icon-4wd.png" alt=""></div>',
+    iconSize: [34, 34],
+    iconAnchor: [17, 17]
+  });
+
+  let features = data.features || [];
+
+  features.forEach(feature => {
+    let properties = feature.properties || {};
+    if (properties.published === false) return;
+
+    let coordinates = feature.geometry?.coordinates || [];
+    if (coordinates.length < 2) return;
+
+    let latLngs = coordinates.map(coord => [coord[1], coord[0]]);
+    let story = fourwdFeatureToStory(feature);
+
+    L.polyline(latLngs, {
+      color: "#9a3412",
+      weight: 7,
+      opacity: 0.42
+    }).addTo(fourwdLayer);
+
+    L.polyline(latLngs, {
+      color: "#f97316",
+      weight: 4,
+      opacity: 0.92,
+      dashArray: "8 7"
+    }).addTo(fourwdLayer).on("click", () => openStory(story));
+
+    let start = properties.start || coordinates[0];
+    L.marker([start[1], start[0]], {
+      icon: fourwdIcon,
+      title: properties.title || "4WD track",
+      zIndexOffset: 875
+    }).addTo(fourwdLayer).on("click", () => openStory(story));
+  });
+
+  renderFourwdStats(stats, features);
+  fourwdToggle.disabled = fourwdLayer.getLayers().length === 0;
+}
+
+Promise.all([
+  fetch('fourwd-tracks.geojson').then(res => res.ok ? res.json() : { features: [] }),
+  fetch('fourwd_stats.json').then(res => res.ok ? res.json() : {})
+]).then(([tracks, stats]) => {
+  addFourwdTracks(tracks, stats);
+}).catch(error => {
+  console.warn("4WD data not loaded:", error);
+  fourwdStats.innerHTML = "<span>No 4WD tracks loaded</span>";
+  fourwdToggle.disabled = true;
+});
+
+fourwdToggle.onchange = () => {
+  if (fourwdToggle.checked) {
+    fourwdLayer.addTo(map);
+
+    if (fourwdLayer.getLayers().length > 0) {
+      map.fitBounds(fourwdLayer.getBounds(), { padding: [50, 50] });
+    }
+  } else {
+    fourwdLayer.removeFrom(map);
   }
 };
 
