@@ -1,5 +1,34 @@
 [
   {
+    "id": "angourie",
+    "type": "surf",
+    "title": "Angourie",
+    "date": "2026-03-09",
+    "coordinates": [
+      153.36673299999998,
+      -29.4826618
+    ],
+    "marker": "surf",
+    "summary": "Hidden gem",
+    "body": [
+      "I arrived a bit too late to this spot. Saw some guys ripping on small barrels, beautiful sets. By the time I got decided and geared up it wasn't too strong anymore and didn't get crazy waves, but a nice encounter with a menta Ray and a great sunset."
+    ],
+    "images": [],
+    "tags": [
+      "surf"
+    ],
+    "details": {
+      "Surf spot": "Angourie",
+      "Wave size": "1 m / 1.5 m",
+      "Wind": "Side off",
+      "Rating": "3/5",
+      "Crowd": "A bit packed"
+    },
+    "published": true,
+    "source_issue": "51",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/51"
+  },
+  {
     "id": "agnes-water",
     "type": "surf",
     "title": "Agnes water",
