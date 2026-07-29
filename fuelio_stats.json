@@ -1,22 +1,32 @@
 {
-  "updated_at": "2026-07-19T06:38:43Z",
+  "updated_at": "2026-07-29T05:31:29Z",
   "source_files": [
-    "fuelio/exports/vehicle-1-sync.csv"
+    "fuelio/exports/vehicle-1-sync.csv",
+    "macrodroid"
   ],
-  "entries_count": 42,
-  "current_odo": 152283,
+  "entries_count": 43,
+  "current_odo": 152655,
   "trip_start_odo": 144243,
-  "trip_distance_km": 8040,
+  "trip_distance_km": 8412,
   "latest_entry": {
-    "date": "2026-07-11",
-    "odometer": 152283,
-    "liters": 50.02,
-    "consumption_l_per_100km": 13.08,
-    "cost": 99.99,
-    "full_tank": true,
-    "source": "fuelio/exports/vehicle-1-sync.csv"
+    "date": "2026-07-29",
+    "odometer": 152655,
+    "liters": 47.64,
+    "cost": 100.0,
+    "note": "After lift - Barcy",
+    "source": "macrodroid",
+    "id": "5793470b16b5"
   },
   "history": [
+    {
+      "date": "2026-07-29",
+      "odometer": 152655,
+      "liters": 47.64,
+      "cost": 100.0,
+      "note": "After lift - Barcy",
+      "source": "macrodroid",
+      "id": "5793470b16b5"
+    },
     {
       "date": "2026-07-11",
       "odometer": 152283,
@@ -223,21 +233,12 @@
       "note": "uki",
       "full_tank": true,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-03-17",
-      "odometer": 145749,
-      "liters": 47.2,
-      "consumption_l_per_100km": 14.25,
-      "cost": 108.32,
-      "full_tank": true,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 29,
-    "liters": 1108.6,
-    "cost": 2165.26,
+    "fills": 30,
+    "liters": 1156.24,
+    "cost": 2265.26,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
