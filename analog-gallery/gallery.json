@@ -1,5 +1,347 @@
 [
   {
+    "id": "issue-52-1",
+    "title": "Working on flooring in Barcaldine",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-1.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-1.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-2",
+    "title": "Morning reading in sunrise in Longreach",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-2.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-2.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-3",
+    "title": "Slacklining in a dry river bed",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-3.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-3.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-4",
+    "title": "Dry river bed camping",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-4.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-4.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-5",
+    "title": "Spearfishing",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-5.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-5.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-6",
+    "title": "Spearfishing",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-6.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-6.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-7",
+    "title": "Bori profile",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-7.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-7.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-8",
+    "title": "Simon profile",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-8.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-8.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-9",
+    "title": "Whitsunday Island",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-9.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-9.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-10",
+    "title": "Nature halo",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-10.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-10.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-11",
+    "title": "Dark red sky",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-11.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-11.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-12",
+    "title": "Fuji at Rainbow beach",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-12.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-12.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-13",
+    "title": "Rainbow Beach",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-13.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-13.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-14",
+    "title": "Sunrise near Noosa",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-14.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-14.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-15",
+    "title": "Shot in the mirror",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-15.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-15.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-16",
+    "title": "Foggy day in Mullumbimby",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-16.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-16.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-17",
+    "title": "With the sqad of Wilsons Creek",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-17.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-17.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-18",
+    "title": "Lunch in Wilsons Creek",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-18.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-18.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-19",
+    "title": "Building a stone BBQ",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-19.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-19.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-20",
+    "title": "Dylan and his chicken",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-20.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-20.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-21",
+    "title": "Dumpster Diving",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-21.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-21.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-22",
+    "title": "Dumpster Diving",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-22.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-22.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-23",
+    "title": "Huh?",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-23.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-23.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-24",
+    "title": "Ukulele time",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-24.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-24.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-25",
+    "title": "Monstera Deliciosa",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-25.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-25.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-26",
+    "title": "Guitar Time",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-26.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-26.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-27",
+    "title": "Mechanical fixes - Thermostat",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-27.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-27.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-28",
+    "title": "Reflection",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-28.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-28.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-29",
+    "title": "Bracelet Making",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-29.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-29.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-30",
+    "title": "Trees shades",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-30.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-30.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-31",
+    "title": "Kookaburra",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-31.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-31.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-32",
+    "title": "Kookaburra",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-32.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-32.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-33",
+    "title": "Cooking",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-33.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-33.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-34",
+    "title": "Meeting another Delica owner",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-34.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-34.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-35",
+    "title": "Feet scrub",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-35.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-35.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-36",
+    "title": "Ceviche time",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-36.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-36.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-37",
+    "title": "Fueling up for a big trip",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-37.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-37.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
+    "id": "issue-52-38",
+    "title": "Chuck that radiator on the rack",
+    "date": "2026-07-30",
+    "src": "analog-gallery/web/issue-52-38.jpg",
+    "thumb": "analog-gallery/thumbs/issue-52-38.jpg",
+    "source_issue": "52",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/52"
+  },
+  {
     "id": "issue-49-1",
     "title": "Morning Brew...",
     "date": "",
