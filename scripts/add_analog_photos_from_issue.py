@@ -51,6 +51,27 @@ def caption_lines(value):
     return [line.strip().lstrip("-").strip() for line in value.splitlines() if line.strip()]
 
 
+def issue_sort_value(item):
+    try:
+        return int(item.get("source_issue", 0))
+    except (TypeError, ValueError):
+        return 0
+
+
+def photo_sort_value(item):
+    try:
+        return int(str(item.get("id", "")).rsplit("-", 1)[-1])
+    except (TypeError, ValueError):
+        return 0
+
+
+def sort_gallery(items):
+    return sorted(
+        items,
+        key=lambda item: (-issue_sort_value(item), photo_sort_value(item)),
+    )
+
+
 def clear_previous_issue_files(issue_number):
     pattern = f"issue-{issue_number}-*.jpg"
 
@@ -115,7 +136,7 @@ def main():
 
     GALLERY_FILE.parent.mkdir(parents=True, exist_ok=True)
     GALLERY_FILE.write_text(
-        json.dumps(new_items + gallery, indent=2, ensure_ascii=False) + "\n",
+        json.dumps(sort_gallery(new_items + gallery), indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
     RESULT_FILE.write_text(
