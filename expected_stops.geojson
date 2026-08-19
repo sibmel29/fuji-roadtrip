@@ -1,0 +1,719 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 1,
+        "name": "NOW — Barcaldine",
+        "display_date": "Late August 2026",
+        "stay": "Current starting point",
+        "type": "now",
+        "description": "The future itinerary starts from Fuji's latest GPS area around Barcaldine.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.28745,
+          -23.55244
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 1,
+        "name": "Winton",
+        "display_date": "Late August 2026",
+        "stay": "Transit stop",
+        "type": "rest",
+        "description": "Outback run west before turning north-west toward the Barkly.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.04,
+          -22.39
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 1,
+        "name": "Mount Isa",
+        "display_date": "Early September 2026",
+        "stay": "Short stop",
+        "type": "city",
+        "description": "Major resupply point before the Northern Territory crossing.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          139.49,
+          -20.73
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 1,
+        "name": "Katherine / Nitmiluk",
+        "display_date": "Early September 2026",
+        "stay": "Few nights",
+        "type": "nature",
+        "description": "Tropical reset and gorge country before pushing west to Kununurra.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          132.26,
+          -14.47
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 2,
+        "name": "Kununurra",
+        "display_date": "September 2026",
+        "stay": "Kimberley base",
+        "type": "city",
+        "description": "Start of the dry-season Kimberley window.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.74,
+          -15.77
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 2,
+        "name": "Purnululu National Park",
+        "display_date": "September 2026",
+        "stay": "Several nights",
+        "type": "4wd",
+        "description": "Indicative access to the Bungle Bungles. Road conditions will decide the real plan.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.4,
+          -17.49
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 2,
+        "name": "El Questro",
+        "display_date": "September 2026",
+        "stay": "Flexible",
+        "type": "4wd",
+        "description": "Gorges, waterholes and the east Kimberley 4WD chapter.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          127.98,
+          -16.02
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 2,
+        "name": "Manning Gorge",
+        "display_date": "September 2026",
+        "stay": "Few nights",
+        "type": "hike",
+        "description": "One of the key Gibb River Road gorge stops.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          125.72,
+          -16.67
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 2,
+        "name": "Windjana Gorge / Tunnel Creek",
+        "display_date": "Late September 2026",
+        "stay": "Short stop",
+        "type": "nature",
+        "description": "Indicative western Kimberley stop before Derby and Broome.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          124.92,
+          -17.42
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 2,
+        "name": "Broome",
+        "display_date": "Early October 2026",
+        "stay": "Reset stop",
+        "type": "city",
+        "description": "End of the Kimberley window and start of the slow west-coast chapter.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          122.24,
+          -17.96
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 3,
+        "name": "Karijini National Park",
+        "display_date": "October 2026",
+        "stay": "4-6 nights",
+        "type": "hike",
+        "description": "Hancock, Weano, Joffre and Hamersley gorges. One of the major hiking stops.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          118.29,
+          -22.56
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 3,
+        "name": "Exmouth / Cape Range",
+        "display_date": "October 2026",
+        "stay": "Flexible",
+        "type": "nature",
+        "description": "Ningaloo reef, Cape Range and a slower coastal rhythm.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.13,
+          -21.93
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 3,
+        "name": "Coral Bay",
+        "display_date": "Oct - Nov 2026",
+        "stay": "Flexible",
+        "type": "fishing",
+        "description": "Reef, fishing and a gentle break between long driving sections.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.77,
+          -23.14
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 3,
+        "name": "Shark Bay / Francois Peron",
+        "display_date": "November 2026",
+        "stay": "Several nights",
+        "type": "4wd",
+        "description": "Indicative 4WD and coastal wildlife stop.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.53,
+          -25.89
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 3,
+        "name": "Kalbarri",
+        "display_date": "November 2026",
+        "stay": "Few nights",
+        "type": "nature",
+        "description": "Gorges and coast on the way into the Perth pause.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.17,
+          -27.71
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 3,
+        "name": "Perth / Fremantle",
+        "display_date": "Mid/Late November 2026",
+        "stay": "Pause and reset",
+        "type": "city",
+        "description": "Western Australia reset point before the summer south-west chapter.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.86,
+          -31.95
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 5,
+        "name": "Margaret River",
+        "display_date": "December 2026",
+        "stay": "1-3 weeks",
+        "type": "surf",
+        "description": "Surf, Cape to Cape walking, caves and coastline. Intentionally flexible.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          115.07,
+          -33.95
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 5,
+        "name": "Pemberton",
+        "display_date": "December / January",
+        "stay": "Flexible",
+        "type": "nature",
+        "description": "Karri forests and a slower inland south-west stop.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          116.06,
+          -34.44
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 5,
+        "name": "Albany / Denmark",
+        "display_date": "January 2027",
+        "stay": "Flexible",
+        "type": "nature",
+        "description": "South coast beaches, forests and walking.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          117.88,
+          -35.03
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 5,
+        "name": "Esperance / Cape Le Grand",
+        "display_date": "Late January 2027",
+        "stay": "Flexible",
+        "type": "nature",
+        "description": "End of the long western summer before the southern crossing.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          121.89,
+          -33.86
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 6,
+        "name": "Nullarbor / Great Australian Bight",
+        "display_date": "February 2027",
+        "stay": "Transit chapter",
+        "type": "nature",
+        "description": "Indicative Eyre Highway crossing; the route is about the corridor, not exact stops.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          128.88,
+          -31.68
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 6,
+        "name": "Eyre Peninsula",
+        "display_date": "February / March 2027",
+        "stay": "Flexible",
+        "type": "fishing",
+        "description": "Coffin Bay, Lincoln National Park and south coast time.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          135.87,
+          -34.88
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 6,
+        "name": "Grampians / Gariwerd",
+        "display_date": "March 2027",
+        "stay": "Few nights",
+        "type": "hike",
+        "description": "Mountain walking before dropping toward the Great Ocean Road.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          142.39,
+          -37.23
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 6,
+        "name": "Great Ocean Road",
+        "display_date": "March 2027",
+        "stay": "Flexible",
+        "type": "nature",
+        "description": "Scenic coast into Melbourne.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          143.39,
+          -38.66
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 7,
+        "name": "Melbourne ferry point",
+        "display_date": "Late March / April 2027",
+        "stay": "Ferry transition",
+        "type": "ferry",
+        "description": "Tasmania ferry transition. The Bass Strait line is styled differently from the driven route.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.96,
+          -37.81
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 7,
+        "name": "Cradle Mountain",
+        "display_date": "April 2027",
+        "stay": "Few nights",
+        "type": "hike",
+        "description": "Autumn hiking anchor for the Tasmania loop.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.95,
+          -41.68
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 7,
+        "name": "Takayna / West Coast",
+        "display_date": "April 2027",
+        "stay": "Flexible",
+        "type": "nature",
+        "description": "Wild west coast and forest country.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.3,
+          -41.75
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 7,
+        "name": "Hobart / kunanyi",
+        "display_date": "April 2027",
+        "stay": "City and mountain time",
+        "type": "city",
+        "description": "Southern Tasmania base before the Tasman Peninsula and east coast.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          147.33,
+          -42.88
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 7,
+        "name": "Freycinet / Bay of Fires",
+        "display_date": "Late April 2027",
+        "stay": "Flexible",
+        "type": "nature",
+        "description": "East coast Tasmania before returning to Devonport.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.29,
+          -42.15
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 8,
+        "name": "Wilsons Promontory / Gippsland",
+        "display_date": "May 2027",
+        "stay": "Flexible",
+        "type": "nature",
+        "description": "Start of the final inland/high-country route to Sydney.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.37,
+          -39.03
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 8,
+        "name": "Victorian High Country",
+        "display_date": "May - June 2027",
+        "stay": "Flexible",
+        "type": "4wd",
+        "description": "Omeo, Bright and alpine roads as conditions allow.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.96,
+          -36.73
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 8,
+        "name": "Kosciuszko / Jindabyne",
+        "display_date": "Winter 2027",
+        "stay": "Flexible",
+        "type": "hike",
+        "description": "Alpine section before Canberra and the Southern Highlands.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.61,
+          -36.42
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 8,
+        "name": "Canberra",
+        "display_date": "Winter 2027",
+        "stay": "Short stop",
+        "type": "city",
+        "description": "Inland connector toward the Southern Highlands and Sydney.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.13,
+          -35.28
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 8,
+        "name": "Sydney — Fuji's finish",
+        "display_date": "Expected Aug/Sep 2027",
+        "stay": "Final stop",
+        "type": "finish",
+        "description": "END OF AUSTRALIAN ROAD TRIP. Sell Fuji here, then fly to New Zealand.",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.21,
+          -33.87
+        ]
+      }
+    }
+  ]
+}

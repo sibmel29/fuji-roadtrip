@@ -7,6 +7,8 @@ Interactive public map for [fujiroadtrip.com](https://fujiroadtrip.com/): live r
 - `index.html` renders the Leaflet map and floating UI.
 - `route_past.geojson` stores the historic Google Timeline route.
 - `route_live.geojson` stores the current GPX-derived car route.
+- `route_expected.geojson` stores the manually planned future route chapters.
+- `expected_stops.geojson` stores clickable planned stop markers for the Expected Route overlay.
 - `route_meta.json` stores the latest GPS update metadata shown on the site.
 - `car/gpx/` is the upload folder for new car GPX tracks.
 - `car/archive/` stores processed car GPX tracks by month.
@@ -65,6 +67,46 @@ python3 -m http.server 8001
 ```
 
 Then open `http://127.0.0.1:8001/index.html`.
+
+## Expected Route
+
+The **Expected Route** overlay is a manually curated future itinerary. It is intentionally separate from the real GPS data:
+
+- Actual travelled route: `route_past.geojson` and `route_live.geojson`
+- Planned future route: `route_expected.geojson`
+- Planned stop popups: `expected_stops.geojson`
+
+The expected route is shown as dashed, semi-transparent chapter lines and is on by default. Visitors can toggle it from the small dashed-route button under the map style buttons. Toggling it does not zoom the map or change the travelled route slider.
+
+Edit `route_expected.geojson` to change future chapter geometry, dates, colours, or descriptions. Each route feature uses GeoJSON longitude/latitude coordinates and metadata like:
+
+```json
+{
+  "status": "expected",
+  "chapter": 3,
+  "name": "Red Gorges to Ningaloo Blue",
+  "start_date": "2026-10-05",
+  "end_date": "2026-11-15",
+  "display_date": "Oct - mid Nov 2026",
+  "color": "#0f9f9a",
+  "transport": "drive",
+  "active": true,
+  "completed": false
+}
+```
+
+Edit `expected_stops.geojson` to change clickable planned stops. Stop types currently include `now`, `hike`, `surf`, `fishing`, `4wd`, `nature`, `city`, `ferry`, `rest`, and `finish`.
+
+To hide a planned route section after the real GPS trace has been published, edit its feature in `route_expected.geojson` and set:
+
+```json
+"active": false,
+"completed": true
+```
+
+Stops attached to that same chapter will disappear automatically. You can also hide one planned stop by setting `active: false` or `completed: true` on just that stop in `expected_stops.geojson`.
+
+The expected route is not automatically moved into the past route. Real GPX/GPS data remains the source of truth for where Fuji has actually travelled; the expected layer simply hides completed planned sections when you mark them done.
 
 ## Fuelio Sync
 

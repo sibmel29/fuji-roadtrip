@@ -1,0 +1,563 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 1,
+        "name": "Dash to the Tropics",
+        "start_date": "2026-08-28",
+        "end_date": "2026-09-08",
+        "display_date": "Late Aug - early Sep 2026",
+        "color": "#c75f1a",
+        "description": "Barcaldine to Kununurra via Winton, Mount Isa, the Barkly and Katherine.",
+        "focus": "big transit days, outback towns, tropical turn",
+        "transport": "drive",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            145.28745,
+            -23.55244
+          ],
+          [
+            145.29,
+            -23.55
+          ],
+          [
+            143.04,
+            -22.39
+          ],
+          [
+            140.51,
+            -20.71
+          ],
+          [
+            139.49,
+            -20.73
+          ],
+          [
+            138.12,
+            -19.92
+          ],
+          [
+            136.27,
+            -19.73
+          ],
+          [
+            134.19,
+            -19.65
+          ],
+          [
+            133.39,
+            -16.27
+          ],
+          [
+            132.72,
+            -14.92
+          ],
+          [
+            132.26,
+            -14.47
+          ],
+          [
+            131.11,
+            -15.62
+          ],
+          [
+            130.48,
+            -15.65
+          ],
+          [
+            128.74,
+            -15.77
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 2,
+        "name": "The Kimberley Window",
+        "start_date": "2026-09-08",
+        "end_date": "2026-10-05",
+        "display_date": "September - early October 2026",
+        "color": "#d59a22",
+        "description": "Kununurra, Purnululu, El Questro and an indicative Gibb River Road crossing to Broome.",
+        "focus": "4WD, gorges, dry-season timing",
+        "transport": "drive",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            128.74,
+            -15.77
+          ],
+          [
+            128.74,
+            -16.12
+          ],
+          [
+            128.23,
+            -17.02
+          ],
+          [
+            128.4,
+            -17.49
+          ],
+          [
+            128.23,
+            -17.02
+          ],
+          [
+            127.98,
+            -16.02
+          ],
+          [
+            127.76,
+            -15.9
+          ],
+          [
+            126.75,
+            -16.13
+          ],
+          [
+            125.72,
+            -16.67
+          ],
+          [
+            125.25,
+            -17.02
+          ],
+          [
+            124.92,
+            -17.42
+          ],
+          [
+            123.63,
+            -17.3
+          ],
+          [
+            122.24,
+            -17.96
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 3,
+        "name": "Red Gorges to Ningaloo Blue",
+        "start_date": "2026-10-05",
+        "end_date": "2026-11-15",
+        "display_date": "Oct - mid Nov 2026",
+        "color": "#0f9f9a",
+        "description": "Broome down the North West coast through Karijini, Ningaloo, Shark Bay and Kalbarri to Perth.",
+        "focus": "gorge hikes, reef, fishing, slow coast",
+        "transport": "drive",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            122.24,
+            -17.96
+          ],
+          [
+            121.19,
+            -19.77
+          ],
+          [
+            118.61,
+            -20.31
+          ],
+          [
+            118.29,
+            -22.56
+          ],
+          [
+            117.75,
+            -22.69
+          ],
+          [
+            115.5,
+            -22.54
+          ],
+          [
+            114.13,
+            -21.93
+          ],
+          [
+            113.77,
+            -23.14
+          ],
+          [
+            113.66,
+            -24.88
+          ],
+          [
+            113.53,
+            -25.89
+          ],
+          [
+            114.17,
+            -27.71
+          ],
+          [
+            114.6,
+            -28.77
+          ],
+          [
+            115.86,
+            -31.95
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 5,
+        "name": "The Long Western Summer",
+        "start_date": "2026-12-05",
+        "end_date": "2027-02-01",
+        "display_date": "Dec 2026 - Jan 2027",
+        "color": "#2f855a",
+        "description": "A flexible summer loop through South-West WA from Perth to Esperance.",
+        "focus": "surf, forests, caves, coastline",
+        "transport": "drive",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            115.86,
+            -31.95
+          ],
+          [
+            115.64,
+            -33.33
+          ],
+          [
+            115.07,
+            -33.95
+          ],
+          [
+            115.16,
+            -34.32
+          ],
+          [
+            116.06,
+            -34.44
+          ],
+          [
+            116.73,
+            -34.98
+          ],
+          [
+            117.35,
+            -34.96
+          ],
+          [
+            117.88,
+            -35.03
+          ],
+          [
+            119.62,
+            -33.95
+          ],
+          [
+            121.89,
+            -33.86
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 6,
+        "name": "Across the Southern Edge",
+        "start_date": "2027-02-01",
+        "end_date": "2027-03-25",
+        "display_date": "February - late March 2027",
+        "color": "#e0574f",
+        "description": "Esperance across the Nullarbor, around the Eyre Peninsula and east through Gariwerd and the Great Ocean Road.",
+        "focus": "desert crossing, coast, national parks",
+        "transport": "drive",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            121.89,
+            -33.86
+          ],
+          [
+            121.78,
+            -32.2
+          ],
+          [
+            123.86,
+            -32.35
+          ],
+          [
+            125.49,
+            -32.27
+          ],
+          [
+            128.88,
+            -31.68
+          ],
+          [
+            131,
+            -31.65
+          ],
+          [
+            133.67,
+            -32.13
+          ],
+          [
+            135.46,
+            -34.62
+          ],
+          [
+            135.87,
+            -34.88
+          ],
+          [
+            137.77,
+            -32.49
+          ],
+          [
+            138.29,
+            -35.5
+          ],
+          [
+            140.78,
+            -37.83
+          ],
+          [
+            142.39,
+            -37.23
+          ],
+          [
+            142.48,
+            -38.38
+          ],
+          [
+            143.39,
+            -38.66
+          ],
+          [
+            144.96,
+            -37.81
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 7,
+        "name": "Bass Strait Ferry",
+        "start_date": "2027-03-25",
+        "end_date": "2027-04-01",
+        "display_date": "Late March / April 2027",
+        "color": "#2563eb",
+        "description": "Indicative Spirit of Tasmania crossing. This is not a driven road.",
+        "focus": "ferry crossing",
+        "transport": "ferry",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            144.96,
+            -37.81
+          ],
+          [
+            146.35,
+            -41.18
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 7,
+        "name": "Tasmania in Autumn",
+        "start_date": "2027-04-01",
+        "end_date": "2027-05-05",
+        "display_date": "April - early May 2027",
+        "color": "#2563eb",
+        "description": "A compact autumn loop through Tasmania's mountains, west coast, Hobart, Tasman Peninsula and east coast.",
+        "focus": "hiking, wild coast, autumn weather",
+        "transport": "drive",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            146.35,
+            -41.18
+          ],
+          [
+            145.95,
+            -41.68
+          ],
+          [
+            146.25,
+            -41.85
+          ],
+          [
+            145.3,
+            -41.75
+          ],
+          [
+            146.6,
+            -42.68
+          ],
+          [
+            147.33,
+            -42.88
+          ],
+          [
+            147.93,
+            -43.1
+          ],
+          [
+            148.29,
+            -42.15
+          ],
+          [
+            148.25,
+            -41.25
+          ],
+          [
+            146.35,
+            -41.18
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 7,
+        "name": "Bass Strait Ferry Return",
+        "start_date": "2027-05-05",
+        "end_date": "2027-05-08",
+        "display_date": "Early May 2027",
+        "color": "#2563eb",
+        "description": "Indicative ferry back to Melbourne before the final inland run to Sydney.",
+        "focus": "ferry crossing",
+        "transport": "ferry",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            146.35,
+            -41.18
+          ],
+          [
+            144.96,
+            -37.81
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "status": "expected",
+        "chapter": 8,
+        "name": "A New Line to Sydney",
+        "start_date": "2027-05-08",
+        "end_date": "2027-09-01",
+        "display_date": "May - Aug/Sep 2027",
+        "color": "#172554",
+        "description": "Final inland and high-country route from Melbourne to Sydney, avoiding a deliberate repeat of the NSW coast.",
+        "focus": "Gippsland, alpine roads, Canberra, Sydney finish",
+        "transport": "drive",
+        "active": true,
+        "completed": false
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            144.96,
+            -37.81
+          ],
+          [
+            146.37,
+            -39.03
+          ],
+          [
+            147.99,
+            -37.88
+          ],
+          [
+            147.6,
+            -36.98
+          ],
+          [
+            146.96,
+            -36.73
+          ],
+          [
+            148.31,
+            -36.5
+          ],
+          [
+            148.61,
+            -36.42
+          ],
+          [
+            149.13,
+            -35.28
+          ],
+          [
+            150.48,
+            -34.55
+          ],
+          [
+            151.21,
+            -33.87
+          ]
+        ]
+      }
+    }
+  ]
+}

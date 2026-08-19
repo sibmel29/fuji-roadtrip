@@ -168,9 +168,115 @@ body { margin:0; font-family: system-ui; }
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
 
-.hike-panel {
+.expected-panel {
   position: fixed;
   top: 178px;
+  right: 20px;
+  z-index: 1000;
+  font-size: 12px;
+}
+
+.expected-menu-button {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: #f7f1df;
+  color: #172554;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  cursor: pointer;
+  padding: 0;
+}
+
+.expected-menu-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.expected-menu-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.expected-menu-arrow {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.85);
+  color: white;
+  font-size: 12px;
+  line-height: 1;
+  transition: transform 0.18s ease;
+}
+
+.expected-panel.open .expected-menu-arrow {
+  transform: rotate(180deg);
+}
+
+.expected-menu-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 66px;
+  width: 190px;
+  max-height: 270px;
+  overflow: auto;
+  background: rgba(255,255,255,0.94);
+  padding: 8px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.expected-panel.open .expected-menu-content {
+  display: block;
+}
+
+.expected-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.expected-legend {
+  display: grid;
+  gap: 4px;
+  margin-top: 8px;
+  color: #333;
+}
+
+.expected-legend span {
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 6px;
+  align-items: center;
+}
+
+.expected-swatch {
+  width: 14px;
+  height: 0;
+  border-top: 3px dashed currentColor;
+}
+
+.hike-panel {
+  position: fixed;
+  top: 244px;
   right: 20px;
   z-index: 1000;
   font-size: 12px;
@@ -268,7 +374,7 @@ body { margin:0; font-family: system-ui; }
 
 .fish-panel {
   position: fixed;
-  top: 244px;
+  top: 310px;
   right: 20px;
   z-index: 1000;
   font-size: 12px;
@@ -364,7 +470,7 @@ body { margin:0; font-family: system-ui; }
 
 .surf-panel {
   position: fixed;
-  top: 310px;
+  top: 376px;
   right: 20px;
   z-index: 1000;
   font-size: 12px;
@@ -460,7 +566,7 @@ body { margin:0; font-family: system-ui; }
 
 .fourwd-panel {
   position: fixed;
-  top: 376px;
+  top: 442px;
   right: 20px;
   z-index: 1000;
   font-size: 12px;
@@ -556,7 +662,7 @@ body { margin:0; font-family: system-ui; }
 
 .contact-panel {
   position: fixed;
-  top: 442px;
+  top: 508px;
   right: 20px;
   z-index: 1000;
 }
@@ -699,6 +805,73 @@ body { margin:0; font-family: system-ui; }
   background: #0369a1;
   color: white;
   font-size: 16px;
+}
+
+.expected-stop {
+  width: 14px;
+  height: 14px;
+  box-sizing: border-box;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: var(--expected-stop-color, #172554);
+  box-shadow: 0 2px 9px rgba(0,0,0,0.28);
+}
+
+.expected-stop.major {
+  width: 20px;
+  height: 20px;
+  border-width: 3px;
+}
+
+.expected-stop.now {
+  background: #ff5500;
+}
+
+.expected-stop.finish {
+  background: #111827;
+}
+
+.expected-stop.ferry {
+  background: #2563eb;
+}
+
+.expected-popup {
+  max-width: 240px;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.expected-popup strong {
+  display: block;
+  margin-bottom: 3px;
+  font-size: 15px;
+}
+
+.expected-popup em {
+  display: block;
+  margin-bottom: 6px;
+  color: #475569;
+}
+
+.expected-popup dl {
+  display: grid;
+  gap: 3px;
+  margin: 6px 0;
+}
+
+.expected-popup div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.expected-popup dt {
+  font-weight: 800;
+}
+
+.expected-popup dd {
+  margin: 0;
+  text-align: right;
 }
 
 .poi-marker.image-marker,
@@ -1265,6 +1438,22 @@ body { margin:0; font-family: system-ui; }
   <button class="map-btn" data-style="sat">🛰</button>
 </div>
 
+<div class="expected-panel" id="expectedPanel">
+  <button class="expected-menu-button" id="expectedMenuButton" type="button" aria-label="Expected route layer" aria-expanded="false" aria-controls="expectedMenuContent">
+    <span class="expected-menu-icon"><img src="icon-expected-route.svg" alt=""></span>
+    <span class="expected-menu-arrow">⌄</span>
+  </button>
+  <div class="expected-menu-content" id="expectedMenuContent">
+    <label class="expected-toggle">
+      <input type="checkbox" id="expectedToggle" checked>
+      <span>Expected Route</span>
+    </label>
+    <div class="expected-legend" id="expectedLegend">
+      <span>Loading plan...</span>
+    </div>
+  </div>
+</div>
+
 <div class="hike-panel" id="hikePanel">
   <button class="hike-menu-button" id="hikeMenuButton" type="button" aria-label="Hike layer" aria-expanded="false" aria-controls="hikeMenuContent">
     <span class="hike-menu-icon"><img src="icon-hike.png" alt=""></span>
@@ -1350,6 +1539,7 @@ body { margin:0; font-family: system-ui; }
       <li><strong>Surf:</strong> open the blue wave icon to show surf spots we have logged.</li>
       <li><strong>Fishing:</strong> open the fishing icon to see catches, species totals, and fishing notes.</li>
       <li><strong>4WD tracks:</strong> open the Delica track icon to show the best beach and forest drives.</li>
+      <li><strong>Expected Route:</strong> open the dashed route icon to see the rough future itinerary.</li>
       <li><strong>Fuel history:</strong> tap the car tile's Fuel history button for ODO, fuel cost, and consumption logs.</li>
       <li><strong>Analog photos:</strong> tap the camera button under the car tile for the film photo gallery.</li>
     </ul>
@@ -1733,6 +1923,20 @@ document.addEventListener("keydown", event => {
 
 const poiLayer = L.featureGroup();
 
+function closeFloatingPanels(exceptId) {
+  [
+    ["expectedPanel", "expectedMenuButton"],
+    ["hikePanel", "hikeMenuButton"],
+    ["fishPanel", "fishMenuButton"],
+    ["surfPanel", "surfMenuButton"],
+    ["fourwdPanel", "fourwdMenuButton"]
+  ].forEach(([panelId, buttonId]) => {
+    if (panelId === exceptId) return;
+    document.getElementById(panelId)?.classList.remove("open");
+    document.getElementById(buttonId)?.setAttribute("aria-expanded", "false");
+  });
+}
+
 function addPOIMarkers(points) {
   const markerTypes = {
     info: "i",
@@ -1789,12 +1993,7 @@ fishMenuButton.onclick = () => {
   fishMenuButton.setAttribute("aria-expanded", String(isOpen));
 
   if (isOpen) {
-    hikePanel.classList.remove("open");
-    hikeMenuButton.setAttribute("aria-expanded", "false");
-    surfPanel.classList.remove("open");
-    surfMenuButton.setAttribute("aria-expanded", "false");
-    fourwdPanel.classList.remove("open");
-    fourwdMenuButton.setAttribute("aria-expanded", "false");
+    closeFloatingPanels("fishPanel");
   }
 };
 
@@ -1930,12 +2129,7 @@ surfMenuButton.onclick = () => {
   surfMenuButton.setAttribute("aria-expanded", String(isOpen));
 
   if (isOpen) {
-    hikePanel.classList.remove("open");
-    hikeMenuButton.setAttribute("aria-expanded", "false");
-    fishPanel.classList.remove("open");
-    fishMenuButton.setAttribute("aria-expanded", "false");
-    fourwdPanel.classList.remove("open");
-    fourwdMenuButton.setAttribute("aria-expanded", "false");
+    closeFloatingPanels("surfPanel");
   }
 };
 
@@ -2018,12 +2212,7 @@ fourwdMenuButton.onclick = () => {
   fourwdMenuButton.setAttribute("aria-expanded", String(isOpen));
 
   if (isOpen) {
-    hikePanel.classList.remove("open");
-    hikeMenuButton.setAttribute("aria-expanded", "false");
-    fishPanel.classList.remove("open");
-    fishMenuButton.setAttribute("aria-expanded", "false");
-    surfPanel.classList.remove("open");
-    surfMenuButton.setAttribute("aria-expanded", "false");
+    closeFloatingPanels("fourwdPanel");
   }
 };
 
@@ -2152,10 +2341,7 @@ hikeMenuButton.onclick = () => {
   hikeMenuButton.setAttribute("aria-expanded", String(isOpen));
 
   if (isOpen) {
-    fishPanel.classList.remove("open");
-    fishMenuButton.setAttribute("aria-expanded", "false");
-    surfPanel.classList.remove("open");
-    surfMenuButton.setAttribute("aria-expanded", "false");
+    closeFloatingPanels("hikePanel");
   }
 };
 
@@ -2282,6 +2468,11 @@ var layers = {
 layers.osm.addTo(map);
 poiLayer.addTo(map);
 
+map.createPane("expectedRoutePane");
+map.getPane("expectedRoutePane").style.zIndex = 350;
+map.createPane("expectedStopPane");
+map.getPane("expectedStopPane").style.zIndex = 560;
+
 // === STYLE SWITCHER
 document.querySelectorAll('.map-btn').forEach(btn => {
   btn.onclick = () => {
@@ -2292,6 +2483,164 @@ document.querySelectorAll('.map-btn').forEach(btn => {
     layers[btn.dataset.style].addTo(map);
   };
 });
+
+// === EXPECTED ROUTE
+const expectedPanel = document.getElementById("expectedPanel");
+const expectedMenuButton = document.getElementById("expectedMenuButton");
+const expectedToggle = document.getElementById("expectedToggle");
+const expectedLegend = document.getElementById("expectedLegend");
+const expectedLayer = L.featureGroup();
+
+expectedMenuButton.onclick = () => {
+  let isOpen = expectedPanel.classList.toggle("open");
+  expectedMenuButton.setAttribute("aria-expanded", String(isOpen));
+
+  if (isOpen) {
+    closeFloatingPanels("expectedPanel");
+  }
+};
+
+function expectedRoutePopup(properties) {
+  let transport = properties.transport === "ferry" ? "Ferry" : "Expected drive";
+  return `
+    <div class="expected-popup">
+      <strong>Chapter ${escapeHTML(properties.chapter || "")} — ${escapeHTML(properties.name || "Expected Route")}</strong>
+      <em>${escapeHTML(properties.display_date || "Approximate timing")}</em>
+      <p>${escapeHTML(properties.description || "")}</p>
+      <dl>
+        <div><dt>Status</dt><dd>Expected</dd></div>
+        <div><dt>Transport</dt><dd>${escapeHTML(transport)}</dd></div>
+        ${properties.focus ? `<div><dt>Focus</dt><dd>${escapeHTML(properties.focus)}</dd></div>` : ""}
+      </dl>
+    </div>
+  `;
+}
+
+function expectedStopPopup(properties) {
+  let chapter = properties.chapter ? `Chapter ${properties.chapter}` : "Expected Route";
+  return `
+    <div class="expected-popup">
+      <strong>${escapeHTML(properties.name || "Planned stop")}</strong>
+      <em>${escapeHTML(chapter)} — ${escapeHTML(properties.display_date || "Approximate timing")}</em>
+      <p>${escapeHTML(properties.description || "")}</p>
+      <dl>
+        ${properties.stay ? `<div><dt>Stay</dt><dd>${escapeHTML(properties.stay)}</dd></div>` : ""}
+        ${properties.type ? `<div><dt>Type</dt><dd>${escapeHTML(properties.type)}</dd></div>` : ""}
+      </dl>
+    </div>
+  `;
+}
+
+function expectedFeatureIsVisible(properties) {
+  return properties.active !== false
+    && properties.completed !== true
+    && properties.status !== "completed";
+}
+
+function renderExpectedLegend(features) {
+  let chapters = new Map();
+
+  features.forEach(feature => {
+    let properties = feature.properties || {};
+    if (!properties.chapter || properties.transport === "ferry") return;
+    if (!chapters.has(properties.chapter)) {
+      chapters.set(properties.chapter, properties);
+    }
+  });
+
+  expectedLegend.innerHTML = [...chapters.values()]
+    .map(properties => `
+      <span>
+        <i class="expected-swatch" style="color: ${escapeHTML(properties.color || "#172554")}"></i>
+        <span>${escapeHTML(properties.name || `Chapter ${properties.chapter}`)}</span>
+      </span>
+    `)
+    .join("") || "<span>No expected route loaded</span>";
+}
+
+function addExpectedRoute(routeData, stopData) {
+  expectedLayer.clearLayers();
+
+  let routeFeatures = (routeData.features || []).filter(feature => expectedFeatureIsVisible(feature.properties || {}));
+  let visibleChapters = new Set(routeFeatures.map(feature => feature.properties?.chapter).filter(Boolean));
+
+  routeFeatures.forEach(feature => {
+    let properties = feature.properties || {};
+    let coordinates = feature.geometry?.coordinates || [];
+    if (coordinates.length < 2) return;
+
+    let latLngs = coordinates.map(coord => [coord[1], coord[0]]);
+    let isFerry = properties.transport === "ferry";
+    let color = properties.color || "#172554";
+
+    L.polyline(latLngs, {
+      pane: "expectedRoutePane",
+      color,
+      weight: isFerry ? 2.5 : 3.5,
+      opacity: isFerry ? 0.72 : 0.76,
+      dashArray: isFerry ? "1 9" : "10 8",
+      lineCap: "round"
+    }).bindPopup(expectedRoutePopup(properties)).addTo(expectedLayer);
+  });
+
+  (stopData.features || []).forEach(feature => {
+    let properties = feature.properties || {};
+    if (!expectedFeatureIsVisible(properties)) return;
+    if (properties.chapter && !visibleChapters.has(properties.chapter)) return;
+
+    let coordinates = feature.geometry?.coordinates || [];
+    if (coordinates.length < 2) return;
+
+    let chapter = routeFeatures.find(routeFeature => routeFeature.properties?.chapter === properties.chapter);
+    let color = properties.type === "now"
+      ? "#ff5500"
+      : properties.type === "finish"
+        ? "#111827"
+        : chapter?.properties?.color || "#172554";
+    let isMajor = ["now", "finish", "ferry"].includes(properties.type);
+    let markerClass = `expected-stop ${isMajor ? "major" : ""} ${escapeHTML(properties.type || "")}`;
+
+    L.marker([coordinates[1], coordinates[0]], {
+      pane: "expectedStopPane",
+      icon: L.divIcon({
+        className: "",
+        html: `<div class="${markerClass}" style="--expected-stop-color: ${escapeHTML(color)}"></div>`,
+        iconSize: isMajor ? [20, 20] : [14, 14],
+        iconAnchor: isMajor ? [10, 10] : [7, 7]
+      }),
+      title: properties.name || "Planned stop",
+      zIndexOffset: properties.type === "finish" ? 780 : 620
+    }).bindTooltip(properties.name || "Planned stop", { direction: "top", offset: [0, -8] })
+      .bindPopup(expectedStopPopup(properties))
+      .addTo(expectedLayer);
+  });
+
+  renderExpectedLegend(routeFeatures);
+  expectedToggle.disabled = expectedLayer.getLayers().length === 0;
+
+  if (expectedToggle.checked && expectedLayer.getLayers().length > 0) {
+    expectedLayer.addTo(map);
+  }
+}
+
+Promise.all([
+  fetch("route_expected.geojson").then(res => res.ok ? res.json() : { features: [] }),
+  fetch("expected_stops.geojson").then(res => res.ok ? res.json() : { features: [] })
+]).then(([routeData, stopData]) => {
+  addExpectedRoute(routeData, stopData);
+}).catch(error => {
+  console.warn("Expected route data not loaded:", error);
+  expectedLegend.innerHTML = "<span>No expected route loaded</span>";
+  expectedToggle.disabled = true;
+});
+
+expectedToggle.onchange = () => {
+  if (expectedToggle.checked) {
+    expectedLayer.addTo(map);
+  } else {
+    expectedLayer.removeFrom(map);
+  }
+};
 
 // === ODO
 Promise.all([
