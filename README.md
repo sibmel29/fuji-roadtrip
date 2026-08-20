@@ -17,6 +17,7 @@ Interactive public map for [fujiroadtrip.com](https://fujiroadtrip.com/): live r
 - `hikes.geojson`, `hikes_stats.json`, and `hike_stories.json` power the hiking overlay.
 - `fishing-log.json` and `surf-log.json` power the fishing and surf overlay menus.
 - `fourwd_segments.json`, `fourwd-tracks.geojson`, and `fourwd_stats.json` power the 4WD tracks overlay.
+- `van-nights.geojson` powers the hidden van-night sleep spot overlay.
 - `analog-gallery/gallery.json` powers the analog photo gallery.
 - `favicon.png`, `favicon-32.png`, `favicon-192.png`, and `apple-touch-icon.png` are the browser/app icons.
 
@@ -67,6 +68,72 @@ python3 -m http.server 8001
 ```
 
 Then open `http://127.0.0.1:8001/index.html`.
+
+## Van Night Extraction Experiment
+
+`scripts/extract_van_nights.py` compares three filters for finding likely nights spent in the van from Google Timeline / Location History JSON.
+
+Run it locally with:
+
+```sh
+python3 scripts/extract_van_nights.py Timeline.json
+```
+
+By default it only checks local dates from `2025-11-01` through the day you run it. Override that with `--start-date YYYY-MM-DD` or `--end-date YYYY-MM-DD` if needed.
+
+It writes separate outputs to `van-nights-output/`:
+
+- `van_nights_strict.json`, `_nightly.geojson`, and `_spots.geojson`
+- `van_nights_balanced.json`, `_nightly.geojson`, and `_spots.geojson`
+- `van_nights_loose.json`, `_nightly.geojson`, and `_spots.geojson`
+- `van_nights_comparison.csv`
+- `van_nights_comparison.json`
+
+The profiles are:
+
+- `strict`: tighter radius, longer stop, clear 8-10pm overlap, grouped only within 250m.
+- `balanced`: default first pass for “settled by around 8pm, not moving for 2+ hours”, grouped within 500m.
+- `loose`: catches sparse Timeline data and phone-off nights, grouped within 1km.
+
+The marker coordinate is now a real observed GPS point, not an averaged midpoint. The script prefers the latest observed point around the settle window and records morning confirmation when the first next-morning point is nearby. Compare `van_nights_comparison.csv` first, inspect `_nightly.geojson` for one marker per detected night, then inspect `_spots.geojson` for tightly grouped unique spots.
+
+## Hidden Van Night Layer
+
+The site includes a casual-secret van-night layer for sleep spots in `van-nights.geojson`.
+
+Unlock flow:
+
+1. Click the Fuji van drawing 7 times.
+2. Enter `donttellthecouncil`.
+3. Use the moon/van icon that appears in the right-side layer menu.
+
+This is an easter egg, not real security. Because the GeoJSON is shipped with the static site, technical visitors could still find it in the public files.
+
+Manual entries can be added later through GitHub's API using the `van_night_entry` repository dispatch event:
+
+```text
+POST https://api.github.com/repos/sibmel29/fuji-roadtrip/dispatches
+```
+
+Body:
+
+```json
+{
+  "event_type": "van_night_entry",
+  "client_payload": {
+    "title": "Quiet beach pull-off",
+    "date": "2026-08-20",
+    "latitude": -25.123456,
+    "longitude": 153.123456,
+    "vibe": "Quiet, good stars",
+    "facilities": "None",
+    "warnings": "Soft sand after rain",
+    "notes": "Arrive late, leave early"
+  }
+}
+```
+
+The workflow appends the spot to `van-nights.geojson` and commits it.
 
 ## Expected Route
 

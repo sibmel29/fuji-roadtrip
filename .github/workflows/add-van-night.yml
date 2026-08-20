@@ -1,0 +1,74 @@
+name: Add Van Night Spot
+
+on:
+  repository_dispatch:
+    types: [van_night_entry]
+  workflow_dispatch:
+    inputs:
+      title:
+        description: Spot title.
+        required: true
+      date:
+        description: Night date, YYYY-MM-DD.
+        required: false
+      latitude:
+        description: Latitude.
+        required: true
+      longitude:
+        description: Longitude.
+        required: true
+      vibe:
+        description: Vibe or recommendation note.
+        required: false
+      facilities:
+        description: Facilities, toilets, water, reception, etc.
+        required: false
+      warnings:
+        description: Issues, ranger risk, noise, safety, etc.
+        required: false
+      notes:
+        description: Longer private note.
+        required: false
+      published:
+        description: true or false.
+        required: false
+        default: "true"
+
+permissions:
+  contents: write
+
+jobs:
+  add-van-night:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Add van night spot
+        env:
+          CLIENT_PAYLOAD: ${{ toJson(github.event.client_payload) }}
+          VAN_NIGHT_TITLE: ${{ github.event.inputs.title }}
+          VAN_NIGHT_DATE: ${{ github.event.inputs.date }}
+          VAN_NIGHT_LATITUDE: ${{ github.event.inputs.latitude }}
+          VAN_NIGHT_LONGITUDE: ${{ github.event.inputs.longitude }}
+          VAN_NIGHT_VIBE: ${{ github.event.inputs.vibe }}
+          VAN_NIGHT_FACILITIES: ${{ github.event.inputs.facilities }}
+          VAN_NIGHT_WARNINGS: ${{ github.event.inputs.warnings }}
+          VAN_NIGHT_NOTES: ${{ github.event.inputs.notes }}
+          VAN_NIGHT_PUBLISHED: ${{ github.event.inputs.published }}
+        run: python scripts/add_van_night_entry.py
+
+      - name: Commit van night spot
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add van-nights.geojson
+          git diff --cached --quiet && echo "No van night changes to commit" && exit 0
+          git commit -m "Add van night spot"
+          git push

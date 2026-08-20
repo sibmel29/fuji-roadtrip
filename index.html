@@ -93,6 +93,9 @@ body { margin:0; font-family: system-ui; }
   margin: 0 auto 9px;
   border-radius: 6px;
   opacity: 0.9;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-drag: none;
 }
 
 .odo-values {
@@ -662,9 +665,196 @@ body { margin:0; font-family: system-ui; }
 
 .contact-panel {
   position: fixed;
+  top: 574px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.van-night-panel {
+  display: none;
+  position: fixed;
   top: 508px;
   right: 20px;
   z-index: 1000;
+  font-size: 12px;
+}
+
+body.camp-unlocked .van-night-panel {
+  display: block;
+}
+
+.van-night-menu-button {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid white;
+  border-radius: 50%;
+  background: #f7f1df;
+  color: #153044;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  cursor: pointer;
+  padding: 0;
+}
+
+.van-night-menu-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.van-night-menu-icon img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.van-night-menu-arrow {
+  position: absolute;
+  right: -3px;
+  bottom: -3px;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.85);
+  color: white;
+  font-size: 12px;
+  line-height: 1;
+  transition: transform 0.18s ease;
+}
+
+.van-night-panel.open .van-night-menu-arrow {
+  transform: rotate(180deg);
+}
+
+.van-night-menu-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 66px;
+  width: 164px;
+  max-height: 230px;
+  overflow: auto;
+  background: rgba(255,255,255,0.94);
+  padding: 8px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.van-night-panel.open .van-night-menu-content {
+  display: block;
+}
+
+.van-night-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.van-night-stats {
+  display: grid;
+  gap: 3px;
+  margin-top: 7px;
+  color: #333;
+}
+
+.van-night-stats strong {
+  color: #153044;
+}
+
+.van-night-marker {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  min-width: 24px;
+  height: 24px;
+  padding: 0 6px;
+  border: 3px solid white;
+  border-radius: 999px;
+  background: #153044;
+  color: #fff7df;
+  font-size: 11px;
+  font-weight: 900;
+  box-shadow: 0 3px 12px rgba(15,23,42,0.35);
+}
+
+.camp-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: none;
+  place-items: center;
+  padding: 20px;
+  background: rgba(4, 12, 18, 0.52);
+  backdrop-filter: blur(4px);
+}
+
+.camp-gate.visible {
+  display: grid;
+}
+
+.camp-gate-card {
+  width: min(320px, 100%);
+  box-sizing: border-box;
+  padding: 18px;
+  border-radius: 14px;
+  background: #fff7df;
+  color: #153044;
+  box-shadow: 0 14px 42px rgba(0,0,0,0.3);
+  animation: fadeIn 0.18s ease;
+}
+
+.camp-gate-card h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.camp-gate-card p {
+  margin: 0 0 12px;
+  color: #52656a;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.camp-gate-card input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 11px;
+  border: 1px solid rgba(21,48,68,0.24);
+  border-radius: 10px;
+  font: inherit;
+}
+
+.camp-gate-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.camp-gate-actions button {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: #153044;
+  color: white;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.camp-gate-actions .secondary {
+  background: #e8ddc5;
+  color: #153044;
 }
 
 .contact-button {
@@ -1421,7 +1611,7 @@ body { margin:0; font-family: system-ui; }
 <div class="left-stack">
   <div class="odo" id="odoTile">
     <img src="fuji-logo.png" class="odo-logo" alt="Fuji logo" />
-    <img src="fuji-van-drawing.png" class="fuji-van-drawing" alt="Drawing of Fuji the Delica" />
+    <img src="fuji-van-drawing.png" class="fuji-van-drawing" id="campUnlockTrigger" alt="Drawing of Fuji the Delica" />
     <div class="odo-values">🚐 Loading...</div>
     <button class="odo-history-button" id="fuelHistoryButton" type="button" aria-label="Fuel history" title="Fuel history">
       <img src="icon-fuel.png" alt="" />
@@ -1430,6 +1620,18 @@ body { margin:0; font-family: system-ui; }
   <button class="analog-gallery-launch" id="analogGalleryLaunch" type="button" aria-label="View analog photo gallery">
     <img src="analog-gallery-button.png" alt="" />
   </button>
+</div>
+
+<div class="camp-gate" id="campGate" aria-hidden="true">
+  <form class="camp-gate-card" id="campGateForm">
+    <h2>Camp mode</h2>
+    <p>Say the road word.</p>
+    <input id="campPasswordInput" type="password" autocomplete="off" aria-label="Camp mode password">
+    <div class="camp-gate-actions">
+      <button type="button" class="secondary" id="campGateCancel">Cancel</button>
+      <button type="submit">Unlock</button>
+    </div>
+  </form>
 </div>
 
 <div class="panel">
@@ -1514,6 +1716,22 @@ body { margin:0; font-family: system-ui; }
     </label>
     <div class="fourwd-stats" id="fourwdStats">
       <span>No 4WD tracks loaded</span>
+    </div>
+  </div>
+</div>
+
+<div class="van-night-panel" id="vanNightPanel">
+  <button class="van-night-menu-button" id="vanNightMenuButton" type="button" aria-label="Van nights layer" aria-expanded="false" aria-controls="vanNightMenuContent">
+    <span class="van-night-menu-icon"><img src="icon-van-night.svg" alt=""></span>
+    <span class="van-night-menu-arrow">⌄</span>
+  </button>
+  <div class="van-night-menu-content" id="vanNightMenuContent">
+    <label class="van-night-toggle">
+      <input type="checkbox" id="vanNightToggle">
+      <span>Van nights</span>
+    </label>
+    <div class="van-night-stats" id="vanNightStats">
+      <span>No spots loaded</span>
     </div>
   </div>
 </div>
@@ -1929,7 +2147,8 @@ function closeFloatingPanels(exceptId) {
     ["hikePanel", "hikeMenuButton"],
     ["fishPanel", "fishMenuButton"],
     ["surfPanel", "surfMenuButton"],
-    ["fourwdPanel", "fourwdMenuButton"]
+    ["fourwdPanel", "fourwdMenuButton"],
+    ["vanNightPanel", "vanNightMenuButton"]
   ].forEach(([panelId, buttonId]) => {
     if (panelId === exceptId) return;
     document.getElementById(panelId)?.classList.remove("open");
@@ -2326,6 +2545,164 @@ fourwdToggle.onchange = () => {
     }
   } else {
     fourwdLayer.removeFrom(map);
+  }
+};
+
+// === VAN NIGHTS
+const CAMP_PASSWORD = "donttellthecouncil";
+const campUnlockTrigger = document.getElementById("campUnlockTrigger");
+const campGate = document.getElementById("campGate");
+const campGateForm = document.getElementById("campGateForm");
+const campPasswordInput = document.getElementById("campPasswordInput");
+const campGateCancel = document.getElementById("campGateCancel");
+const vanNightPanel = document.getElementById("vanNightPanel");
+const vanNightMenuButton = document.getElementById("vanNightMenuButton");
+const vanNightToggle = document.getElementById("vanNightToggle");
+const vanNightStats = document.getElementById("vanNightStats");
+const vanNightLayer = L.featureGroup();
+let campTapCount = 0;
+
+function unlockCampMode() {
+  document.body.classList.add("camp-unlocked");
+  localStorage.setItem("fujiCampMode", "1");
+  campGate.classList.remove("visible");
+  campGate.setAttribute("aria-hidden", "true");
+  campPasswordInput.value = "";
+}
+
+function showCampGate() {
+  campGate.classList.add("visible");
+  campGate.setAttribute("aria-hidden", "false");
+  campPasswordInput.value = "";
+  setTimeout(() => campPasswordInput.focus(), 40);
+}
+
+function hideCampGate() {
+  campGate.classList.remove("visible");
+  campGate.setAttribute("aria-hidden", "true");
+}
+
+if (localStorage.getItem("fujiCampMode") === "1") {
+  document.body.classList.add("camp-unlocked");
+}
+
+campUnlockTrigger.addEventListener("click", () => {
+  campTapCount += 1;
+
+  if (campTapCount >= 7) {
+    campTapCount = 0;
+    showCampGate();
+  }
+});
+
+campGateCancel.onclick = hideCampGate;
+
+campGate.onclick = event => {
+  if (event.target === campGate) {
+    hideCampGate();
+  }
+};
+
+campGateForm.onsubmit = event => {
+  event.preventDefault();
+
+  let attempt = campPasswordInput.value.trim().toLowerCase().replace(/\s+/g, "");
+
+  if (attempt === CAMP_PASSWORD) {
+    unlockCampMode();
+  } else {
+    campPasswordInput.value = "";
+    campPasswordInput.placeholder = "Not that one";
+  }
+};
+
+vanNightMenuButton.onclick = () => {
+  let isOpen = vanNightPanel.classList.toggle("open");
+  vanNightMenuButton.setAttribute("aria-expanded", String(isOpen));
+
+  if (isOpen) {
+    closeFloatingPanels("vanNightPanel");
+  }
+};
+
+function vanNightPopup(feature) {
+  let properties = feature.properties || {};
+  let nights = properties.nights || [];
+  let dates = nights.length <= 18 ? nights.join(", ") : `${nights.slice(0, 18).join(", ")}...`;
+  let note = properties.note || properties.notes || properties.summary || "";
+  let warning = properties.warning || properties.warnings || "";
+  let facilities = properties.facilities || "";
+  let vibe = properties.vibe || properties.rating || "";
+
+  return `
+    <div class="expected-popup">
+      <strong>${escapeHTML(properties.title || "Van night spot")}</strong>
+      <em>${escapeHTML(properties.first_night || "")}${properties.last_night && properties.last_night !== properties.first_night ? ` — ${escapeHTML(properties.last_night)}` : ""}</em>
+      <dl>
+        <div><dt>Nights</dt><dd>${escapeHTML(properties.night_count || nights.length || 1)}</dd></div>
+        ${properties.morning_confirmed_count !== undefined ? `<div><dt>Confirmed</dt><dd>${escapeHTML(properties.morning_confirmed_count)}</dd></div>` : ""}
+        ${vibe ? `<div><dt>Vibe</dt><dd>${escapeHTML(vibe)}</dd></div>` : ""}
+        ${facilities ? `<div><dt>Facilities</dt><dd>${escapeHTML(facilities)}</dd></div>` : ""}
+        ${warning ? `<div><dt>Heads up</dt><dd>${escapeHTML(warning)}</dd></div>` : ""}
+      </dl>
+      ${note ? `<p>${escapeHTML(note)}</p>` : ""}
+      ${dates ? `<p>${escapeHTML(dates)}</p>` : ""}
+    </div>
+  `;
+}
+
+function addVanNightMarkers(data) {
+  vanNightLayer.clearLayers();
+
+  (data.features || []).forEach(feature => {
+    let properties = feature.properties || {};
+    if (properties.published === false) return;
+
+    let coordinates = feature.geometry?.coordinates || [];
+    if (coordinates.length < 2) return;
+
+    let nightCount = Number(properties.night_count || (properties.nights || []).length || 1);
+    let label = nightCount > 9 ? "9+" : String(nightCount);
+
+    L.marker([coordinates[1], coordinates[0]], {
+      icon: L.divIcon({
+        className: "",
+        html: `<div class="van-night-marker">${escapeHTML(label)}</div>`,
+        iconSize: [32, 24],
+        iconAnchor: [16, 12]
+      }),
+      title: properties.title || "Van night spot",
+      zIndexOffset: 980
+    }).bindTooltip(properties.title || "Van night spot", { direction: "top", offset: [0, -10] })
+      .bindPopup(vanNightPopup(feature))
+      .addTo(vanNightLayer);
+  });
+
+  let count = vanNightLayer.getLayers().length;
+  vanNightStats.innerHTML = count
+    ? `<span><span>Sleep spots</span><strong>${count.toLocaleString()}</strong></span>`
+    : "<span>No spots loaded</span>";
+  vanNightToggle.disabled = count === 0;
+}
+
+fetch('van-nights.geojson')
+.then(res => res.ok ? res.json() : { features: [] })
+.then(addVanNightMarkers)
+.catch(error => {
+  console.warn("Van nights data not loaded:", error);
+  vanNightStats.innerHTML = "<span>No spots loaded</span>";
+  vanNightToggle.disabled = true;
+});
+
+vanNightToggle.onchange = () => {
+  if (vanNightToggle.checked) {
+    vanNightLayer.addTo(map);
+
+    if (vanNightLayer.getLayers().length > 0) {
+      map.fitBounds(vanNightLayer.getBounds(), { padding: [50, 50] });
+    }
+  } else {
+    vanNightLayer.removeFrom(map);
   }
 };
 

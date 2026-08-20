@@ -1,0 +1,2636 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "source_files": [
+      "van_nights_strict_spots.geojson",
+      "van_nights_balanced_spots.geojson"
+    ],
+    "dupe_radius_m": 500,
+    "strict_count": 58,
+    "balanced_count": 79,
+    "combined_count": 78,
+    "duplicates_removed": 59,
+    "preference": "strict profile wins when duplicate spots overlap, then morning confirmation/night count/spread"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.603005,
+          -33.555587
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-001",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2025-11-01",
+        "last_night": "2025-11-01",
+        "night_count": 1,
+        "nights": [
+          "2025-11-01"
+        ],
+        "max_spread_m": 65,
+        "dedupe_radius_m": 500,
+        "representative_night": "2025-11-01",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.268361,
+          -33.67555
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-002",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2025-11-02",
+        "last_night": "2025-11-02",
+        "night_count": 1,
+        "nights": [
+          "2025-11-02"
+        ],
+        "max_spread_m": 25,
+        "dedupe_radius_m": 500,
+        "representative_night": "2025-11-02",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.321553,
+          -33.656949
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-003",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2025-11-03",
+        "last_night": "2025-12-13",
+        "night_count": 17,
+        "nights": [
+          "2025-11-03",
+          "2025-11-04",
+          "2025-11-05",
+          "2025-11-09",
+          "2025-11-10",
+          "2025-11-11",
+          "2025-11-12",
+          "2025-11-14",
+          "2025-11-16",
+          "2025-11-17",
+          "2025-11-18",
+          "2025-11-21",
+          "2025-11-23",
+          "2025-11-25",
+          "2025-11-26",
+          "2025-11-27",
+          "2025-12-13"
+        ],
+        "max_spread_m": 843,
+        "dedupe_radius_m": 500,
+        "representative_night": "2025-11-09",
+        "morning_confirmed_count": 15,
+        "title": "Van night spot x17",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.287292,
+          -33.798543
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-004",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2025-11-06",
+        "last_night": "2025-11-07",
+        "night_count": 2,
+        "nights": [
+          "2025-11-06",
+          "2025-11-07"
+        ],
+        "max_spread_m": 559,
+        "dedupe_radius_m": 500,
+        "representative_night": "2025-11-07",
+        "morning_confirmed_count": 2,
+        "title": "Van night spot x2",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.312015,
+          -33.634397
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-005",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2025-11-08",
+        "last_night": "2025-11-08",
+        "night_count": 1,
+        "nights": [
+          "2025-11-08"
+        ],
+        "max_spread_m": 82,
+        "dedupe_radius_m": 500,
+        "representative_night": "2025-11-08",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.92789,
+          -34.31572
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-006",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2025-11-28",
+        "last_night": "2025-11-28",
+        "night_count": 1,
+        "nights": [
+          "2025-11-28"
+        ],
+        "max_spread_m": 717,
+        "dedupe_radius_m": 500,
+        "representative_night": "2025-11-28",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.825522,
+          -35.012034
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-007",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2025-11-29",
+        "last_night": "2025-11-29",
+        "night_count": 1,
+        "nights": [
+          "2025-11-29"
+        ],
+        "max_spread_m": 570,
+        "dedupe_radius_m": 500,
+        "representative_night": "2025-11-29",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.690546,
+          -35.096382
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-008",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2025-11-30",
+        "last_night": "2025-11-30",
+        "night_count": 1,
+        "nights": [
+          "2025-11-30"
+        ],
+        "max_spread_m": 294,
+        "dedupe_radius_m": 500,
+        "representative_night": "2025-11-30",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.287776,
+          -33.780938
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-009",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2025-12-01",
+        "last_night": "2026-02-28",
+        "night_count": 75,
+        "nights": [
+          "2025-12-01",
+          "2025-12-02",
+          "2025-12-03",
+          "2025-12-04",
+          "2025-12-05",
+          "2025-12-08",
+          "2025-12-09",
+          "2025-12-10",
+          "2025-12-12",
+          "2025-12-14",
+          "2025-12-15",
+          "2025-12-16",
+          "2025-12-17",
+          "2025-12-18",
+          "2025-12-19",
+          "2025-12-20",
+          "2025-12-21",
+          "2025-12-22",
+          "2025-12-23",
+          "2025-12-24",
+          "2025-12-26",
+          "2025-12-29",
+          "2025-12-30",
+          "2025-12-31",
+          "2026-01-01",
+          "2026-01-02",
+          "2026-01-03",
+          "2026-01-04",
+          "2026-01-05",
+          "2026-01-06",
+          "2026-01-07",
+          "2026-01-08",
+          "2026-01-09",
+          "2026-01-11",
+          "2026-01-12",
+          "2026-01-14",
+          "2026-01-15",
+          "2026-01-16",
+          "2026-01-18",
+          "2026-01-19",
+          "2026-01-20",
+          "2026-01-21",
+          "2026-01-22",
+          "2026-01-23",
+          "2026-01-26",
+          "2026-01-27",
+          "2026-01-28",
+          "2026-01-29",
+          "2026-01-31",
+          "2026-02-01",
+          "2026-02-02",
+          "2026-02-03",
+          "2026-02-04",
+          "2026-02-05",
+          "2026-02-06",
+          "2026-02-07",
+          "2026-02-08",
+          "2026-02-09",
+          "2026-02-10",
+          "2026-02-11",
+          "2026-02-13",
+          "2026-02-14",
+          "2026-02-15",
+          "2026-02-16",
+          "2026-02-17",
+          "2026-02-18",
+          "2026-02-19",
+          "2026-02-20",
+          "2026-02-22",
+          "2026-02-23",
+          "2026-02-24",
+          "2026-02-25",
+          "2026-02-26",
+          "2026-02-27",
+          "2026-02-28"
+        ],
+        "max_spread_m": 700,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-02-20",
+        "morning_confirmed_count": 57,
+        "title": "Van night spot x75",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.330812,
+          -33.611173
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-010",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2025-12-27",
+        "last_night": "2026-01-25",
+        "night_count": 2,
+        "nights": [
+          "2025-12-27",
+          "2026-01-25"
+        ],
+        "max_spread_m": 279,
+        "dedupe_radius_m": 500,
+        "representative_night": "2025-12-27",
+        "morning_confirmed_count": 2,
+        "title": "Van night spot x2",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.153548,
+          -33.698932
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-011",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2025-12-28",
+        "last_night": "2025-12-28",
+        "night_count": 1,
+        "nights": [
+          "2025-12-28"
+        ],
+        "max_spread_m": 329,
+        "dedupe_radius_m": 500,
+        "representative_night": "2025-12-28",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.328159,
+          -33.634505
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-012",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2025-11-19",
+        "last_night": "2026-01-30",
+        "night_count": 5,
+        "nights": [
+          "2025-11-19",
+          "2025-11-24",
+          "2025-12-25",
+          "2026-01-10",
+          "2026-01-30"
+        ],
+        "max_spread_m": 281,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-01-30",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x5",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.307882,
+          -33.659931
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-013",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-01-24",
+        "last_night": "2026-01-24",
+        "night_count": 1,
+        "nights": [
+          "2026-01-24"
+        ],
+        "max_spread_m": 501,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-01-24",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.642183,
+          -33.029753
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-014",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-02",
+        "last_night": "2026-03-02",
+        "night_count": 1,
+        "nights": [
+          "2026-03-02"
+        ],
+        "max_spread_m": 42,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-02",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.063238,
+          -32.699312
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-015",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-03",
+        "last_night": "2026-03-03",
+        "night_count": 1,
+        "nights": [
+          "2026-03-03"
+        ],
+        "max_spread_m": 125,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-03",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.307503,
+          -32.543679
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-016",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-05",
+        "last_night": "2026-03-05",
+        "night_count": 1,
+        "nights": [
+          "2026-03-05"
+        ],
+        "max_spread_m": 42,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-05",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.502704,
+          -32.171809
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-017",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-07",
+        "last_night": "2026-03-07",
+        "night_count": 1,
+        "nights": [
+          "2026-03-07"
+        ],
+        "max_spread_m": 704,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-07",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.791157,
+          -31.709507
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-018",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-08",
+        "last_night": "2026-03-08",
+        "night_count": 1,
+        "nights": [
+          "2026-03-08"
+        ],
+        "max_spread_m": 4,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-08",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.359293,
+          -29.434757
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-019",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-13",
+        "last_night": "2026-03-14",
+        "night_count": 2,
+        "nights": [
+          "2026-03-13",
+          "2026-03-14"
+        ],
+        "max_spread_m": 594,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-13",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x2",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.359826,
+          -29.360787
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-020",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-15",
+        "last_night": "2026-03-15",
+        "night_count": 1,
+        "nights": [
+          "2026-03-15"
+        ],
+        "max_spread_m": 22,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-15",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.60226,
+          -28.825337
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-021",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-17",
+        "last_night": "2026-03-17",
+        "night_count": 1,
+        "nights": [
+          "2026-03-17"
+        ],
+        "max_spread_m": 77,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-17",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.592128,
+          -28.670605
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-022",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-18",
+        "last_night": "2026-03-18",
+        "night_count": 1,
+        "nights": [
+          "2026-03-18"
+        ],
+        "max_spread_m": 83,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-18",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.545429,
+          -28.545371
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-023",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-19",
+        "last_night": "2026-03-19",
+        "night_count": 1,
+        "nights": [
+          "2026-03-19"
+        ],
+        "max_spread_m": 19,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-19",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.401929,
+          -28.612741
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-024",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-20",
+        "last_night": "2026-03-20",
+        "night_count": 1,
+        "nights": [
+          "2026-03-20"
+        ],
+        "max_spread_m": 7,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-20",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.307053,
+          -28.574679
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-025",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-21",
+        "last_night": "2026-03-21",
+        "night_count": 1,
+        "nights": [
+          "2026-03-21"
+        ],
+        "max_spread_m": 48,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-21",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.239881,
+          -28.581685
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-026",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-22",
+        "last_night": "2026-03-22",
+        "night_count": 1,
+        "nights": [
+          "2026-03-22"
+        ],
+        "max_spread_m": 53,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-22",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.229099,
+          -28.22465
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-027",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-23",
+        "last_night": "2026-03-23",
+        "night_count": 1,
+        "nights": [
+          "2026-03-23"
+        ],
+        "max_spread_m": 36,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-23",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.548707,
+          -28.164213
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-028",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-27",
+        "last_night": "2026-04-10",
+        "night_count": 2,
+        "nights": [
+          "2026-03-27",
+          "2026-04-10"
+        ],
+        "max_spread_m": 456,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-04-10",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x2",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.551401,
+          -28.539413
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-029",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-28",
+        "last_night": "2026-04-11",
+        "night_count": 2,
+        "nights": [
+          "2026-03-28",
+          "2026-04-11"
+        ],
+        "max_spread_m": 241,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-04-11",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x2",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.499033,
+          -28.55422
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-030",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-03-29",
+        "last_night": "2026-03-29",
+        "night_count": 1,
+        "nights": [
+          "2026-03-29"
+        ],
+        "max_spread_m": 196,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-29",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.360717,
+          -28.070041
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-031",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-04-08",
+        "last_night": "2026-04-08",
+        "night_count": 1,
+        "nights": [
+          "2026-04-08"
+        ],
+        "max_spread_m": 357,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-04-08",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.551242,
+          -28.029951
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-032",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-04-09",
+        "last_night": "2026-04-09",
+        "night_count": 1,
+        "nights": [
+          "2026-04-09"
+        ],
+        "max_spread_m": 261,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-04-09",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.42018,
+          -28.566906
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-033",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-04-12",
+        "last_night": "2026-05-03",
+        "night_count": 17,
+        "nights": [
+          "2026-04-12",
+          "2026-04-14",
+          "2026-04-16",
+          "2026-04-19",
+          "2026-04-20",
+          "2026-04-21",
+          "2026-04-22",
+          "2026-04-23",
+          "2026-04-24",
+          "2026-04-25",
+          "2026-04-26",
+          "2026-04-27",
+          "2026-04-28",
+          "2026-04-29",
+          "2026-04-30",
+          "2026-05-01",
+          "2026-05-03"
+        ],
+        "max_spread_m": 136,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-04-30",
+        "morning_confirmed_count": 10,
+        "title": "Van night spot x17",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.357646,
+          -27.735387
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-034",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-05-04",
+        "last_night": "2026-05-04",
+        "night_count": 1,
+        "nights": [
+          "2026-05-04"
+        ],
+        "max_spread_m": 107,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-04",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.087584,
+          -26.558543
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-035",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-05-07",
+        "last_night": "2026-05-11",
+        "night_count": 2,
+        "nights": [
+          "2026-05-07",
+          "2026-05-11"
+        ],
+        "max_spread_m": 86,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-07",
+        "morning_confirmed_count": 2,
+        "title": "Van night spot x2",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.100324,
+          -26.639107
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-036",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-05-10",
+        "last_night": "2026-05-10",
+        "night_count": 1,
+        "nights": [
+          "2026-05-10"
+        ],
+        "max_spread_m": 257,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-10",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.607387,
+          -25.184221
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-037",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-05-13",
+        "last_night": "2026-05-13",
+        "night_count": 1,
+        "nights": [
+          "2026-05-13"
+        ],
+        "max_spread_m": 239,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-13",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.883895,
+          -24.170824
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-038",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-05-14",
+        "last_night": "2026-05-16",
+        "night_count": 3,
+        "nights": [
+          "2026-05-14",
+          "2026-05-15",
+          "2026-05-16"
+        ],
+        "max_spread_m": 129,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-15",
+        "morning_confirmed_count": 2,
+        "title": "Van night spot x3",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          150.792194,
+          -23.163674
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-039",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-05-19",
+        "last_night": "2026-05-19",
+        "night_count": 1,
+        "nights": [
+          "2026-05-19"
+        ],
+        "max_spread_m": 739,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-19",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.536694,
+          -22.122124
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-040",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-05-20",
+        "last_night": "2026-05-20",
+        "night_count": 1,
+        "nights": [
+          "2026-05-20"
+        ],
+        "max_spread_m": 148,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-20",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.187191,
+          -21.16277
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-041",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-05-21",
+        "last_night": "2026-05-21",
+        "night_count": 1,
+        "nights": [
+          "2026-05-21"
+        ],
+        "max_spread_m": 33,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-21",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.153107,
+          -21.002641
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-042",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-05-23",
+        "last_night": "2026-05-23",
+        "night_count": 1,
+        "nights": [
+          "2026-05-23"
+        ],
+        "max_spread_m": 240,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-23",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.188237,
+          -21.103945
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-043",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-05-24",
+        "last_night": "2026-05-24",
+        "night_count": 1,
+        "nights": [
+          "2026-05-24"
+        ],
+        "max_spread_m": 388,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-24",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.990573,
+          -20.895652
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-044",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-05-27",
+        "last_night": "2026-05-27",
+        "night_count": 1,
+        "nights": [
+          "2026-05-27"
+        ],
+        "max_spread_m": 608,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-27",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.499689,
+          -21.169798
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-045",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-05-28",
+        "last_night": "2026-05-28",
+        "night_count": 1,
+        "nights": [
+          "2026-05-28"
+        ],
+        "max_spread_m": 21,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-28",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.788847,
+          -20.285339
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-046",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-05-29",
+        "last_night": "2026-05-29",
+        "night_count": 1,
+        "nights": [
+          "2026-05-29"
+        ],
+        "max_spread_m": 37,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-29",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.740564,
+          -20.47833
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-047",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-05-30",
+        "last_night": "2026-05-30",
+        "night_count": 1,
+        "nights": [
+          "2026-05-30"
+        ],
+        "max_spread_m": 257,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-30",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.695647,
+          -20.27339
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-048",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-05-31",
+        "last_night": "2026-06-01",
+        "night_count": 2,
+        "nights": [
+          "2026-05-31",
+          "2026-06-01"
+        ],
+        "max_spread_m": 189,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-31",
+        "morning_confirmed_count": 2,
+        "title": "Van night spot x2",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.49987,
+          -20.091037
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-049",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-06-02",
+        "last_night": "2026-06-02",
+        "night_count": 1,
+        "nights": [
+          "2026-06-02"
+        ],
+        "max_spread_m": 238,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-06-02",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          148.232135,
+          -20.012897
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-050",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-06-10",
+        "last_night": "2026-06-10",
+        "night_count": 1,
+        "nights": [
+          "2026-06-10"
+        ],
+        "max_spread_m": 430,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-06-10",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.820296,
+          -19.315367
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-051",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-06-14",
+        "last_night": "2026-06-14",
+        "night_count": 1,
+        "nights": [
+          "2026-06-14"
+        ],
+        "max_spread_m": 98,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-06-14",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.290551,
+          -23.552967
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-052",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-06-16",
+        "last_night": "2026-08-19",
+        "night_count": 53,
+        "nights": [
+          "2026-06-16",
+          "2026-06-17",
+          "2026-06-18",
+          "2026-06-19",
+          "2026-06-20",
+          "2026-06-21",
+          "2026-06-23",
+          "2026-06-24",
+          "2026-06-26",
+          "2026-06-27",
+          "2026-06-28",
+          "2026-06-29",
+          "2026-06-30",
+          "2026-07-01",
+          "2026-07-02",
+          "2026-07-03",
+          "2026-07-04",
+          "2026-07-05",
+          "2026-07-06",
+          "2026-07-08",
+          "2026-07-10",
+          "2026-07-12",
+          "2026-07-13",
+          "2026-07-14",
+          "2026-07-15",
+          "2026-07-16",
+          "2026-07-19",
+          "2026-07-20",
+          "2026-07-21",
+          "2026-07-22",
+          "2026-07-23",
+          "2026-07-24",
+          "2026-07-26",
+          "2026-07-27",
+          "2026-07-28",
+          "2026-07-30",
+          "2026-07-31",
+          "2026-08-01",
+          "2026-08-02",
+          "2026-08-03",
+          "2026-08-04",
+          "2026-08-05",
+          "2026-08-06",
+          "2026-08-07",
+          "2026-08-08",
+          "2026-08-09",
+          "2026-08-10",
+          "2026-08-12",
+          "2026-08-13",
+          "2026-08-15",
+          "2026-08-17",
+          "2026-08-18",
+          "2026-08-19"
+        ],
+        "max_spread_m": 581,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-07-22",
+        "morning_confirmed_count": 36,
+        "title": "Van night spot x53",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.283639,
+          -23.552493
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-053",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-07-25",
+        "last_night": "2026-07-25",
+        "night_count": 1,
+        "nights": [
+          "2026-07-25"
+        ],
+        "max_spread_m": 534,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-07-25",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.198317,
+          -23.541749
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-054",
+        "type": "van-night-combined",
+        "profile": "strict+balanced",
+        "first_night": "2026-08-16",
+        "last_night": "2026-08-16",
+        "night_count": 1,
+        "nights": [
+          "2026-08-16"
+        ],
+        "max_spread_m": 262,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-08-16",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "strict",
+        "source_profiles": [
+          "balanced",
+          "strict"
+        ],
+        "duplicate_profiles": "balanced, strict"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.299408,
+          -33.726033
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-055",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2025-11-13",
+        "last_night": "2025-11-13",
+        "night_count": 1,
+        "nights": [
+          "2025-11-13"
+        ],
+        "max_spread_m": 651,
+        "dedupe_radius_m": 500,
+        "representative_night": "2025-11-13",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.300778,
+          -33.733679
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-056",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2025-11-20",
+        "last_night": "2025-11-20",
+        "night_count": 1,
+        "nights": [
+          "2025-11-20"
+        ],
+        "max_spread_m": 245,
+        "dedupe_radius_m": 500,
+        "representative_night": "2025-11-20",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.270904,
+          -33.898563
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-057",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2025-11-22",
+        "last_night": "2025-11-22",
+        "night_count": 1,
+        "nights": [
+          "2025-11-22"
+        ],
+        "max_spread_m": 430,
+        "dedupe_radius_m": 500,
+        "representative_night": "2025-11-22",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.047875,
+          -33.400817
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-058",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2025-12-07",
+        "last_night": "2025-12-07",
+        "night_count": 1,
+        "nights": [
+          "2025-12-07"
+        ],
+        "max_spread_m": 1047,
+        "dedupe_radius_m": 500,
+        "representative_night": "2025-12-07",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.2009,
+          -33.87488
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-059",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2025-12-11",
+        "last_night": "2025-12-11",
+        "night_count": 1,
+        "nights": [
+          "2025-12-11"
+        ],
+        "max_spread_m": 603,
+        "dedupe_radius_m": 500,
+        "representative_night": "2025-12-11",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.243711,
+          -33.842071
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-060",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-02-12",
+        "last_night": "2026-02-12",
+        "night_count": 1,
+        "nights": [
+          "2026-02-12"
+        ],
+        "max_spread_m": 1088,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-02-12",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.841836,
+          -32.817505
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-061",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-03-04",
+        "last_night": "2026-03-04",
+        "night_count": 1,
+        "nights": [
+          "2026-03-04"
+        ],
+        "max_spread_m": 827,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-04",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.514681,
+          -32.4482
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-062",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-03-06",
+        "last_night": "2026-03-06",
+        "night_count": 1,
+        "nights": [
+          "2026-03-06"
+        ],
+        "max_spread_m": 11,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-06",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.978521,
+          -31.187841
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-063",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-03-09",
+        "last_night": "2026-03-09",
+        "night_count": 1,
+        "nights": [
+          "2026-03-09"
+        ],
+        "max_spread_m": 334,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-09",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.043967,
+          -31.047922
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-064",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-03-10",
+        "last_night": "2026-03-10",
+        "night_count": 1,
+        "nights": [
+          "2026-03-10"
+        ],
+        "max_spread_m": 602,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-10",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.997233,
+          -30.744751
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-065",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-03-11",
+        "last_night": "2026-03-11",
+        "night_count": 1,
+        "nights": [
+          "2026-03-11"
+        ],
+        "max_spread_m": 264,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-11",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.435621,
+          -29.121445
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-066",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-03-16",
+        "last_night": "2026-03-16",
+        "night_count": 1,
+        "nights": [
+          "2026-03-16"
+        ],
+        "max_spread_m": 1061,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-16",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.41492,
+          -27.969604
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-067",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-03-26",
+        "last_night": "2026-03-26",
+        "night_count": 1,
+        "nights": [
+          "2026-03-26"
+        ],
+        "max_spread_m": 775,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-03-26",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.915756,
+          -28.237344
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-068",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-04-07",
+        "last_night": "2026-04-07",
+        "night_count": 1,
+        "nights": [
+          "2026-04-07"
+        ],
+        "max_spread_m": 285,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-04-07",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.587066,
+          -28.789832
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-069",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-04-18",
+        "last_night": "2026-04-18",
+        "night_count": 1,
+        "nights": [
+          "2026-04-18"
+        ],
+        "max_spread_m": 277,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-04-18",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          153.222519,
+          -28.594585
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-070",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-05-02",
+        "last_night": "2026-05-02",
+        "night_count": 1,
+        "nights": [
+          "2026-05-02"
+        ],
+        "max_spread_m": 250,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-02",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          152.841573,
+          -26.631073
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-071",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-05-09",
+        "last_night": "2026-05-09",
+        "night_count": 1,
+        "nights": [
+          "2026-05-09"
+        ],
+        "max_spread_m": 664,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-09",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          151.366411,
+          -23.945728
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-072",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-05-17",
+        "last_night": "2026-05-17",
+        "night_count": 1,
+        "nights": [
+          "2026-05-17"
+        ],
+        "max_spread_m": 635,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-17",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.202336,
+          -21.148244
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-073",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-05-25",
+        "last_night": "2026-05-25",
+        "night_count": 1,
+        "nights": [
+          "2026-05-25"
+        ],
+        "max_spread_m": 857,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-25",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          149.197535,
+          -21.142343
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-074",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-05-26",
+        "last_night": "2026-05-26",
+        "night_count": 1,
+        "nights": [
+          "2026-05-26"
+        ],
+        "max_spread_m": 63,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-05-26",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.806678,
+          -19.24102
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-075",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-06-12",
+        "last_night": "2026-06-12",
+        "night_count": 1,
+        "nights": [
+          "2026-06-12"
+        ],
+        "max_spread_m": 565,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-06-12",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          146.869102,
+          -19.111122
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-076",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-06-13",
+        "last_night": "2026-06-13",
+        "night_count": 1,
+        "nights": [
+          "2026-06-13"
+        ],
+        "max_spread_m": 783,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-06-13",
+        "morning_confirmed_count": 1,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          145.267004,
+          -20.648832
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-077",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-06-15",
+        "last_night": "2026-06-15",
+        "night_count": 1,
+        "nights": [
+          "2026-06-15"
+        ],
+        "max_spread_m": 8,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-06-15",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          144.50884,
+          -23.490133
+        ]
+      },
+      "properties": {
+        "id": "strict-balanced-van-night-078",
+        "type": "van-night",
+        "profile": "balanced",
+        "first_night": "2026-07-29",
+        "last_night": "2026-07-29",
+        "night_count": 1,
+        "nights": [
+          "2026-07-29"
+        ],
+        "max_spread_m": 235,
+        "dedupe_radius_m": 500,
+        "representative_night": "2026-07-29",
+        "morning_confirmed_count": 0,
+        "title": "Van night spot x1",
+        "source_profile": "balanced",
+        "source_profiles": [
+          "balanced"
+        ]
+      }
+    }
+  ]
+}
