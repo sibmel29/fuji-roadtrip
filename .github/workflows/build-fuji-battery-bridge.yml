@@ -10,6 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     defaults:
       run:
         working-directory: fuji-battery-bridge
@@ -19,8 +20,10 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
+      - uses: android-actions/setup-android@v3
+      - run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
       - uses: gradle/actions/setup-gradle@v4
-      - run: ./gradlew :app:assembleDebug
+      - run: ./gradlew --no-daemon --stacktrace :app:assembleDebug
       - uses: actions/upload-artifact@v4
         with:
           name: Fuji-Battery-Bridge-APK
