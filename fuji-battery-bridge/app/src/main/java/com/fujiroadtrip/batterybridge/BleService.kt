@@ -234,5 +234,5 @@ class BleService : Service() {
 private fun Double?.orNaN(): Double = this ?: Double.NaN
 
 private fun Double?.format(decimals: Int): String {
-    return if (this == null || isNaN()) "--" else "%.${decimals}f".format(Locale.US, this)
+    return if (this == null || this.isNaN()) "--" else "%.${decimals}f".format(Locale.US, this)
 }
