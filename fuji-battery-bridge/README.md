@@ -69,7 +69,7 @@ Expected notification once packets decode:
 
 ```text
 Fuji Battery Bridge
-BLE OK - sent #153 - 82.0% - 13.28 V - -1.8 A - 0s ago
+BLE OK - MacroDroid #153 - 82.0% - 13.28 V - -32 W - 0s ago
 ```
 
 ## MacroDroid Broadcast
@@ -95,8 +95,10 @@ broadcast_count
 source
 ```
 
-The main numeric extras are still sent as Android numeric types. `broadcast_count` and
-`source` are debug helpers so MacroDroid can prove that it received a specific packet.
+The main numeric extras are still sent as Android numeric types. Live SmartShunt packets
+are throttled to one MacroDroid broadcast per minute, which keeps the drawer useful
+without notification spam. `broadcast_count` and `source` are debug helpers so
+MacroDroid can prove that it received a specific packet.
 
 Version `0.2` deliberately sends a normal custom broadcast without
 `setPackage("com.arlosoft.macrodroid")`, because the MacroDroid log showed no receive

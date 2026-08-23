@@ -62,7 +62,8 @@ class MainActivity : Activity() {
         })
         layout.addView(TextView(this).apply {
             text = "\nMacroDroid intent:\ncom.fujiroadtrip.BATTERY_UPDATE\n\n" +
-                "Extras:\nsoc, voltage, current, power, consumed_ah, time_to_go_minutes, rssi, updated_ms"
+                "Extras:\nsoc, voltage, current, power, consumed_ah, time_to_go_minutes, rssi, updated_ms\n\n" +
+                "Live battery packets are broadcast to MacroDroid once per minute."
         })
 
         setContentView(layout)
@@ -96,7 +97,7 @@ class MainActivity : Activity() {
         val count = BatteryBroadcaster.sendBatteryUpdate(this, values, -55, updatedMs)
         Toast.makeText(
             this,
-            "Test battery broadcast sent (#$count)",
+            "Test broadcast sent (#$count): -30 W",
             Toast.LENGTH_LONG
         ).show()
     }
