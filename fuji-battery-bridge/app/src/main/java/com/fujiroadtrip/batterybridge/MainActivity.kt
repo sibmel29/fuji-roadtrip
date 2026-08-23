@@ -53,6 +53,10 @@ class MainActivity : Activity() {
             setOnClickListener { saveAndStart(prefs) }
         })
         layout.addView(Button(this).apply {
+            text = "SEND TEST BROADCAST"
+            setOnClickListener { sendTestBroadcast() }
+        })
+        layout.addView(Button(this).apply {
             text = "STOP"
             setOnClickListener { stopService(Intent(this@MainActivity, BleService::class.java)) }
         })
@@ -76,6 +80,25 @@ class MainActivity : Activity() {
 
         prefs.edit().putString("mac", normalizedMac).putString("key", normalizedKey).apply()
         requestStart()
+    }
+
+    private fun sendTestBroadcast() {
+        val updatedMs = System.currentTimeMillis()
+        val values = BatteryValues(
+            soc = 77.7,
+            voltage = 13.21,
+            current = -2.3,
+            power = -30.4,
+            consumedAh = -11.5,
+            timeToGoMinutes = 860.0,
+            modelId = 0
+        )
+        val count = BatteryBroadcaster.sendBatteryUpdate(this, values, -55, updatedMs)
+        Toast.makeText(
+            this,
+            "Test battery broadcast sent (#$count)",
+            Toast.LENGTH_LONG
+        ).show()
     }
 
     private fun requestStart() {

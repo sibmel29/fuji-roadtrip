@@ -29,6 +29,7 @@ class BleService : Service() {
     private var smartShuntMac = ""
     private var advertisementKey = ByteArray(0)
     private var lastUpdateMs = 0L
+    private var lastBroadcastCount = 0
     private var lastStatus = "Waiting for SmartShunt..."
 
     override fun onCreate() {
@@ -138,8 +139,13 @@ class BleService : Service() {
         when (val decoded = VictronDecoder.decodeBatteryMonitor(manufacturerData, advertisementKey)) {
             is DecodeResult.Success -> {
                 lastUpdateMs = System.currentTimeMillis()
-                broadcastToMacroDroid(decoded.values, result.rssi, lastUpdateMs)
-                setStatus(formatValues(decoded.values, lastUpdateMs))
+                lastBroadcastCount = BatteryBroadcaster.sendBatteryUpdate(
+                    this,
+                    decoded.values,
+                    result.rssi,
+                    lastUpdateMs
+                )
+                setStatus(formatValues(decoded.values, lastUpdateMs, lastBroadcastCount))
             }
             is DecodeResult.Failure -> {
                 if (decoded.reason == "Encryption key mismatch") {
@@ -151,25 +157,10 @@ class BleService : Service() {
         }
     }
 
-    private fun broadcastToMacroDroid(values: BatteryValues, rssi: Int, updatedMs: Long) {
-        val intent = Intent("com.fujiroadtrip.BATTERY_UPDATE").apply {
-            setPackage("com.arlosoft.macrodroid")
-            putExtra("soc", values.soc.orNaN())
-            putExtra("voltage", values.voltage.orNaN())
-            putExtra("current", values.current.orNaN())
-            putExtra("power", values.power.orNaN())
-            putExtra("consumed_ah", values.consumedAh.orNaN())
-            putExtra("time_to_go_minutes", values.timeToGoMinutes.orNaN())
-            putExtra("rssi", rssi)
-            putExtra("updated_ms", updatedMs)
-        }
-        sendBroadcast(intent)
-    }
-
-    private fun formatValues(values: BatteryValues, updatedMs: Long): String {
+    private fun formatValues(values: BatteryValues, updatedMs: Long, broadcastCount: Int): String {
         val ageSeconds = ((System.currentTimeMillis() - updatedMs) / 1000).coerceAtLeast(0)
-        return "${values.soc.format(1)}% - ${values.voltage.format(2)} V - " +
-            "${values.current.format(1)} A - updated ${ageSeconds}s ago"
+        return "BLE OK - sent #$broadcastCount - ${values.soc.format(1)}% - " +
+            "${values.voltage.format(2)} V - ${values.current.format(1)} A - ${ageSeconds}s ago"
     }
 
     private fun setStatus(text: String) {
@@ -230,8 +221,6 @@ class BleService : Service() {
         private const val STALE_CHECK_MS = 15_000L
     }
 }
-
-private fun Double?.orNaN(): Double = this ?: Double.NaN
 
 private fun Double?.format(decimals: Int): String {
     return if (this == null || this.isNaN()) "--" else "%.${decimals}f".format(Locale.US, this)

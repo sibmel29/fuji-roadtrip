@@ -17,14 +17,16 @@ The app passively scans Victron BLE advertisements. It does not connect to the S
 
 ## Current Status
 
-Implemented in this first iteration:
+Implemented:
 
 - Foreground service with low-power BLE scanning
 - Local-only SmartShunt MAC and 128-bit Victron Instant Readout key storage
 - Victron manufacturer data filtering, company ID `0x02E1`
 - Battery Monitor record decoding for SmartShunt-style packets
 - Notification diagnostics for waiting, Bluetooth off, permission denied, invalid key, scan failure, malformed packet, and stale data
-- Broadcast to MacroDroid with the agreed action and extras
+- Unscoped custom broadcast to MacroDroid with the agreed action and extras
+- `SEND TEST BROADCAST` button for MacroDroid receiver debugging without BLE packets
+- Broadcast counter in the notification and `broadcast_count` extra
 - GitHub Actions debug APK build
 
 The decoder follows Victron's published Bluetooth advertising / extra manufacturer data layout for Battery Monitor records:
@@ -67,7 +69,7 @@ Expected notification once packets decode:
 
 ```text
 Fuji Battery Bridge
-82.0% - 13.28 V - -1.8 A - updated 0s ago
+BLE OK - sent #153 - 82.0% - 13.28 V - -1.8 A - 0s ago
 ```
 
 ## MacroDroid Broadcast
@@ -89,7 +91,24 @@ consumed_ah
 time_to_go_minutes
 rssi
 updated_ms
+broadcast_count
+source
 ```
+
+The main numeric extras are still sent as Android numeric types. `broadcast_count` and
+`source` are debug helpers so MacroDroid can prove that it received a specific packet.
+
+Version `0.2` deliberately sends a normal custom broadcast without
+`setPackage("com.arlosoft.macrodroid")`, because the MacroDroid log showed no receive
+activity for `com.fujiroadtrip.BATTERY_UPDATE`. MacroDroid's receiver macro should
+listen for exactly:
+
+```text
+com.fujiroadtrip.BATTERY_UPDATE
+```
+
+For the first test, add only a diagnostic notification action in MacroDroid, then tap
+`SEND TEST BROADCAST` in the app. Once the trigger fires, map the extras into variables.
 
 Suggested MacroDroid global variables for the next step:
 
