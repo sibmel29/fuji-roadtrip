@@ -83,7 +83,7 @@ class MainActivity : Activity() {
             text = BatterySnapshotStore.render(this@MainActivity)
             textSize = 16f
             typeface = android.graphics.Typeface.MONOSPACE
-        })
+        }
         layout.addView(dashboard)
         layout.addView(TextView(this).apply {
             text = "\nMacroDroid intent:\ncom.fujiroadtrip.BATTERY_UPDATE\n\n" +
