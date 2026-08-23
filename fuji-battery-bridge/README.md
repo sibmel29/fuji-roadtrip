@@ -27,6 +27,7 @@ Implemented:
 - Unscoped custom broadcast to MacroDroid with the agreed action and extras
 - `SEND TEST BROADCAST` button for MacroDroid receiver debugging without BLE packets
 - Broadcast counter in the notification and `broadcast_count` extra
+- Starter battery voltage broadcast from the SmartShunt aux input when Aux input is configured as starter battery voltage
 - GitHub Actions debug APK build
 
 The decoder follows Victron's published Bluetooth advertising / extra manufacturer data layout for Battery Monitor records:
@@ -69,7 +70,7 @@ Expected notification once packets decode:
 
 ```text
 Fuji Battery Bridge
-BLE OK - MacroDroid #153 - 82.0% - 13.28 V - -32 W - 0s ago
+BLE OK - MacroDroid #153 - 82.0% - 13.28 V - -32 W - start 12.62 V - 0s ago
 ```
 
 ## MacroDroid Broadcast
@@ -89,6 +90,8 @@ current
 power
 consumed_ah
 time_to_go_minutes
+starter_voltage
+aux_mode
 rssi
 updated_ms
 broadcast_count
@@ -99,6 +102,10 @@ The main numeric extras are still sent as Android numeric types. Live SmartShunt
 are throttled to one MacroDroid broadcast per minute, which keeps the drawer useful
 without notification spam. `broadcast_count` and `source` are debug helpers so
 MacroDroid can prove that it received a specific packet.
+
+`starter_voltage` is populated when the SmartShunt aux input is set to starter
+battery voltage in VictronConnect. `aux_mode` is included for debugging that
+configuration.
 
 Version `0.2` deliberately sends a normal custom broadcast without
 `setPackage("com.arlosoft.macrodroid")`, because the MacroDroid log showed no receive
@@ -121,6 +128,8 @@ fuji_battery_current
 fuji_battery_power
 fuji_battery_consumed_ah
 fuji_battery_ttg
+fuji_battery_starter_voltage
+fuji_battery_aux_mode
 fuji_battery_rssi
 fuji_battery_updated
 ```

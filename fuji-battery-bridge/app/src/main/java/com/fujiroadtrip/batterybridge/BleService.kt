@@ -168,7 +168,8 @@ class BleService : Service() {
     private fun formatValues(values: BatteryValues, updatedMs: Long, broadcastCount: Int): String {
         val ageSeconds = ((System.currentTimeMillis() - updatedMs) / 1000).coerceAtLeast(0)
         return "BLE OK - MacroDroid #$broadcastCount - ${values.soc.format(1)}% - " +
-            "${values.voltage.format(2)} V - ${values.power.format(0)} W - ${ageSeconds}s ago"
+            "${values.voltage.format(2)} V - ${values.power.format(0)} W - " +
+            "start ${values.starterVoltage.format(2)} V - ${ageSeconds}s ago"
     }
 
     private fun setStatus(text: String) {

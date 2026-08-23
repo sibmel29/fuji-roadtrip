@@ -10,6 +10,8 @@ data class BatteryValues(
     val power: Double?,
     val consumedAh: Double?,
     val timeToGoMinutes: Double?,
+    val starterVoltage: Double?,
+    val auxMode: Int,
     val modelId: Int
 )
 
@@ -51,14 +53,19 @@ object VictronDecoder {
         val ttgRaw = bits.readUnsigned(16)
         val voltageRaw = bits.readSignedRaw(16)
         bits.readUnsigned(16) // Alarm reason; kept for a later UI/debug iteration.
-        bits.readUnsigned(16) // Aux voltage/midpoint/temperature, depending on aux mode.
-        bits.readUnsigned(2) // Aux input mode.
+        val auxRaw = bits.readSignedRaw(16)
+        val auxMode = bits.readUnsigned(2).toInt()
         val currentRaw = bits.readSignedRaw(22)
         val consumedAhRaw = bits.readUnsigned(20)
         val socRaw = bits.readUnsigned(10)
 
         val voltage = if (voltageRaw.unsigned == 0x7FFFL) null else voltageRaw.signed / 100.0
         val current = if (currentRaw.unsigned == 0x3FFFFFL) null else currentRaw.signed / 1000.0
+        val starterVoltage = if (auxMode == AUX_MODE_STARTER_VOLTAGE && auxRaw.unsigned != 0x7FFFL) {
+            auxRaw.signed / 100.0
+        } else {
+            null
+        }
         return BatteryValues(
             soc = if (socRaw == 0x3FFL) null else socRaw / 10.0,
             voltage = voltage,
@@ -66,6 +73,8 @@ object VictronDecoder {
             power = if (voltage != null && current != null) voltage * current else null,
             consumedAh = if (consumedAhRaw == 0xFFFFFL) null else -consumedAhRaw / 10.0,
             timeToGoMinutes = if (ttgRaw == 0xFFFFL) null else ttgRaw.toDouble(),
+            starterVoltage = starterVoltage,
+            auxMode = auxMode,
             modelId = modelId
         )
     }
@@ -135,6 +144,8 @@ object VictronDecoder {
     }
 
     private data class SignedValue(val unsigned: Long, val signed: Long)
+
+    private const val AUX_MODE_STARTER_VOLTAGE = 1
 }
 
 private fun Byte.u8(): Int = toInt() and 0xFF

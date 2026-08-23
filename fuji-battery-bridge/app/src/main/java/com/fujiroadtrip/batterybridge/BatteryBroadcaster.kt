@@ -24,6 +24,8 @@ object BatteryBroadcaster {
             putExtra("power", values.power.orNaN())
             putExtra("consumed_ah", values.consumedAh.orNaN())
             putExtra("time_to_go_minutes", values.timeToGoMinutes.orNaN())
+            putExtra("starter_voltage", values.starterVoltage.orNaN())
+            putExtra("aux_mode", values.auxMode)
             putExtra("rssi", rssi)
             putExtra("updated_ms", updatedMs)
             putExtra("broadcast_count", count)
