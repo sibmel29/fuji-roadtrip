@@ -145,7 +145,7 @@ object VictronDecoder {
 
     private data class SignedValue(val unsigned: Long, val signed: Long)
 
-    private const val AUX_MODE_STARTER_VOLTAGE = 1
+    private const val AUX_MODE_STARTER_VOLTAGE = 0
 }
 
 private fun Byte.u8(): Int = toInt() and 0xFF

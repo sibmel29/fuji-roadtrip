@@ -6,10 +6,13 @@ import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.text.InputType
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
+import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
 import java.util.Locale
@@ -17,6 +20,14 @@ import java.util.Locale
 class MainActivity : Activity() {
     private lateinit var mac: EditText
     private lateinit var key: EditText
+    private lateinit var dashboard: TextView
+    private val handler = Handler(Looper.getMainLooper())
+    private val dashboardRefresh = object : Runnable {
+        override fun run() {
+            refreshDashboard()
+            handler.postDelayed(this, DASHBOARD_REFRESH_MS)
+        }
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,16 +69,47 @@ class MainActivity : Activity() {
         })
         layout.addView(Button(this).apply {
             text = "STOP"
-            setOnClickListener { stopService(Intent(this@MainActivity, BleService::class.java)) }
+            setOnClickListener {
+                stopService(Intent(this@MainActivity, BleService::class.java))
+                BatterySnapshotStore.saveStatus(this@MainActivity, "Stopped")
+                refreshDashboard()
+            }
         })
+        layout.addView(TextView(this).apply {
+            text = "\nLive values"
+            textSize = 20f
+        })
+        dashboard = TextView(this).apply {
+            text = BatterySnapshotStore.render(this@MainActivity)
+            textSize = 16f
+            typeface = android.graphics.Typeface.MONOSPACE
+        })
+        layout.addView(dashboard)
         layout.addView(TextView(this).apply {
             text = "\nMacroDroid intent:\ncom.fujiroadtrip.BATTERY_UPDATE\n\n" +
                 "Extras:\nsoc, voltage, current, power, consumed_ah, time_to_go_minutes, " +
                 "starter_voltage, aux_mode, rssi, updated_ms\n\n" +
-                "Live battery packets are broadcast to MacroDroid once per minute."
+                "The app display refreshes while open. MacroDroid broadcasts are rounded " +
+                "to two decimals and sent once per minute."
         })
 
-        setContentView(layout)
+        setContentView(ScrollView(this).apply { addView(layout) })
+    }
+
+    override fun onResume() {
+        super.onResume()
+        handler.post(dashboardRefresh)
+    }
+
+    override fun onPause() {
+        handler.removeCallbacks(dashboardRefresh)
+        super.onPause()
+    }
+
+    private fun refreshDashboard() {
+        if (::dashboard.isInitialized) {
+            dashboard.text = BatterySnapshotStore.render(this)
+        }
     }
 
     private fun saveAndStart(prefs: android.content.SharedPreferences) {
@@ -87,20 +129,22 @@ class MainActivity : Activity() {
     private fun sendTestBroadcast() {
         val updatedMs = System.currentTimeMillis()
         val values = BatteryValues(
-            soc = 77.7,
-            voltage = 13.21,
-            current = -2.3,
-            power = -30.4,
-            consumedAh = -11.5,
-            timeToGoMinutes = 860.0,
-            starterVoltage = 12.62,
-            auxMode = 1,
+            soc = 66.6,
+            voltage = 12.34,
+            current = -1.23,
+            power = -15.18,
+            consumedAh = -4.5,
+            timeToGoMinutes = 321.0,
+            starterVoltage = 12.34,
+            auxMode = 0,
             modelId = 0
         )
         val count = BatteryBroadcaster.sendBatteryUpdate(this, values, -55, updatedMs)
+        BatterySnapshotStore.save(this, values, -55, updatedMs, count, "TEST broadcast sent")
+        refreshDashboard()
         Toast.makeText(
             this,
-            "Test broadcast sent (#$count): -30 W, start 12.62 V",
+            "TEST broadcast sent (#$count): -15 W, start 12.34 V",
             Toast.LENGTH_LONG
         ).show()
     }
@@ -146,5 +190,6 @@ class MainActivity : Activity() {
 
     companion object {
         private const val REQUEST_PERMISSIONS = 42
+        private const val DASHBOARD_REFRESH_MS = 1_000L
     }
 }

@@ -149,7 +149,16 @@ class BleService : Service() {
                     )
                     lastBroadcastMs = lastUpdateMs
                 }
-                setStatus(formatValues(decoded.values, lastUpdateMs, lastBroadcastCount))
+                val status = formatValues(decoded.values, lastUpdateMs, lastBroadcastCount)
+                BatterySnapshotStore.save(
+                    this,
+                    decoded.values,
+                    result.rssi,
+                    lastUpdateMs,
+                    lastBroadcastCount,
+                    status
+                )
+                setStatus(status)
             }
             is DecodeResult.Failure -> {
                 if (decoded.reason == "Encryption key mismatch") {
@@ -174,6 +183,7 @@ class BleService : Service() {
 
     private fun setStatus(text: String) {
         lastStatus = text
+        BatterySnapshotStore.saveStatus(this, text)
         try {
             getSystemService(NotificationManager::class.java).notify(notificationId, notification(text))
         } catch (e: SecurityException) {

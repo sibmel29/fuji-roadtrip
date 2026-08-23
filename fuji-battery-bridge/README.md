@@ -28,6 +28,7 @@ Implemented:
 - `SEND TEST BROADCAST` button for MacroDroid receiver debugging without BLE packets
 - Broadcast counter in the notification and `broadcast_count` extra
 - Starter battery voltage broadcast from the SmartShunt aux input when Aux input is configured as starter battery voltage
+- A lightweight main-page dashboard showing the latest decoded SmartShunt values
 - GitHub Actions debug APK build
 
 The decoder follows Victron's published Bluetooth advertising / extra manufacturer data layout for Battery Monitor records:
@@ -98,14 +99,21 @@ broadcast_count
 source
 ```
 
-The main numeric extras are still sent as Android numeric types. Live SmartShunt packets
-are throttled to one MacroDroid broadcast per minute, which keeps the drawer useful
-without notification spam. `broadcast_count` and `source` are debug helpers so
-MacroDroid can prove that it received a specific packet.
+The main numeric extras are still sent as Android numeric types and rounded to two
+decimal places before broadcast so MacroDroid drawer labels stay compact. Live
+SmartShunt packets are throttled to one MacroDroid broadcast per minute, which keeps
+the drawer useful without notification spam. `broadcast_count` and `source` are debug
+helpers so MacroDroid can prove that it received a specific packet.
+
+The Android app main page also shows the latest decoded packet while open, including
+house battery values, starter battery voltage, aux mode, RSSI, last update age, and
+MacroDroid broadcast count. This is useful for proving that BLE decoding works before
+debugging the MacroDroid drawer.
 
 `starter_voltage` is populated when the SmartShunt aux input is set to starter
 battery voltage in VictronConnect. `aux_mode` is included for debugging that
-configuration.
+configuration. Victron Instant Readout aux modes are decoded as `0 = starter
+voltage`, `1 = midpoint`, `2 = temperature`, and `3 = disabled`.
 
 Version `0.2` deliberately sends a normal custom broadcast without
 `setPackage("com.arlosoft.macrodroid")`, because the MacroDroid log showed no receive
