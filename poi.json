@@ -1,5 +1,24 @@
 [
   {
+    "id": "dunblane",
+    "title": "Dunblane",
+    "date": "2026-08-24",
+    "coordinates": [
+      145.1970824,
+      -23.5348339
+    ],
+    "marker": "food",
+    "summary": "Farming Fun",
+    "body": [
+      "The farm of our friend David, where we spent heaps of quality time. Hot tub, dirt bike riding, shooting,  nice conversations over barbecue."
+    ],
+    "images": [],
+    "tags": [],
+    "published": false,
+    "source_issue": "54",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/54"
+  },
+  {
     "id": "whitsunday-snorkeling-trip",
     "title": "Whitsunday Snorkeling Trip",
     "date": "2026-06-01",
