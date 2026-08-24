@@ -1,5 +1,30 @@
 [
   {
+    "id": "test",
+    "type": "fishing",
+    "title": "Test",
+    "date": "2026-08-24",
+    "coordinates": [
+      145.2906669,
+      -23.5529201
+    ],
+    "marker": "fish",
+    "summary": "testing",
+    "body": [],
+    "images": [],
+    "tags": [
+      "fishing"
+    ],
+    "details": {
+      "Kept or released": "released",
+      "Bait or lure": "lure",
+      "Conditions": "night"
+    },
+    "published": true,
+    "source_issue": "56",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/56"
+  },
+  {
     "id": "fishing-alva-beach",
     "type": "fishing",
     "title": "Fishing Alva Beach",
