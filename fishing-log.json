@@ -1,5 +1,49 @@
 [
   {
+    "id": "yellowbelly",
+    "type": "fishing",
+    "title": "Yellowbelly",
+    "date": "2026-08-29",
+    "coordinates": [
+      145.2905781,
+      -23.5529369
+    ],
+    "marker": "fish",
+    "summary": "test",
+    "body": [
+      "test"
+    ],
+    "images": [
+      {
+        "src": "test",
+        "alt": "Yellowbelly photo 1"
+      }
+    ],
+    "tags": [
+      "test"
+    ],
+    "details": {
+      "Spot name": "test",
+      "Kept or released": "test",
+      "Bait or lure": "test",
+      "Conditions": "test",
+      "Catches": [
+        {
+          "species": "test"
+        },
+        {
+          "species": "test"
+        }
+      ],
+      "Species": "test",
+      "Count": "",
+      "Size": ""
+    },
+    "published": true,
+    "source_issue": "58",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/58"
+  },
+  {
     "id": "test",
     "type": "fishing",
     "title": "Test",
