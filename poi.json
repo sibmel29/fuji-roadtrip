@@ -1,5 +1,24 @@
 [
   {
+    "id": "super",
+    "title": "Super",
+    "date": "2026-08-29",
+    "coordinates": [
+      145.2905781,
+      -23.5529369
+    ],
+    "marker": "mountain",
+    "summary": "short sentence",
+    "body": [
+      "story"
+    ],
+    "images": [],
+    "tags": [],
+    "published": true,
+    "source_issue": "57",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/57"
+  },
+  {
     "id": "dunblane",
     "title": "Dunblane",
     "date": "2026-08-24",
