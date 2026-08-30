@@ -16,6 +16,15 @@
       "cost": 100.0,
       "note": "After lift - Barcy",
       "id": "5793470b16b5"
+    },
+    {
+      "date": "2026-08-30",
+      "odometer": 152900,
+      "source": "macrodroid",
+      "liters": 39.63,
+      "cost": 93.0,
+      "note": "Leaving barky",
+      "id": "31a8c1e6b8cd"
     }
   ]
 }

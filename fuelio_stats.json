@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-07-29T05:31:29Z",
+  "updated_at": "2026-08-30T01:43:00Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 43,
-  "current_odo": 152655,
+  "entries_count": 44,
+  "current_odo": 152900,
   "trip_start_odo": 144243,
-  "trip_distance_km": 8412,
+  "trip_distance_km": 8657,
   "latest_entry": {
-    "date": "2026-07-29",
-    "odometer": 152655,
-    "liters": 47.64,
-    "cost": 100.0,
-    "note": "After lift - Barcy",
+    "date": "2026-08-30",
+    "odometer": 152900,
+    "liters": 39.63,
+    "cost": 93.0,
+    "note": "Leaving barky",
     "source": "macrodroid",
-    "id": "5793470b16b5"
+    "id": "31a8c1e6b8cd"
   },
   "history": [
+    {
+      "date": "2026-08-30",
+      "odometer": 152900,
+      "liters": 39.63,
+      "cost": 93.0,
+      "note": "Leaving barky",
+      "source": "macrodroid",
+      "id": "31a8c1e6b8cd"
+    },
     {
       "date": "2026-07-29",
       "odometer": 152655,
@@ -223,22 +232,12 @@
       "cost": 90.87,
       "full_tank": true,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-03-23",
-      "odometer": 146058,
-      "liters": 49.92,
-      "consumption_l_per_100km": 16.16,
-      "cost": 122.75,
-      "note": "uki",
-      "full_tank": true,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 30,
-    "liters": 1156.24,
-    "cost": 2265.26,
+    "fills": 31,
+    "liters": 1195.87,
+    "cost": 2358.26,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
