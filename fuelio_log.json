@@ -25,6 +25,15 @@
       "cost": 93.0,
       "note": "Leaving barky",
       "id": "31a8c1e6b8cd"
+    },
+    {
+      "date": "2026-08-31",
+      "odometer": 152203,
+      "source": "macrodroid",
+      "liters": 38.0,
+      "cost": 90.0,
+      "note": "Winton",
+      "id": "b4f0c1eba3c6"
     }
   ]
 }
