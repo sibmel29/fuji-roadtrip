@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-08-31T03:32:57Z",
+  "updated_at": "2026-09-01T01:02:17Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 45,
+  "entries_count": 46,
   "current_odo": 152900,
   "trip_start_odo": 144243,
   "trip_distance_km": 8657,
   "latest_entry": {
-    "date": "2026-08-31",
-    "odometer": 152203,
-    "liters": 38.0,
+    "date": "2026-09-01",
+    "odometer": 152579,
+    "liters": 40.0,
     "cost": 90.0,
-    "note": "Winton",
+    "note": "Cloncurry",
     "source": "macrodroid",
-    "id": "b4f0c1eba3c6"
+    "id": "cfb2cbc360ec"
   },
   "history": [
+    {
+      "date": "2026-09-01",
+      "odometer": 152579,
+      "liters": 40.0,
+      "cost": 90.0,
+      "note": "Cloncurry",
+      "source": "macrodroid",
+      "id": "cfb2cbc360ec"
+    },
     {
       "date": "2026-08-31",
       "odometer": 152203,
@@ -222,22 +231,12 @@
       "note": "crossing Queensland",
       "full_tank": true,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-03-30",
-      "odometer": 146544,
-      "liters": 33.96,
-      "consumption_l_per_100km": 15.87,
-      "cost": 86.24,
-      "note": "casino",
-      "full_tank": true,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 32,
-    "liters": 1233.87,
-    "cost": 2448.26,
+    "fills": 33,
+    "liters": 1273.87,
+    "cost": 2538.26,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
