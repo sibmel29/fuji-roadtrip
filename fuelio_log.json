@@ -43,6 +43,15 @@
       "cost": 90.0,
       "note": "Cloncurry",
       "id": "cfb2cbc360ec"
+    },
+    {
+      "date": "2026-09-03",
+      "odometer": 153790,
+      "source": "macrodroid",
+      "liters": 39.82,
+      "cost": 87.4,
+      "note": "Mt Isa",
+      "id": "ccdeb5bae7cd"
     }
   ]
 }

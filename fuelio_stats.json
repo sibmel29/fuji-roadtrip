@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-09-01T01:02:17Z",
+  "updated_at": "2026-09-02T23:33:19Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 46,
-  "current_odo": 152900,
+  "entries_count": 47,
+  "current_odo": 153790,
   "trip_start_odo": 144243,
-  "trip_distance_km": 8657,
+  "trip_distance_km": 9547,
   "latest_entry": {
-    "date": "2026-09-01",
-    "odometer": 152579,
-    "liters": 40.0,
-    "cost": 90.0,
-    "note": "Cloncurry",
+    "date": "2026-09-03",
+    "odometer": 153790,
+    "liters": 39.82,
+    "cost": 87.4,
+    "note": "Mt Isa",
     "source": "macrodroid",
-    "id": "cfb2cbc360ec"
+    "id": "ccdeb5bae7cd"
   },
   "history": [
+    {
+      "date": "2026-09-03",
+      "odometer": 153790,
+      "liters": 39.82,
+      "cost": 87.4,
+      "note": "Mt Isa",
+      "source": "macrodroid",
+      "id": "ccdeb5bae7cd"
+    },
     {
       "date": "2026-09-01",
       "odometer": 152579,
@@ -221,22 +230,12 @@
       "cost": 98.6,
       "full_tank": true,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-03-31",
-      "odometer": 146697,
-      "liters": 18.31,
-      "consumption_l_per_100km": 11.97,
-      "cost": 44.58,
-      "note": "crossing Queensland",
-      "full_tank": true,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 33,
-    "liters": 1273.87,
-    "cost": 2538.26,
+    "fills": 34,
+    "liters": 1313.69,
+    "cost": 2625.66,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
