@@ -14,6 +14,68 @@
   },
   "features": [
     {
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      142.06844,
+      -21.599687
+    ]
+  },
+  "properties": {
+    "id": "2026-08-31-combo-water-hole",
+    "type": "van-night",
+    "profile": "manual",
+    "source_profile": "manual",
+    "source_profiles": [
+      "manual"
+    ],
+    "title": "Combo Water Hole",
+    "first_night": "2026-08-31",
+    "last_night": "2026-08-31",
+    "night_count": 1,
+    "nights": [
+      "2026-08-31"
+    ],
+    "note": "",
+    "vibe": "",
+    "facilities": "",
+    "warnings": "",
+    "published": true
+  }
+},
+{
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      140.009944,
+      -20.732087
+    ]
+  },
+  "properties": {
+    "id": "2026-09-01-mary-kathleen",
+    "type": "van-night",
+    "profile": "manual",
+    "source_profile": "manual",
+    "source_profiles": [
+      "manual"
+    ],
+    "title": "Mary Kathleen",
+    "first_night": "2026-09-01",
+    "last_night": "2026-09-01",
+    "night_count": 1,
+    "nights": [
+      "2026-09-01"
+    ],
+    "note": "",
+    "vibe": "",
+    "facilities": "",
+    "warnings": "",
+    "published": true
+  }
+},
+    {
       "type": "Feature",
       "geometry": {
         "type": "Point",
