@@ -1,5 +1,45 @@
 [
   {
+    "id": "lawnhill-national-park",
+    "title": "LawnHill national park",
+    "date": "2026-09-03",
+    "coordinates": [
+      138.4821658,
+      -18.7107745
+    ],
+    "marker": "mountain",
+    "summary": "Lawnhill - The beautiful gorges",
+    "body": [
+      "After several hours of driving on corrugated dirt roads, we make it to Lawnhill and spend three days here, hiking and canoeing in the gorge, almost alone. It's one of the most beautiful place I've ever seen."
+    ],
+    "images": [
+      {
+        "src": "poi-media/lawnhill-national-park/1.jpg",
+        "alt": "LawnHill national park photo 1"
+      },
+      {
+        "src": "poi-media/lawnhill-national-park/2.jpg",
+        "alt": "LawnHill national park photo 2"
+      },
+      {
+        "src": "poi-media/lawnhill-national-park/3.jpg",
+        "alt": "LawnHill national park photo 3"
+      },
+      {
+        "src": "poi-media/lawnhill-national-park/4.jpg",
+        "alt": "LawnHill national park photo 4"
+      },
+      {
+        "src": "poi-media/lawnhill-national-park/5.jpg",
+        "alt": "LawnHill national park photo 5"
+      }
+    ],
+    "tags": [],
+    "published": true,
+    "source_issue": "60",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/60"
+  },
+  {
     "id": "dunblane",
     "title": "Dunblane",
     "date": "2026-08-24",
