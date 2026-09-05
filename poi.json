@@ -1,5 +1,67 @@
 [
   {
+    "id": "barcaldine",
+    "title": "Barcaldine",
+    "date": "",
+    "coordinates": [
+      -119.8093025,
+      44.24236485
+    ],
+    "marker": "info",
+    "summary": "Barcaldine - our home for three months.",
+    "body": [
+      "Little did we know when we imagined our work in Australia, that we'd come so far away from the coast to get work. \nThe Union Hotel is a bar/restaurant and hotel that's been just bought out by an ambitious family who needed a hand with the renovation. They was perfect for us, and we delivered almost three month of intense work, mostly painting and laying a new floor in the entire place. We learnt a lot, it was a great experience and opportunity. Thanks to Alby for finding us, and offering us such a nice job, treating us like family.",
+      "The town of barcaldine had so much to offer, we met our friend David who became our rowing coach, and taught us not only rowing, but also shooting various rifles and shotguns, hunting goats, driving big cylinders dirt bikes mustering sheep around his farm, and an overall great bloke to have conversation around the campfire and about every subject.",
+      "What an adventure, will remember Barcaldine forever."
+    ],
+    "images": [
+      {
+        "src": "poi-media/barcaldine/1.jpg",
+        "alt": "Barcaldine photo 1"
+      },
+      {
+        "src": "poi-media/barcaldine/2.jpg",
+        "alt": "Barcaldine photo 2"
+      },
+      {
+        "src": "poi-media/barcaldine/3.jpg",
+        "alt": "Barcaldine photo 3"
+      },
+      {
+        "src": "<!-- Failed to upload \"IMG20260822180701.jpg\" -->",
+        "alt": "Barcaldine photo 4"
+      },
+      {
+        "src": "poi-media/barcaldine/4.jpg",
+        "alt": "Barcaldine photo 5"
+      },
+      {
+        "src": "<!-- Failed to upload \"IMG20260815091439.jpg\" -->",
+        "alt": "Barcaldine photo 6"
+      },
+      {
+        "src": "poi-media/barcaldine/5.jpg",
+        "alt": "Barcaldine photo 7"
+      },
+      {
+        "src": "poi-media/barcaldine/6.jpg",
+        "alt": "Barcaldine photo 8"
+      },
+      {
+        "src": "poi-media/barcaldine/7.jpg",
+        "alt": "Barcaldine photo 9"
+      },
+      {
+        "src": "poi-media/barcaldine/8.jpg",
+        "alt": "Barcaldine photo 10"
+      }
+    ],
+    "tags": [],
+    "published": true,
+    "source_issue": "62",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/62"
+  },
+  {
     "id": "granite-sunset",
     "title": "Granite sunset",
     "date": "",
