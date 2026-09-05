@@ -52,6 +52,15 @@
       "cost": 87.4,
       "note": "Mt Isa",
       "id": "ccdeb5bae7cd"
+    },
+    {
+      "date": "2026-09-04",
+      "odometer": 154164,
+      "source": "macrodroid",
+      "liters": 39.5,
+      "cost": 88.26,
+      "note": "Lawnhill Jerries",
+      "id": "910e561bb46b"
     }
   ]
 }

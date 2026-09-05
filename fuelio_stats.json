@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-09-02T23:33:19Z",
+  "updated_at": "2026-09-05T09:04:21Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 47,
-  "current_odo": 153790,
+  "entries_count": 48,
+  "current_odo": 154164,
   "trip_start_odo": 144243,
-  "trip_distance_km": 9547,
+  "trip_distance_km": 9921,
   "latest_entry": {
-    "date": "2026-09-03",
-    "odometer": 153790,
-    "liters": 39.82,
-    "cost": 87.4,
-    "note": "Mt Isa",
+    "date": "2026-09-04",
+    "odometer": 154164,
+    "liters": 39.5,
+    "cost": 88.26,
+    "note": "Lawnhill Jerries",
     "source": "macrodroid",
-    "id": "ccdeb5bae7cd"
+    "id": "910e561bb46b"
   },
   "history": [
+    {
+      "date": "2026-09-04",
+      "odometer": 154164,
+      "liters": 39.5,
+      "cost": 88.26,
+      "note": "Lawnhill Jerries",
+      "source": "macrodroid",
+      "id": "910e561bb46b"
+    },
     {
       "date": "2026-09-03",
       "odometer": 153790,
@@ -221,21 +230,12 @@
       "cost": 92.65,
       "full_tank": true,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-04-08",
-      "odometer": 147087,
-      "liters": 46.97,
-      "consumption_l_per_100km": 12.04,
-      "cost": 98.6,
-      "full_tank": true,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 34,
-    "liters": 1313.69,
-    "cost": 2625.66,
+    "fills": 35,
+    "liters": 1353.19,
+    "cost": 2713.92,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
