@@ -1,5 +1,29 @@
 [
   {
+    "id": "granite-sunset",
+    "title": "Granite sunset",
+    "date": "",
+    "coordinates": [
+      -93.3897729,
+      41.9383181
+    ],
+    "marker": "sun",
+    "summary": "Beautiful sunset and canp",
+    "body": [
+      "Nice place to camp and see the sunset from"
+    ],
+    "images": [
+      {
+        "src": "poi-media/granite-sunset/1.jpg",
+        "alt": "Granite sunset photo 1"
+      }
+    ],
+    "tags": [],
+    "published": true,
+    "source_issue": "61",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/61"
+  },
+  {
     "id": "lawnhill-national-park",
     "title": "LawnHill national park",
     "date": "2026-09-03",
