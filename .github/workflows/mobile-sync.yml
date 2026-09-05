@@ -6,7 +6,6 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency:
   group: fuji-mobile-sync
@@ -16,58 +15,26 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout mobile sync branch if it exists
-        id: checkout_sync
-        continue-on-error: true
-        uses: actions/checkout@v4
-        with:
-          ref: mobile-sync
-          fetch-depth: 0
-
-      - name: Checkout main and create sync branch
-        if: steps.checkout_sync.outcome == 'failure'
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
-
-      - name: Create mobile-sync branch
-        if: steps.checkout_sync.outcome == 'failure'
-        run: git checkout -b mobile-sync
-
-      - name: Rebase current sync work on latest main
-        run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git fetch origin main
-          git rebase origin/main
 
       - name: Apply mobile item
         env:
           MOBILE_ITEM: ${{ toJson(github.event.client_payload.item) }}
         run: python scripts/apply_mobile_sync_item.py
 
-      - name: Commit and push
+      - name: Commit directly to main
         run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
           git add poi.json fishing-log.json surf-log.json van-nights.geojson
           if git diff --cached --quiet; then
             echo "No new change (duplicate/retry)."
           else
             git commit -m "Add mobile sync item"
-          fi
-          git push --force-with-lease origin mobile-sync
-
-      - name: Create or update one mobile sync PR
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          EXISTING="$(gh pr list --head mobile-sync --base main --state open --json number --jq '.[0].number // empty')"
-          if [ -z "$EXISTING" ]; then
-            gh pr create \
-              --base main \
-              --head mobile-sync \
-              --title "Fuji mobile sync" \
-              --body "Queued mobile logs captured offline from MacroDroid. This PR is reused until merged."
-          else
-            echo "Mobile sync PR #$EXISTING already open; new item added to it."
+            git pull --rebase origin main
+            git push origin main
           fi
