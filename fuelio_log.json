@@ -61,6 +61,15 @@
       "cost": 88.26,
       "note": "Lawnhill Jerries",
       "id": "910e561bb46b"
+    },
+    {
+      "date": "2026-09-06",
+      "odometer": 154468,
+      "source": "macrodroid",
+      "liters": 43.66,
+      "cost": 111.73,
+      "note": "Cammoweal",
+      "id": "bd441f839137"
     }
   ]
 }

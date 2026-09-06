@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-09-05T09:04:21Z",
+  "updated_at": "2026-09-06T02:51:04Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 48,
-  "current_odo": 154164,
+  "entries_count": 49,
+  "current_odo": 154468,
   "trip_start_odo": 144243,
-  "trip_distance_km": 9921,
+  "trip_distance_km": 10225,
   "latest_entry": {
-    "date": "2026-09-04",
-    "odometer": 154164,
-    "liters": 39.5,
-    "cost": 88.26,
-    "note": "Lawnhill Jerries",
+    "date": "2026-09-06",
+    "odometer": 154468,
+    "liters": 43.66,
+    "cost": 111.73,
+    "note": "Cammoweal",
     "source": "macrodroid",
-    "id": "910e561bb46b"
+    "id": "bd441f839137"
   },
   "history": [
+    {
+      "date": "2026-09-06",
+      "odometer": 154468,
+      "liters": 43.66,
+      "cost": 111.73,
+      "note": "Cammoweal",
+      "source": "macrodroid",
+      "id": "bd441f839137"
+    },
     {
       "date": "2026-09-04",
       "odometer": 154164,
@@ -221,21 +230,12 @@
       "consumption_l_per_100km": 19.45,
       "cost": 51.6,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-04-12",
-      "odometer": 147416,
-      "liters": 41.38,
-      "consumption_l_per_100km": 12.58,
-      "cost": 92.65,
-      "full_tank": true,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 35,
-    "liters": 1353.19,
-    "cost": 2713.92,
+    "fills": 36,
+    "liters": 1396.85,
+    "cost": 2825.65,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
