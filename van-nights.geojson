@@ -18,6 +18,39 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          134.537872,
+          -19.369231
+        ]
+      },
+      "properties": {
+        "id": "2026-09-06-quiet-burnt-bush-pull-off",
+        "type": "van-night",
+        "profile": "manual",
+        "source_profile": "manual",
+        "source_profiles": [
+          "manual"
+        ],
+        "title": "Quiet burnt bush pull off",
+        "first_night": "2026-09-06",
+        "last_night": "2026-09-06",
+        "night_count": 1,
+        "nights": [
+          "2026-09-06"
+        ],
+        "note": "Just pulled off for a sleep",
+        "vibe": "Nothing there ",
+        "facilities": "Nada",
+        "warnings": "Nada",
+        "published": true,
+        "created_at": "2026-09-06T23:05:05.610148+00:00",
+        "source_mobile_id": "e1a8d0efc47828ede5a9815a"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           138.529423,
           -18.689511
         ]
