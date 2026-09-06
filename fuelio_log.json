@@ -70,6 +70,15 @@
       "cost": 111.73,
       "note": "Cammoweal",
       "id": "bd441f839137"
+    },
+    {
+      "date": "2026-09-06",
+      "odometer": 154740,
+      "source": "macrodroid",
+      "liters": 36.5,
+      "cost": 94.17,
+      "note": "Barkley roadhouse",
+      "id": "0330dc01897d"
     }
   ]
 }

@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-09-06T02:51:04Z",
+  "updated_at": "2026-09-06T07:14:38Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 49,
-  "current_odo": 154468,
+  "entries_count": 50,
+  "current_odo": 154740,
   "trip_start_odo": 144243,
-  "trip_distance_km": 10225,
+  "trip_distance_km": 10497,
   "latest_entry": {
     "date": "2026-09-06",
-    "odometer": 154468,
-    "liters": 43.66,
-    "cost": 111.73,
-    "note": "Cammoweal",
+    "odometer": 154740,
+    "liters": 36.5,
+    "cost": 94.17,
+    "note": "Barkley roadhouse",
     "source": "macrodroid",
-    "id": "bd441f839137"
+    "id": "0330dc01897d"
   },
   "history": [
+    {
+      "date": "2026-09-06",
+      "odometer": 154740,
+      "liters": 36.5,
+      "cost": 94.17,
+      "note": "Barkley roadhouse",
+      "source": "macrodroid",
+      "id": "0330dc01897d"
+    },
     {
       "date": "2026-09-06",
       "odometer": 154468,
@@ -222,20 +231,12 @@
       "consumption_l_per_100km": 14.2,
       "cost": 50.8,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-05-02",
-      "odometer": 147717,
-      "liters": 20.0,
-      "consumption_l_per_100km": 19.45,
-      "cost": 51.6,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 36,
-    "liters": 1396.85,
-    "cost": 2825.65,
+    "fills": 37,
+    "liters": 1433.35,
+    "cost": 2919.82,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
