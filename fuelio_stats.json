@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-09-06T07:14:38Z",
+  "updated_at": "2026-09-07T00:01:26Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 50,
-  "current_odo": 154740,
+  "entries_count": 51,
+  "current_odo": 154935,
   "trip_start_odo": 144243,
-  "trip_distance_km": 10497,
+  "trip_distance_km": 10692,
   "latest_entry": {
-    "date": "2026-09-06",
-    "odometer": 154740,
-    "liters": 36.5,
-    "cost": 94.17,
-    "note": "Barkley roadhouse",
+    "date": "2026-09-07",
+    "odometer": 154935,
+    "liters": 28.0,
+    "cost": 72.0,
+    "note": "Three ways",
     "source": "macrodroid",
-    "id": "0330dc01897d"
+    "id": "ca8d481f9b57"
   },
   "history": [
+    {
+      "date": "2026-09-07",
+      "odometer": 154935,
+      "liters": 28.0,
+      "cost": 72.0,
+      "note": "Three ways",
+      "source": "macrodroid",
+      "id": "ca8d481f9b57"
+    },
     {
       "date": "2026-09-06",
       "odometer": 154740,
@@ -223,20 +232,12 @@
       "note": "Jacobs well",
       "full_tank": true,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-05-04",
-      "odometer": 147870,
-      "liters": 20.0,
-      "consumption_l_per_100km": 14.2,
-      "cost": 50.8,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 37,
-    "liters": 1433.35,
-    "cost": 2919.82,
+    "fills": 38,
+    "liters": 1461.35,
+    "cost": 2991.82,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }

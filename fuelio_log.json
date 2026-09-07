@@ -79,6 +79,15 @@
       "cost": 94.17,
       "note": "Barkley roadhouse",
       "id": "0330dc01897d"
+    },
+    {
+      "date": "2026-09-07",
+      "odometer": 154935,
+      "source": "macrodroid",
+      "liters": 28.0,
+      "cost": 72.0,
+      "note": "Three ways",
+      "id": "ca8d481f9b57"
     }
   ]
 }
