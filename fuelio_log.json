@@ -88,6 +88,15 @@
       "cost": 72.0,
       "note": "Three ways",
       "id": "ca8d481f9b57"
+    },
+    {
+      "date": "2026-09-08",
+      "odometer": 155330,
+      "source": "macrodroid",
+      "liters": 48.88,
+      "cost": 110.0,
+      "note": "Daly watets",
+      "id": "3bb08881f311"
     }
   ]
 }

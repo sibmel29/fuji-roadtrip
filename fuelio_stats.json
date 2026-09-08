@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-09-07T00:01:26Z",
+  "updated_at": "2026-09-08T00:50:22Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 51,
-  "current_odo": 154935,
+  "entries_count": 52,
+  "current_odo": 155330,
   "trip_start_odo": 144243,
-  "trip_distance_km": 10692,
+  "trip_distance_km": 11087,
   "latest_entry": {
-    "date": "2026-09-07",
-    "odometer": 154935,
-    "liters": 28.0,
-    "cost": 72.0,
-    "note": "Three ways",
+    "date": "2026-09-08",
+    "odometer": 155330,
+    "liters": 48.88,
+    "cost": 110.0,
+    "note": "Daly watets",
     "source": "macrodroid",
-    "id": "ca8d481f9b57"
+    "id": "3bb08881f311"
   },
   "history": [
+    {
+      "date": "2026-09-08",
+      "odometer": 155330,
+      "liters": 48.88,
+      "cost": 110.0,
+      "note": "Daly watets",
+      "source": "macrodroid",
+      "id": "3bb08881f311"
+    },
     {
       "date": "2026-09-07",
       "odometer": 154935,
@@ -222,22 +231,12 @@
       "cost": 70.0,
       "full_tank": true,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-05-04",
-      "odometer": 148023,
-      "liters": 47.23,
-      "consumption_l_per_100km": 14.37,
-      "cost": 83.55,
-      "note": "Jacobs well",
-      "full_tank": true,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 38,
-    "liters": 1461.35,
-    "cost": 2991.82,
+    "fills": 39,
+    "liters": 1510.23,
+    "cost": 3101.82,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
