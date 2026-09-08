@@ -1,5 +1,21 @@
 [
   {
+    "id": "mataranka-thermal",
+    "title": "Mataranka Thermal",
+    "date": "2026-09-08",
+    "coordinates": [
+      133.135094,
+      -14.923104
+    ],
+    "marker": "star",
+    "summary": "Beautiful thermal water ",
+    "body": [],
+    "images": [],
+    "tags": [],
+    "published": true,
+    "source_mobile_id": "40073a7f5d2133dcd825a3dc"
+  },
+  {
     "id": "barcaldine",
     "title": "Barcaldine",
     "date": "",
