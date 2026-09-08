@@ -18,6 +18,39 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          133.131864,
+          -14.922581
+        ]
+      },
+      "properties": {
+        "id": "2026-09-08-mataranka-camp",
+        "type": "van-night",
+        "profile": "manual",
+        "source_profile": "manual",
+        "source_profiles": [
+          "manual"
+        ],
+        "title": "Mataranka Camp",
+        "first_night": "2026-09-08",
+        "last_night": "2026-09-08",
+        "night_count": 1,
+        "nights": [
+          "2026-09-08"
+        ],
+        "note": "Nice access to river ",
+        "vibe": "Free, if you don't pay",
+        "facilities": "toilet and shower, no cell",
+        "warnings": "Empty ",
+        "published": true,
+        "created_at": "2026-09-08T21:58:31.304093+00:00",
+        "source_mobile_id": "e07ea9133b5c39f0d7dd28fb"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           134.537872,
           -19.369231
         ]
