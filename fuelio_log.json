@@ -97,6 +97,15 @@
       "cost": 110.0,
       "note": "Daly watets",
       "id": "3bb08881f311"
+    },
+    {
+      "date": "2026-09-09",
+      "odometer": 155671,
+      "source": "macrodroid",
+      "liters": 43.73,
+      "cost": 91.5,
+      "note": "KATHERINE",
+      "id": "9bbe78ee159e"
     }
   ]
 }

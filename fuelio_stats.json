@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-09-08T00:50:22Z",
+  "updated_at": "2026-09-09T04:17:24Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 52,
-  "current_odo": 155330,
+  "entries_count": 53,
+  "current_odo": 155671,
   "trip_start_odo": 144243,
-  "trip_distance_km": 11087,
+  "trip_distance_km": 11428,
   "latest_entry": {
-    "date": "2026-09-08",
-    "odometer": 155330,
-    "liters": 48.88,
-    "cost": 110.0,
-    "note": "Daly watets",
+    "date": "2026-09-09",
+    "odometer": 155671,
+    "liters": 43.73,
+    "cost": 91.5,
+    "note": "KATHERINE",
     "source": "macrodroid",
-    "id": "3bb08881f311"
+    "id": "9bbe78ee159e"
   },
   "history": [
+    {
+      "date": "2026-09-09",
+      "odometer": 155671,
+      "liters": 43.73,
+      "cost": 91.5,
+      "note": "KATHERINE",
+      "source": "macrodroid",
+      "id": "9bbe78ee159e"
+    },
     {
       "date": "2026-09-08",
       "odometer": 155330,
@@ -222,21 +231,12 @@
       "cost": 54.37,
       "full_tank": true,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-05-08",
-      "odometer": 148350,
-      "liters": 40.82,
-      "consumption_l_per_100km": 12.48,
-      "cost": 70.0,
-      "full_tank": true,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 39,
-    "liters": 1510.23,
-    "cost": 3101.82,
+    "fills": 40,
+    "liters": 1553.96,
+    "cost": 3193.32,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
