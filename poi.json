@@ -1,5 +1,21 @@
 [
   {
+    "id": "edith-camp",
+    "title": "Edith Camp",
+    "date": "2026-09-09",
+    "coordinates": [
+      132.187524,
+      -14.179776
+    ],
+    "marker": "star",
+    "summary": "Nice chill ",
+    "body": [],
+    "images": [],
+    "tags": [],
+    "published": true,
+    "source_mobile_id": "c772498b241dafde65f17e7a"
+  },
+  {
     "id": "mataranka-thermal",
     "title": "Mataranka Thermal",
     "date": "2026-09-08",
