@@ -18,6 +18,39 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          132.419459,
+          -14.319222
+        ]
+      },
+      "properties": {
+        "id": "2026-09-11-camp-katherine-gorge",
+        "type": "van-night",
+        "profile": "manual",
+        "source_profile": "manual",
+        "source_profiles": [
+          "manual"
+        ],
+        "title": "Camp Katherine Gorge",
+        "first_night": "2026-09-11",
+        "last_night": "2026-09-11",
+        "night_count": 1,
+        "nights": [
+          "2026-09-11"
+        ],
+        "note": "",
+        "vibe": "Free if you don't pay",
+        "facilities": "all needed ",
+        "warnings": "Good",
+        "published": true,
+        "created_at": "2026-09-10T21:42:54.306637+00:00",
+        "source_mobile_id": "ad8e8580ec033d5562abf71f"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           133.131864,
           -14.922581
         ]
