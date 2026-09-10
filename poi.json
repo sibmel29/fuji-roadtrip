@@ -1,19 +1,40 @@
 [
   {
     "id": "edith-camp",
-    "title": "Edith Camp",
+    "title": "Leliyn",
     "date": "2026-09-09",
     "coordinates": [
       132.187524,
       -14.179776
     ],
     "marker": "star",
-    "summary": "Nice chill ",
-    "body": [],
-    "images": [],
+    "summary": "Falls to swim and hike",
+    "body": [
+      "Nice big pool with freshwater and no crocodiles.",
+      "The upper pool is even nicer and somewhat more private."
+    ],
+    "images": [
+      {
+        "src": "poi-media/edith-camp/1.jpg",
+        "alt": "Leliyn photo 1"
+      },
+      {
+        "src": "poi-media/edith-camp/2.jpg",
+        "alt": "Leliyn photo 2"
+      },
+      {
+        "src": "poi-media/edith-camp/3.jpg",
+        "alt": "Leliyn photo 3"
+      },
+      {
+        "src": "poi-media/edith-camp/4.jpg",
+        "alt": "Leliyn photo 4"
+      }
+    ],
     "tags": [],
     "published": true,
-    "source_mobile_id": "c772498b241dafde65f17e7a"
+    "source_issue": "64",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/64"
   },
   {
     "id": "mataranka-thermal",
