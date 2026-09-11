@@ -1,5 +1,49 @@
 [
   {
+    "id": "katherine-gorge",
+    "title": "Katherine gorge",
+    "date": "Sept 11",
+    "coordinates": [
+      132.443593,
+      -14.309697
+    ],
+    "marker": "mountain",
+    "summary": "Wonderful swim and hike",
+    "body": [
+      "Plenty to do here! Nice swim in the stunning gorge."
+    ],
+    "images": [
+      {
+        "src": "poi-media/katherine-gorge/1.jpg",
+        "alt": "Katherine gorge photo 1"
+      },
+      {
+        "src": "poi-media/katherine-gorge/2.jpg",
+        "alt": "Katherine gorge photo 2"
+      },
+      {
+        "src": "poi-media/katherine-gorge/3.jpg",
+        "alt": "Katherine gorge photo 3"
+      },
+      {
+        "src": "poi-media/katherine-gorge/4.jpg",
+        "alt": "Katherine gorge photo 4"
+      },
+      {
+        "src": "poi-media/katherine-gorge/5.jpg",
+        "alt": "Katherine gorge photo 5"
+      },
+      {
+        "src": "poi-media/katherine-gorge/6.jpg",
+        "alt": "Katherine gorge photo 6"
+      }
+    ],
+    "tags": [],
+    "published": true,
+    "source_issue": "65",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/65"
+  },
+  {
     "id": "edith-camp",
     "title": "Leliyn",
     "date": "2026-09-09",
