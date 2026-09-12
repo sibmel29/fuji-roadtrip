@@ -106,6 +106,15 @@
       "cost": 91.5,
       "note": "KATHERINE",
       "id": "9bbe78ee159e"
+    },
+    {
+      "date": "2026-09-12",
+      "odometer": 155874,
+      "source": "macrodroid",
+      "liters": 26.89,
+      "cost": 58.41,
+      "note": "KATHERINE",
+      "id": "dfc1513cde78"
     }
   ]
 }
