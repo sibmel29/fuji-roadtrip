@@ -115,6 +115,15 @@
       "cost": 58.41,
       "note": "KATHERINE",
       "id": "dfc1513cde78"
+    },
+    {
+      "date": "2026-09-13",
+      "odometer": 156171,
+      "source": "macrodroid",
+      "liters": 40.6,
+      "cost": 97.4,
+      "note": "Timber Creek",
+      "id": "8219992f5030"
     }
   ]
 }

@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-09-12T03:01:48Z",
+  "updated_at": "2026-09-13T00:39:39Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 54,
-  "current_odo": 155874,
+  "entries_count": 55,
+  "current_odo": 156171,
   "trip_start_odo": 144243,
-  "trip_distance_km": 11631,
+  "trip_distance_km": 11928,
   "latest_entry": {
-    "date": "2026-09-12",
-    "odometer": 155874,
-    "liters": 26.89,
-    "cost": 58.41,
-    "note": "KATHERINE",
+    "date": "2026-09-13",
+    "odometer": 156171,
+    "liters": 40.6,
+    "cost": 97.4,
+    "note": "Timber Creek",
     "source": "macrodroid",
-    "id": "dfc1513cde78"
+    "id": "8219992f5030"
   },
   "history": [
+    {
+      "date": "2026-09-13",
+      "odometer": 156171,
+      "liters": 40.6,
+      "cost": 97.4,
+      "note": "Timber Creek",
+      "source": "macrodroid",
+      "id": "8219992f5030"
+    },
     {
       "date": "2026-09-12",
       "odometer": 155874,
@@ -222,21 +231,12 @@
       "cost": 31.14,
       "full_tank": true,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-05-13",
-      "odometer": 148853,
-      "liters": 38.76,
-      "consumption_l_per_100km": 14.36,
-      "cost": 69.19,
-      "full_tank": true,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 41,
-    "liters": 1580.85,
-    "cost": 3251.73,
+    "fills": 42,
+    "liters": 1621.45,
+    "cost": 3349.13,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
