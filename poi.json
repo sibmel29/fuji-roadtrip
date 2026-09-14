@@ -1,5 +1,21 @@
 [
   {
+    "id": "mirama-np",
+    "title": "Mirama NP",
+    "date": "2026-09-14",
+    "coordinates": [
+      128.751836,
+      -15.758057
+    ],
+    "marker": "sun",
+    "summary": "",
+    "body": [],
+    "images": [],
+    "tags": [],
+    "published": true,
+    "source_mobile_id": "327f0b3b7e68eaa5ed1b0f52"
+  },
+  {
     "id": "jarnem-keep-river",
     "title": "Jarnem - Keep river",
     "date": "2026-09-13",
