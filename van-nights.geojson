@@ -18,6 +18,39 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          128.476438,
+          -15.798612
+        ]
+      },
+      "properties": {
+        "id": "2026-09-14-molly-spring",
+        "type": "van-night",
+        "profile": "manual",
+        "source_profile": "manual",
+        "source_profiles": [
+          "manual"
+        ],
+        "title": "Molly Spring",
+        "first_night": "2026-09-14",
+        "last_night": "2026-09-14",
+        "night_count": 1,
+        "nights": [
+          "2026-09-14"
+        ],
+        "note": "",
+        "vibe": "Wild camp ",
+        "facilities": "Toilet",
+        "warnings": "no cell, ranger possible ",
+        "published": true,
+        "created_at": "2026-09-14T22:20:58.779984+00:00",
+        "source_mobile_id": "53ba8abb7430c4abe75ed5d2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           129.098925,
           -15.763139
         ]
