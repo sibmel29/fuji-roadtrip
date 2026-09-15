@@ -1,5 +1,21 @@
 [
   {
+    "id": "zebedee-springs",
+    "title": "Zebedee Springs",
+    "date": "2026-09-15",
+    "coordinates": [
+      128.025142,
+      -16.013752
+    ],
+    "marker": "sun",
+    "summary": "",
+    "body": [],
+    "images": [],
+    "tags": [],
+    "published": true,
+    "source_mobile_id": "af0d5e40d6ec02725defbeef"
+  },
+  {
     "id": "molly-spring",
     "title": "Molly Spring",
     "date": "2026-09-14",
