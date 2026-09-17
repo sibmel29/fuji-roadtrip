@@ -18,6 +18,39 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          127.882443,
+          -15.788308
+        ]
+      },
+      "properties": {
+        "id": "2026-09-17-pentecost-river",
+        "type": "van-night",
+        "profile": "manual",
+        "source_profile": "manual",
+        "source_profiles": [
+          "manual"
+        ],
+        "title": "pentecost river",
+        "first_night": "2026-09-17",
+        "last_night": "2026-09-17",
+        "night_count": 1,
+        "nights": [
+          "2026-09-17"
+        ],
+        "note": "Fishing Barra ",
+        "vibe": "Super chill ",
+        "facilities": "nothing ",
+        "warnings": "4WD only ",
+        "published": true,
+        "created_at": "2026-09-17T02:57:34.838791+00:00",
+        "source_mobile_id": "ff07fb2d1a566f7583fb9b37"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           127.981416,
           -16.008289
         ]
