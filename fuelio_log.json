@@ -124,6 +124,15 @@
       "cost": 97.4,
       "note": "Timber Creek",
       "id": "8219992f5030"
+    },
+    {
+      "date": "2026-09-19",
+      "odometer": 157329,
+      "source": "macrodroid",
+      "liters": 58.34,
+      "cost": 158.0,
+      "note": "Halls Creek after Purnu",
+      "id": "b9d5a28d8ad0"
     }
   ]
 }

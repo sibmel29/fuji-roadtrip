@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-09-13T00:39:39Z",
+  "updated_at": "2026-09-19T09:11:01Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 55,
-  "current_odo": 156171,
+  "entries_count": 56,
+  "current_odo": 157329,
   "trip_start_odo": 144243,
-  "trip_distance_km": 11928,
+  "trip_distance_km": 13086,
   "latest_entry": {
-    "date": "2026-09-13",
-    "odometer": 156171,
-    "liters": 40.6,
-    "cost": 97.4,
-    "note": "Timber Creek",
+    "date": "2026-09-19",
+    "odometer": 157329,
+    "liters": 58.34,
+    "cost": 158.0,
+    "note": "Halls Creek after Purnu",
     "source": "macrodroid",
-    "id": "8219992f5030"
+    "id": "b9d5a28d8ad0"
   },
   "history": [
+    {
+      "date": "2026-09-19",
+      "odometer": 157329,
+      "liters": 58.34,
+      "cost": 158.0,
+      "note": "Halls Creek after Purnu",
+      "source": "macrodroid",
+      "id": "b9d5a28d8ad0"
+    },
     {
       "date": "2026-09-13",
       "odometer": 156171,
@@ -222,21 +231,12 @@
       "cost": 68.25,
       "full_tank": true,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-05-14",
-      "odometer": 148998,
-      "liters": 17.95,
-      "consumption_l_per_100km": 12.38,
-      "cost": 31.14,
-      "full_tank": true,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 42,
-    "liters": 1621.45,
-    "cost": 3349.13,
+    "fills": 43,
+    "liters": 1679.79,
+    "cost": 3507.13,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
