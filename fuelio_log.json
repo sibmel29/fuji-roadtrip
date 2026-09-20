@@ -133,6 +133,15 @@
       "cost": 158.0,
       "note": "Halls Creek after Purnu",
       "id": "b9d5a28d8ad0"
+    },
+    {
+      "date": "2026-09-20",
+      "odometer": 157648,
+      "source": "macrodroid",
+      "liters": 39.93,
+      "cost": 106.15,
+      "note": "Fritzroy Crossing",
+      "id": "2fd388740523"
     }
   ]
 }

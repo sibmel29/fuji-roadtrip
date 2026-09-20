@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-09-19T09:11:01Z",
+  "updated_at": "2026-09-20T04:57:29Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 56,
-  "current_odo": 157329,
+  "entries_count": 57,
+  "current_odo": 157648,
   "trip_start_odo": 144243,
-  "trip_distance_km": 13086,
+  "trip_distance_km": 13405,
   "latest_entry": {
-    "date": "2026-09-19",
-    "odometer": 157329,
-    "liters": 58.34,
-    "cost": 158.0,
-    "note": "Halls Creek after Purnu",
+    "date": "2026-09-20",
+    "odometer": 157648,
+    "liters": 39.93,
+    "cost": 106.15,
+    "note": "Fritzroy Crossing",
     "source": "macrodroid",
-    "id": "b9d5a28d8ad0"
+    "id": "2fd388740523"
   },
   "history": [
+    {
+      "date": "2026-09-20",
+      "odometer": 157648,
+      "liters": 39.93,
+      "cost": 106.15,
+      "note": "Fritzroy Crossing",
+      "source": "macrodroid",
+      "id": "2fd388740523"
+    },
     {
       "date": "2026-09-19",
       "odometer": 157329,
@@ -222,21 +231,12 @@
       "cost": 66.17,
       "full_tank": true,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-05-18",
-      "odometer": 149315,
-      "liters": 37.94,
-      "consumption_l_per_100km": 11.97,
-      "cost": 68.25,
-      "full_tank": true,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 43,
-    "liters": 1679.79,
-    "cost": 3507.13,
+    "fills": 44,
+    "liters": 1719.72,
+    "cost": 3613.28,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
