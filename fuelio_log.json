@@ -142,6 +142,15 @@
       "cost": 106.15,
       "note": "Fritzroy Crossing",
       "id": "2fd388740523"
+    },
+    {
+      "date": "2026-09-22",
+      "odometer": 158115,
+      "source": "macrodroid",
+      "liters": 61.43,
+      "cost": 163.1,
+      "note": "Broome",
+      "id": "eff1329974d3"
     }
   ]
 }
