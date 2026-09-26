@@ -1,5 +1,33 @@
 [
   {
+    "id": "dart-at-dream-beach",
+    "type": "fishing",
+    "title": "Dart at dream Beach",
+    "date": "2026-09-26",
+    "coordinates": [
+      122.15232,
+      -17.574947
+    ],
+    "marker": "fish",
+    "summary": "",
+    "body": [],
+    "images": [],
+    "tags": [
+      "fishing",
+      "test"
+    ],
+    "details": {
+      "Species": "Dart",
+      "Other species": "Big one !",
+      "Catch details": "Dart X1, 40cm",
+      "Kept or released": "Kept",
+      "Bait or lure": "Bait",
+      "Conditions": "Sunny"
+    },
+    "published": true,
+    "source_mobile_id": "ca4ebdd42a1bc7144732710f"
+  },
+  {
     "id": "fishing-alva-beach",
     "type": "fishing",
     "title": "Fishing Alva Beach",
