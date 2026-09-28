@@ -1,5 +1,31 @@
 [
   {
+    "id": "queenfish",
+    "type": "fishing",
+    "title": "Queenfish",
+    "date": "2026-09-26",
+    "coordinates": [
+      122.150987,
+      -17.5754501
+    ],
+    "marker": "fish",
+    "summary": "Beautiful experience, aggressive fight",
+    "body": [],
+    "images": [],
+    "tags": [
+      "fishing"
+    ],
+    "details": {
+      "Spot name": "Quondong Beach",
+      "Kept or released": "kept",
+      "Bait or lure": "Mullie",
+      "Conditions": "High tide incoming"
+    },
+    "published": true,
+    "source_issue": "66",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/66"
+  },
+  {
     "id": "dart-at-dream-beach",
     "type": "fishing",
     "title": "Dart at dream Beach",
