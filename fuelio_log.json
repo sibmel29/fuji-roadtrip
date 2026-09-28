@@ -160,6 +160,15 @@
       "cost": 162.0,
       "note": "Broome",
       "id": "6edf6c60de91"
+    },
+    {
+      "date": "2026-09-29",
+      "odometer": 158760,
+      "source": "macrodroid",
+      "liters": 19.0,
+      "cost": 60.0,
+      "note": "test area after Broome",
+      "id": "2603a36665d3"
     }
   ]
 }

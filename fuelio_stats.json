@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-09-28T04:32:53Z",
+  "updated_at": "2026-09-28T23:30:21Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 59,
-  "current_odo": 158533,
+  "entries_count": 60,
+  "current_odo": 158760,
   "trip_start_odo": 144243,
-  "trip_distance_km": 14290,
+  "trip_distance_km": 14517,
   "latest_entry": {
-    "date": "2026-09-28",
-    "odometer": 158533,
-    "liters": 60.03,
-    "cost": 162.0,
-    "note": "Broome",
+    "date": "2026-09-29",
+    "odometer": 158760,
+    "liters": 19.0,
+    "cost": 60.0,
+    "note": "test area after Broome",
     "source": "macrodroid",
-    "id": "6edf6c60de91"
+    "id": "2603a36665d3"
   },
   "history": [
+    {
+      "date": "2026-09-29",
+      "odometer": 158760,
+      "liters": 19.0,
+      "cost": 60.0,
+      "note": "test area after Broome",
+      "source": "macrodroid",
+      "id": "2603a36665d3"
+    },
     {
       "date": "2026-09-28",
       "odometer": 158533,
@@ -223,20 +232,12 @@
       "cost": 104.49,
       "full_tank": true,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-05-29",
-      "odometer": 150357,
-      "liters": 20.0,
-      "consumption_l_per_100km": 16.59,
-      "cost": 38.0,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 46,
-    "liters": 1841.18,
-    "cost": 3938.38,
+    "fills": 47,
+    "liters": 1860.18,
+    "cost": 3998.38,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
