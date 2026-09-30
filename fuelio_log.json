@@ -171,6 +171,15 @@
       "id": "2603a36665d3"
     },
     {
+      "date": "2026-09-30",
+      "odometer": 159485,
+      "source": "macrodroid",
+      "liters": 32.13,
+      "cost": 85.75,
+      "note": "Autski",
+      "id": "afbdfbb27f02"
+    },
+    {
       "date": "2026-09-39",
       "odometer": 159224,
       "source": "macrodroid",
