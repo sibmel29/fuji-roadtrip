@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-09-28T23:30:21Z",
+  "updated_at": "2026-09-30T04:14:35Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 60,
-  "current_odo": 158760,
+  "entries_count": 61,
+  "current_odo": 159224,
   "trip_start_odo": 144243,
-  "trip_distance_km": 14517,
+  "trip_distance_km": 14981,
   "latest_entry": {
     "date": "2026-09-29",
     "odometer": 158760,
@@ -235,9 +235,9 @@
     }
   ],
   "fuel": {
-    "fills": 47,
-    "liters": 1860.18,
-    "cost": 3998.38,
+    "fills": 48,
+    "liters": 1920.18,
+    "cost": 4155.38,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }

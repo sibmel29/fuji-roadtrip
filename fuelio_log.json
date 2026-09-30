@@ -169,6 +169,15 @@
       "cost": 60.0,
       "note": "test area after Broome",
       "id": "2603a36665d3"
+    },
+    {
+      "date": "2026-09-39",
+      "odometer": 159224,
+      "source": "macrodroid",
+      "liters": 60.0,
+      "cost": 157.0,
+      "note": "Port Headland",
+      "id": "60a201390571"
     }
   ]
 }
