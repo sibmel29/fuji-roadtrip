@@ -187,6 +187,15 @@
       "cost": 157.0,
       "note": "Port Headland",
       "id": "60a201390571"
+    },
+    {
+      "date": "2026-10-02",
+      "odometer": 159740,
+      "source": "macrodroid",
+      "liters": 34.0,
+      "cost": 92.0,
+      "note": "Tom Price",
+      "id": "0b98bdd58d47"
     }
   ]
 }
