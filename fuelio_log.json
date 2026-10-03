@@ -196,6 +196,15 @@
       "cost": 92.0,
       "note": "Tom Price",
       "id": "0b98bdd58d47"
+    },
+    {
+      "date": "2026-10-03",
+      "odometer": 160064,
+      "source": "macrodroid",
+      "liters": 40.0,
+      "cost": 130.0,
+      "note": "Nanutarra",
+      "id": "8c5cd89ae544"
     }
   ]
 }

@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-10-02T05:03:44Z",
+  "updated_at": "2026-10-03T02:11:35Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 63,
-  "current_odo": 159740,
+  "entries_count": 64,
+  "current_odo": 160064,
   "trip_start_odo": 144243,
-  "trip_distance_km": 15497,
+  "trip_distance_km": 15821,
   "latest_entry": {
-    "date": "2026-10-02",
-    "odometer": 159740,
-    "liters": 34.0,
-    "cost": 92.0,
-    "note": "Tom Price",
+    "date": "2026-10-03",
+    "odometer": 160064,
+    "liters": 40.0,
+    "cost": 130.0,
+    "note": "Nanutarra",
     "source": "macrodroid",
-    "id": "0b98bdd58d47"
+    "id": "8c5cd89ae544"
   },
   "history": [
+    {
+      "date": "2026-10-03",
+      "odometer": 160064,
+      "liters": 40.0,
+      "cost": 130.0,
+      "note": "Nanutarra",
+      "source": "macrodroid",
+      "id": "8c5cd89ae544"
+    },
     {
       "date": "2026-10-02",
       "odometer": 159740,
@@ -223,21 +232,12 @@
       "cost": 63.18,
       "full_tank": true,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-06-11",
-      "odometer": 151311,
-      "liters": 50.84,
-      "consumption_l_per_100km": 13.78,
-      "cost": 88.44,
-      "full_tank": true,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 50,
-    "liters": 1986.31,
-    "cost": 4333.13,
+    "fills": 51,
+    "liters": 2026.31,
+    "cost": 4463.13,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
