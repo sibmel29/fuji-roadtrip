@@ -205,6 +205,14 @@
       "cost": 130.0,
       "note": "Nanutarra",
       "id": "8c5cd89ae544"
+    },
+    {
+      "date": "2026-10-03",
+      "odometer": 160377,
+      "source": "macrodroid",
+      "cost": 130.0,
+      "note": "Exmouth",
+      "id": "ef2fa56fcbc7"
     }
   ]
 }

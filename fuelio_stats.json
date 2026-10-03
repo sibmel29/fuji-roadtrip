@@ -1,23 +1,30 @@
 {
-  "updated_at": "2026-10-03T02:11:35Z",
+  "updated_at": "2026-10-03T07:53:23Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 64,
-  "current_odo": 160064,
+  "entries_count": 65,
+  "current_odo": 160377,
   "trip_start_odo": 144243,
-  "trip_distance_km": 15821,
+  "trip_distance_km": 16134,
   "latest_entry": {
     "date": "2026-10-03",
-    "odometer": 160064,
-    "liters": 40.0,
+    "odometer": 160377,
     "cost": 130.0,
-    "note": "Nanutarra",
+    "note": "Exmouth",
     "source": "macrodroid",
-    "id": "8c5cd89ae544"
+    "id": "ef2fa56fcbc7"
   },
   "history": [
+    {
+      "date": "2026-10-03",
+      "odometer": 160377,
+      "cost": 130.0,
+      "note": "Exmouth",
+      "source": "macrodroid",
+      "id": "ef2fa56fcbc7"
+    },
     {
       "date": "2026-10-03",
       "odometer": 160064,
@@ -222,15 +229,6 @@
       "liters": 40.0,
       "consumption_l_per_100km": 13.65,
       "cost": 67.0,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-06-15",
-      "odometer": 151595,
-      "liters": 37.72,
-      "consumption_l_per_100km": 13.28,
-      "cost": 63.18,
-      "full_tank": true,
       "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
