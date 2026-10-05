@@ -18,6 +18,39 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          113.867399,
+          -22.193156
+        ]
+      },
+      "properties": {
+        "id": "2026-10-05-gorge-parking",
+        "type": "van-night",
+        "profile": "manual",
+        "source_profile": "manual",
+        "source_profiles": [
+          "manual"
+        ],
+        "title": "Gorge Parking",
+        "first_night": "2026-10-05",
+        "last_night": "2026-10-05",
+        "night_count": 1,
+        "nights": [
+          "2026-10-05"
+        ],
+        "note": "Amazing walk in the gorge ",
+        "vibe": "Solo, perfecto ",
+        "facilities": "nothing ",
+        "warnings": "Careful rangers ",
+        "published": true,
+        "created_at": "2026-10-05T00:14:35.477093+00:00",
+        "source_mobile_id": "692831efff32db407de8ef8d"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           114.144493,
           -21.808706
         ]
