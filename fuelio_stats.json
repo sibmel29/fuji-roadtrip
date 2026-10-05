@@ -1,22 +1,32 @@
 {
-  "updated_at": "2026-10-03T07:53:23Z",
+  "updated_at": "2026-10-05T05:56:58Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 65,
-  "current_odo": 160377,
+  "entries_count": 66,
+  "current_odo": 160610,
   "trip_start_odo": 144243,
-  "trip_distance_km": 16134,
+  "trip_distance_km": 16367,
   "latest_entry": {
-    "date": "2026-10-03",
-    "odometer": 160377,
-    "cost": 130.0,
-    "note": "Exmouth",
+    "date": "2026-10-05",
+    "odometer": 160610,
+    "liters": 27.92,
+    "cost": 77.0,
+    "note": "Exmouth 2",
     "source": "macrodroid",
-    "id": "ef2fa56fcbc7"
+    "id": "b548c8cbaedb"
   },
   "history": [
+    {
+      "date": "2026-10-05",
+      "odometer": 160610,
+      "liters": 27.92,
+      "cost": 77.0,
+      "note": "Exmouth 2",
+      "source": "macrodroid",
+      "id": "b548c8cbaedb"
+    },
     {
       "date": "2026-10-03",
       "odometer": 160377,
@@ -222,20 +232,12 @@
       "cost": 99.99,
       "full_tank": true,
       "source": "fuelio/exports/vehicle-1-sync.csv"
-    },
-    {
-      "date": "2026-06-16",
-      "odometer": 152032,
-      "liters": 40.0,
-      "consumption_l_per_100km": 13.65,
-      "cost": 67.0,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
-    "fills": 51,
-    "liters": 2026.31,
-    "cost": 4463.13,
+    "fills": 52,
+    "liters": 2054.23,
+    "cost": 4540.13,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }

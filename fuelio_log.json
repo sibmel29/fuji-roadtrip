@@ -213,6 +213,15 @@
       "cost": 130.0,
       "note": "Exmouth",
       "id": "ef2fa56fcbc7"
+    },
+    {
+      "date": "2026-10-05",
+      "odometer": 160610,
+      "source": "macrodroid",
+      "liters": 27.92,
+      "cost": 77.0,
+      "note": "Exmouth 2",
+      "id": "b548c8cbaedb"
     }
   ]
 }
