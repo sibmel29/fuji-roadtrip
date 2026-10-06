@@ -222,6 +222,14 @@
       "cost": 77.0,
       "note": "Exmouth 2",
       "id": "b548c8cbaedb"
+    },
+    {
+      "date": "2026-10-06",
+      "odometer": 160894,
+      "source": "macrodroid",
+      "cost": 70.0,
+      "note": "Milyina",
+      "id": "0db18a1ce311"
     }
   ]
 }

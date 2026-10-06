@@ -1,23 +1,30 @@
 {
-  "updated_at": "2026-10-05T05:56:58Z",
+  "updated_at": "2026-10-06T03:39:58Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 66,
-  "current_odo": 160610,
+  "entries_count": 67,
+  "current_odo": 160894,
   "trip_start_odo": 144243,
-  "trip_distance_km": 16367,
+  "trip_distance_km": 16651,
   "latest_entry": {
-    "date": "2026-10-05",
-    "odometer": 160610,
-    "liters": 27.92,
-    "cost": 77.0,
-    "note": "Exmouth 2",
+    "date": "2026-10-06",
+    "odometer": 160894,
+    "cost": 70.0,
+    "note": "Milyina",
     "source": "macrodroid",
-    "id": "b548c8cbaedb"
+    "id": "0db18a1ce311"
   },
   "history": [
+    {
+      "date": "2026-10-06",
+      "odometer": 160894,
+      "cost": 70.0,
+      "note": "Milyina",
+      "source": "macrodroid",
+      "id": "0db18a1ce311"
+    },
     {
       "date": "2026-10-05",
       "odometer": 160610,
@@ -223,15 +230,6 @@
       "note": "After lift - Barcy",
       "source": "macrodroid",
       "id": "5793470b16b5"
-    },
-    {
-      "date": "2026-07-11",
-      "odometer": 152283,
-      "liters": 50.02,
-      "consumption_l_per_100km": 13.08,
-      "cost": 99.99,
-      "full_tank": true,
-      "source": "fuelio/exports/vehicle-1-sync.csv"
     }
   ],
   "fuel": {
