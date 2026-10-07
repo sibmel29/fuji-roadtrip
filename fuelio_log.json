@@ -230,6 +230,14 @@
       "cost": 70.0,
       "note": "Milyina",
       "id": "0db18a1ce311"
+    },
+    {
+      "date": "2026-10-07",
+      "odometer": 161179,
+      "source": "macrodroid",
+      "cost": 139.0,
+      "note": "Carnarvon",
+      "id": "4e89c96e2c5f"
     }
   ]
 }

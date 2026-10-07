@@ -1,22 +1,30 @@
 {
-  "updated_at": "2026-10-06T03:39:58Z",
+  "updated_at": "2026-10-07T02:28:05Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 67,
-  "current_odo": 160894,
+  "entries_count": 68,
+  "current_odo": 161179,
   "trip_start_odo": 144243,
-  "trip_distance_km": 16651,
+  "trip_distance_km": 16936,
   "latest_entry": {
-    "date": "2026-10-06",
-    "odometer": 160894,
-    "cost": 70.0,
-    "note": "Milyina",
+    "date": "2026-10-07",
+    "odometer": 161179,
+    "cost": 139.0,
+    "note": "Carnarvon",
     "source": "macrodroid",
-    "id": "0db18a1ce311"
+    "id": "4e89c96e2c5f"
   },
   "history": [
+    {
+      "date": "2026-10-07",
+      "odometer": 161179,
+      "cost": 139.0,
+      "note": "Carnarvon",
+      "source": "macrodroid",
+      "id": "4e89c96e2c5f"
+    },
     {
       "date": "2026-10-06",
       "odometer": 160894,
@@ -221,15 +229,6 @@
       "note": "Leaving barky",
       "source": "macrodroid",
       "id": "31a8c1e6b8cd"
-    },
-    {
-      "date": "2026-07-29",
-      "odometer": 152655,
-      "liters": 47.64,
-      "cost": 100.0,
-      "note": "After lift - Barcy",
-      "source": "macrodroid",
-      "id": "5793470b16b5"
     }
   ],
   "fuel": {
