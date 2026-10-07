@@ -18,6 +18,39 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          113.677931,
+          -24.84321
+        ]
+      },
+      "properties": {
+        "id": "2026-10-07-nudist-beach-night",
+        "type": "van-night",
+        "profile": "manual",
+        "source_profile": "manual",
+        "source_profiles": [
+          "manual"
+        ],
+        "title": "Nudist beach night",
+        "first_night": "2026-10-07",
+        "last_night": "2026-10-07",
+        "night_count": 1,
+        "nights": [
+          "2026-10-07"
+        ],
+        "note": "No one there ",
+        "vibe": "Too easy mate",
+        "facilities": "Nothing ",
+        "warnings": "Super private ",
+        "published": true,
+        "created_at": "2026-10-07T01:36:56.340274+00:00",
+        "source_mobile_id": "74cb5ea97bc342602f8a7500"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           113.773149,
           -23.186342
         ]
