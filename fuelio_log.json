@@ -238,6 +238,15 @@
       "cost": 139.0,
       "note": "Carnarvon",
       "id": "4e89c96e2c5f"
+    },
+    {
+      "date": "2026-10-08",
+      "odometer": 161557,
+      "source": "macrodroid",
+      "liters": 50.0,
+      "cost": 131.0,
+      "note": "Shark Bay",
+      "id": "f900d6039ecf"
     }
   ]
 }
