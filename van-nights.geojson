@@ -18,6 +18,39 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          114.246665,
+          -25.952836
+        ]
+      },
+      "properties": {
+        "id": "2026-10-08-gladstone-campground",
+        "type": "van-night",
+        "profile": "manual",
+        "source_profile": "manual",
+        "source_profiles": [
+          "manual"
+        ],
+        "title": "Gladstone Campground",
+        "first_night": "2026-10-08",
+        "last_night": "2026-10-08",
+        "night_count": 1,
+        "nights": [
+          "2026-10-08"
+        ],
+        "note": "Nice place ",
+        "vibe": "13pp",
+        "facilities": "Toilet",
+        "warnings": "Windy af",
+        "published": true,
+        "created_at": "2026-10-08T01:31:53.503660+00:00",
+        "source_mobile_id": "ba21ed931dbd0bb8302feaf0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           113.677931,
           -24.84321
         ]
