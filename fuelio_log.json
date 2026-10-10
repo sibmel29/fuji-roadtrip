@@ -247,6 +247,15 @@
       "cost": 131.0,
       "note": "Shark Bay",
       "id": "f900d6039ecf"
+    },
+    {
+      "date": "2026-10-10",
+      "odometer": 161710,
+      "source": "macrodroid",
+      "liters": 27.47,
+      "cost": 68.61,
+      "note": "denham",
+      "id": "8f2a269a7280"
     }
   ]
 }
