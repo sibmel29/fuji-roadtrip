@@ -18,6 +18,39 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          114.143749,
+          -27.757737
+        ]
+      },
+      "properties": {
+        "id": "2026-10-12-tracks-camp",
+        "type": "van-night",
+        "profile": "manual",
+        "source_profile": "manual",
+        "source_profiles": [
+          "manual"
+        ],
+        "title": "Tracks camp",
+        "first_night": "2026-10-12",
+        "last_night": "2026-10-12",
+        "night_count": 1,
+        "nights": [
+          "2026-10-12"
+        ],
+        "note": "Made some fire, bit windy ",
+        "vibe": "super hidden",
+        "facilities": "Good cell ",
+        "warnings": "soft sand 4wd only ",
+        "published": true,
+        "created_at": "2026-10-11T23:40:00.240693+00:00",
+        "source_mobile_id": "31a1dcfbb6586b0013f06d47"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           114.246665,
           -25.952836
         ]
