@@ -256,6 +256,14 @@
       "cost": 68.61,
       "note": "denham",
       "id": "8f2a269a7280"
+    },
+    {
+      "date": "2026-10-11",
+      "odometer": 162175,
+      "source": "macrodroid",
+      "cost": 142.0,
+      "note": "Kalbarri",
+      "id": "380de6e796d2"
     }
   ]
 }

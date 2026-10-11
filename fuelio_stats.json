@@ -1,23 +1,30 @@
 {
-  "updated_at": "2026-10-10T01:33:20Z",
+  "updated_at": "2026-10-11T02:04:23Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 70,
-  "current_odo": 161710,
+  "entries_count": 71,
+  "current_odo": 162175,
   "trip_start_odo": 144243,
-  "trip_distance_km": 17467,
+  "trip_distance_km": 17932,
   "latest_entry": {
-    "date": "2026-10-10",
-    "odometer": 161710,
-    "liters": 27.47,
-    "cost": 68.61,
-    "note": "denham",
+    "date": "2026-10-11",
+    "odometer": 162175,
+    "cost": 142.0,
+    "note": "Kalbarri",
     "source": "macrodroid",
-    "id": "8f2a269a7280"
+    "id": "380de6e796d2"
   },
   "history": [
+    {
+      "date": "2026-10-11",
+      "odometer": 162175,
+      "cost": 142.0,
+      "note": "Kalbarri",
+      "source": "macrodroid",
+      "id": "380de6e796d2"
+    },
     {
       "date": "2026-10-10",
       "odometer": 161710,
@@ -221,15 +228,6 @@
       "note": "Mt Isa",
       "source": "macrodroid",
       "id": "ccdeb5bae7cd"
-    },
-    {
-      "date": "2026-09-01",
-      "odometer": 152579,
-      "liters": 40.0,
-      "cost": 90.0,
-      "note": "Cloncurry",
-      "source": "macrodroid",
-      "id": "cfb2cbc360ec"
     }
   ],
   "fuel": {
