@@ -264,6 +264,15 @@
       "cost": 142.0,
       "note": "Kalbarri",
       "id": "380de6e796d2"
+    },
+    {
+      "date": "2026-10-14",
+      "odometer": 162473,
+      "source": "macrodroid",
+      "liters": 40.84,
+      "cost": 93.9,
+      "note": "Geraldton",
+      "id": "9f933ea60658"
     }
   ]
 }

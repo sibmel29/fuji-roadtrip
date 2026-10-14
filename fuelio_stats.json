@@ -1,22 +1,32 @@
 {
-  "updated_at": "2026-10-11T02:04:23Z",
+  "updated_at": "2026-10-14T03:03:17Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 71,
-  "current_odo": 162175,
+  "entries_count": 72,
+  "current_odo": 162473,
   "trip_start_odo": 144243,
-  "trip_distance_km": 17932,
+  "trip_distance_km": 18230,
   "latest_entry": {
-    "date": "2026-10-11",
-    "odometer": 162175,
-    "cost": 142.0,
-    "note": "Kalbarri",
+    "date": "2026-10-14",
+    "odometer": 162473,
+    "liters": 40.84,
+    "cost": 93.9,
+    "note": "Geraldton",
     "source": "macrodroid",
-    "id": "380de6e796d2"
+    "id": "9f933ea60658"
   },
   "history": [
+    {
+      "date": "2026-10-14",
+      "odometer": 162473,
+      "liters": 40.84,
+      "cost": 93.9,
+      "note": "Geraldton",
+      "source": "macrodroid",
+      "id": "9f933ea60658"
+    },
     {
       "date": "2026-10-11",
       "odometer": 162175,
@@ -219,21 +229,12 @@
       "note": "Lawnhill Jerries",
       "source": "macrodroid",
       "id": "910e561bb46b"
-    },
-    {
-      "date": "2026-09-03",
-      "odometer": 153790,
-      "liters": 39.82,
-      "cost": 87.4,
-      "note": "Mt Isa",
-      "source": "macrodroid",
-      "id": "ccdeb5bae7cd"
     }
   ],
   "fuel": {
-    "fills": 54,
-    "liters": 2131.7,
-    "cost": 4739.74,
+    "fills": 55,
+    "liters": 2172.54,
+    "cost": 4833.64,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
