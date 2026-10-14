@@ -1533,11 +1533,16 @@ body.camp-unlocked .van-night-panel {
 .popup {
   position: fixed;
   inset: 0;
+  box-sizing: border-box;
   background: rgba(0,0,0,0.6);
   display: none;
   align-items: center;
   justify-content: center;
+  padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
   z-index: 2000;
+  overflow: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .popup.visible {
@@ -1546,14 +1551,17 @@ body.camp-unlocked .van-night-panel {
 
 .popup-content {
   background: white;
+  box-sizing: border-box;
   padding: 20px;
   border-radius: 16px;
   width: min(380px, calc(100vw - 36px));
-  max-height: calc(100vh - 36px);
+  max-height: calc(100dvh - 32px);
   overflow: auto;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
   animation: fadeIn 0.3s ease;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
 .popup-img {
@@ -1585,13 +1593,24 @@ body.camp-unlocked .van-night-panel {
 }
 
 .popup button {
-  margin-top: 10px;
-  padding: 10px 15px;
+  position: sticky;
+  bottom: 0;
+  margin-top: 14px;
+  padding: 12px 18px;
   border: none;
-  border-radius: 10px;
+  border-radius: 999px;
   background: #ff5500;
   color: white;
+  font-weight: 800;
   cursor: pointer;
+  box-shadow: 0 8px 18px rgba(255,255,255,0.92), 0 -8px 18px rgba(255,255,255,0.92);
+  z-index: 1;
+}
+
+@supports not (height: 100dvh) {
+  .popup-content {
+    max-height: calc(100vh - 32px);
+  }
 }
 
 @keyframes fadeIn {

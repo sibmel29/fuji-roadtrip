@@ -1,5 +1,8 @@
 {
   "gpx_count": 79,
+  "skipped_gpx_count": 0,
+  "skipped_gpx_files": [],
+  "bridged_gaps": 99,
   "latest_time": "2026-10-11T09:39:00+00:00",
-  "generated_at": "2026-10-11T23:46:17.772174+00:00"
+  "generated_at": "2026-10-14T08:55:39.258468+00:00"
 }

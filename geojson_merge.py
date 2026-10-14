@@ -10,7 +10,7 @@ from pathlib import Path
 # === SETTINGS (tune these if needed)
 MIN_DISTANCE_METERS = 150     # skip jitter
 MAX_JUMP_METERS = 5000        # split tracks at impossible GPS jumps
-MAX_BRIDGE_GAP_SECONDS = 30 * 60
+MAX_BRIDGE_GAP_SECONDS = 12 * 60 * 60
 MAX_BRIDGE_SPEED_KMH = 160
 MAX_POINTS = 800              # keep file light
 INPUT_FOLDERS = [".", "car/gpx", "car/archive"]
@@ -99,6 +99,9 @@ if not gpx_files:
     geojson = {"type": "FeatureCollection", "features": []}
     metadata = {
         "gpx_count": 0,
+        "skipped_gpx_count": 0,
+        "skipped_gpx_files": [],
+        "bridged_gaps": 0,
         "latest_time": None,
         "generated_at": datetime.now(timezone.utc).isoformat()
     }
@@ -124,14 +127,25 @@ last_lat = None
 last_lon = None
 last_time = None
 bridged_gaps = 0
+skipped_gpx_files = []
 
 
 # === MERGE ALL FILES
 for file in gpx_files:
     print(f"→ Processing {file}")
 
-    with open(file, "r") as f:
-        gpx = gpxpy.parse(f)
+    if os.path.getsize(file) == 0:
+        skipped_gpx_files.append(file)
+        print(f"  ⚠️ Skipping empty GPX file: {file}")
+        continue
+
+    try:
+        with open(file, "r") as f:
+            gpx = gpxpy.parse(f)
+    except Exception as error:
+        skipped_gpx_files.append(file)
+        print(f"  ⚠️ Skipping unreadable GPX file: {file} ({error})")
+        continue
 
     for track in gpx.tracks:
         for segment in track.segments:
@@ -187,6 +201,9 @@ if not segments:
     }
     metadata = {
         "gpx_count": len(gpx_files),
+        "skipped_gpx_count": len(skipped_gpx_files),
+        "skipped_gpx_files": skipped_gpx_files,
+        "bridged_gaps": bridged_gaps,
         "latest_time": max(all_times).isoformat() if all_times else None,
         "generated_at": datetime.now(timezone.utc).isoformat()
     }
@@ -248,6 +265,9 @@ with open(OUTPUT_FILE, "w") as f:
 
 metadata = {
     "gpx_count": len(gpx_files),
+    "skipped_gpx_count": len(skipped_gpx_files),
+    "skipped_gpx_files": skipped_gpx_files,
+    "bridged_gaps": bridged_gaps,
     "latest_time": max(all_times).isoformat() if all_times else None,
     "generated_at": datetime.now(timezone.utc).isoformat()
 }
