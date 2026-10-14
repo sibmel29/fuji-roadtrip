@@ -1,5 +1,33 @@
 [
   {
+    "id": "james-price",
+    "title": "James Price",
+    "date": "2026-09-26",
+    "coordinates": [
+      122.1447241,
+      -17.4868152
+    ],
+    "marker": "camp",
+    "summary": "North of Broome it's all very wild",
+    "body": [
+      "Red dirt, and turquoise waters. Good fishing!!"
+    ],
+    "images": [
+      {
+        "src": "poi-media/james-price/1.jpg",
+        "alt": "James Price photo 1"
+      },
+      {
+        "src": "poi-media/james-price/2.jpg",
+        "alt": "James Price photo 2"
+      }
+    ],
+    "tags": [],
+    "published": true,
+    "source_issue": "67",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/67"
+  },
+  {
     "id": "purnululu",
     "title": "Purnululu",
     "date": "2026-09-19",
