@@ -1296,6 +1296,20 @@ body.camp-unlocked .van-night-panel {
   text-align: right;
 }
 
+.story-source-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  margin-top: 12px;
+  padding: 0 13px;
+  border: 1px solid rgba(15, 23, 42, 0.16);
+  border-radius: 999px;
+  color: #155e75;
+  background: white;
+  font-weight: 800;
+  text-decoration: none;
+}
+
 .lightbox {
   position: fixed;
   inset: 0;
@@ -1875,6 +1889,12 @@ function renderStory() {
   ` : "";
   let body = (poi.body || []).map(paragraph => `<p>${escapeHTML(paragraph)}</p>`).join("");
   let tags = (poi.tags || []).map(tag => `<span>${escapeHTML(tag)}</span>`).join("");
+  let sourceUrl = /^https:\/\//.test(poi.sourceUrl || "") ? poi.sourceUrl : "";
+  let sourceLink = sourceUrl ? `
+    <a class="story-source-link" href="${escapeHTML(sourceUrl)}" target="_blank" rel="noopener noreferrer">
+      ${escapeHTML(poi.sourceLabel || "View source")} ↗
+    </a>
+  ` : "";
   function detailValue(value) {
     if (Array.isArray(value)) {
       return value.map(item => {
@@ -1914,6 +1934,7 @@ function renderStory() {
       ${details ? `<dl class="story-details">${details}</dl>` : ""}
       ${body}
       ${tags ? `<div class="story-tags">${tags}</div>` : ""}
+      ${sourceLink}
     </div>
   `;
 
@@ -2755,8 +2776,20 @@ function hikeFeatureToStory(feature, storiesById) {
     summary: customStory.summary || properties.summary,
     body,
     images,
-    tags
+    tags,
+    details: customStory.details || properties.details || {},
+    sourceUrl: customStory.source_url || properties.source_url,
+    sourceLabel: customStory.source_label || properties.source_label
   };
+}
+
+function combineHikeStats(...sources) {
+  return sources.reduce((combined, source) => ({
+    hike_count: combined.hike_count + Number(source?.hike_count || 0),
+    distance_km: Math.round((combined.distance_km + Number(source?.distance_km || 0)) * 100) / 100,
+    ascent_m: combined.ascent_m + Number(source?.ascent_m || 0),
+    descent_m: combined.descent_m + Number(source?.descent_m || 0)
+  }), { hike_count: 0, distance_km: 0, ascent_m: 0, descent_m: 0 });
 }
 
 function renderHikeStats(stats) {
@@ -2801,11 +2834,14 @@ function addHikes(data, storiesById = {}) {
 Promise.all([
   fetch('hikes.geojson').then(res => res.ok ? res.json() : { features: [] }),
   fetch('hikes_stats.json').then(res => res.ok ? res.json() : {}),
-  fetch('hike_stories.json').then(res => res.ok ? res.json() : {})
-]).then(([hikes, stats, hikeStories]) => {
+  fetch('hike_stories.json').then(res => res.ok ? res.json() : {}),
+  fetch('komoot_hikes.geojson').then(res => res.ok ? res.json() : { features: [] }),
+  fetch('komoot_hikes_stats.json').then(res => res.ok ? res.json() : {})
+]).then(([hikes, stats, hikeStories, komootHikes, komootStats]) => {
   addHikes(hikes, hikeStories || {});
-  renderHikeStats(stats);
-  hikeToggle.disabled = (hikes.features || []).length === 0;
+  addHikes(komootHikes);
+  renderHikeStats(combineHikeStats(stats, komootStats));
+  hikeToggle.disabled = (hikes.features || []).length + (komootHikes.features || []).length === 0;
 }).catch(error => {
   console.warn("Hike data not loaded:", error);
   hikeStats.innerHTML = "<span>No hikes loaded</span>";

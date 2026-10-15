@@ -14,7 +14,8 @@ Interactive public map for [fujiroadtrip.com](https://fujiroadtrip.com/): live r
 - `car/archive/` stores processed car GPX tracks by month.
 - `odo.json`, `fuelio_log.json`, and `fuelio_stats.json` power odometer, trip distance, fuel cost, and consumption stats.
 - `poi.json` stores always-visible story points.
-- `hikes.geojson`, `hikes_stats.json`, and `hike_stories.json` power the hiking overlay.
+- `hikes.geojson`, `hikes_stats.json`, and `hike_stories.json` power the manually managed hiking overlay.
+- `komoot_hikes.geojson` and `komoot_hikes_stats.json` contain public Australian hikes imported from Komoot.
 - `fishing-log.json` and `surf-log.json` power the fishing and surf overlay menus.
 - `fourwd_segments.json`, `fourwd-tracks.geojson`, and `fourwd_stats.json` power the 4WD tracks overlay.
 - `van-nights.geojson` powers the hidden van-night sleep spot overlay.
@@ -53,6 +54,12 @@ Regenerate the hike overlay:
 
 ```sh
 python3 process_hikes.py
+```
+
+Refresh public Komoot hikes:
+
+```sh
+python3 scripts/sync_komoot_hikes.py --user-id 1732805368253
 ```
 
 Regenerate the 4WD overlay:
@@ -136,6 +143,8 @@ Published entries in `poi.json` are always shown on the map. Draft POIs can stay
 ## Hikes
 
 Use the **Add hike** issue form. Add the hike details and media in the form.
+
+Public recorded hikes from Simon's Komoot profile are also imported automatically every 12 hours. The importer keeps only hikes whose start point is inside Australia, excludes activities already represented in the manual hike layer, and adds Komoot route geometry, statistics, descriptions, and photo galleries. It uses only publicly visible profile data and requires no account credentials or repository secrets.
 
 ## Fishing And Surf Logs
 
