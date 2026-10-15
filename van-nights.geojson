@@ -18,6 +18,39 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          114.634692,
+          -28.823096
+        ]
+      },
+      "properties": {
+        "id": "2026-10-16-river-mouth-sleep",
+        "type": "van-night",
+        "profile": "manual",
+        "source_profile": "manual",
+        "source_profiles": [
+          "manual"
+        ],
+        "title": "River mouth sleep",
+        "first_night": "2026-10-16",
+        "last_night": "2026-10-16",
+        "night_count": 1,
+        "nights": [
+          "2026-10-16"
+        ],
+        "note": "",
+        "vibe": "Super chill",
+        "facilities": "toilet, cell",
+        "warnings": "",
+        "published": true,
+        "created_at": "2026-10-15T23:11:33.603953+00:00",
+        "source_mobile_id": "f4951e20b48f69d5eeafa509"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           114.591564,
           -28.775465
         ]
