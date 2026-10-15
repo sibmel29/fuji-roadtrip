@@ -3,17 +3,14 @@
 import argparse
 import json
 import math
-import re
 import urllib.parse
 import urllib.request
-from datetime import date as calendar_date
 from pathlib import Path
 
 
 ACTIVITIES_URL = "https://www.komoot.com/api/v007/users/{user_id}/activities/"
 OUTPUT_GEOJSON = Path("komoot_hikes.geojson")
 OUTPUT_STATS = Path("komoot_hikes_stats.json")
-LOCAL_HIKES = Path("hikes.geojson")
 AUSTRALIA_BOUNDS = {
     "min_lat": -44.5,
     "max_lat": -9.0,
@@ -85,78 +82,6 @@ def fetch_public_activities(user_id):
         page += 1
 
     return activities
-
-
-def haversine_km(first, second):
-    lat1, lng1 = map(math.radians, first)
-    lat2, lng2 = map(math.radians, second)
-    dlat = lat2 - lat1
-    dlng = lng2 - lng1
-    value = math.sin(dlat / 2) ** 2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlng / 2) ** 2
-    return 6371 * 2 * math.atan2(math.sqrt(value), math.sqrt(1 - value))
-
-
-def existing_hike_index():
-    data = load_json(LOCAL_HIKES, {"features": []})
-    tour_ids = set()
-    signatures = []
-
-    for feature in data.get("features") or []:
-        properties = feature.get("properties") or {}
-        hike_id = str(properties.get("id") or "")
-        explicit_id = properties.get("komoot_id")
-
-        if explicit_id:
-            tour_ids.add(str(explicit_id))
-
-        tour_ids.update(re.findall(r"(?<!\d)\d{9,13}(?!\d)", hike_id))
-        start = properties.get("start")
-        distance = properties.get("distance_km")
-        date = properties.get("date")
-
-        if date and distance is not None and isinstance(start, list) and len(start) >= 2:
-            signatures.append({
-                "date": str(date)[:10],
-                "distance_km": float(distance),
-                "start": [float(start[1]), float(start[0])],
-            })
-
-    return tour_ids, signatures
-
-
-def is_existing_hike(tour, tour_ids, signatures):
-    tour_id = str(tour.get("id"))
-
-    if tour_id in tour_ids:
-        return True
-
-    start = tour.get("start_point") or {}
-    tour_date = str(tour.get("date") or "")[:10]
-    distance_km = float(tour.get("distance") or 0) / 1000
-
-    if not tour_date or start.get("lat") is None or start.get("lng") is None:
-        return False
-
-    for signature in signatures:
-        try:
-            date_difference = abs(
-                (calendar_date.fromisoformat(signature["date"]) - calendar_date.fromisoformat(tour_date)).days
-            )
-        except ValueError:
-            date_difference = 99
-
-        # GPX timestamps are often UTC while Komoot reports the Australian local date.
-        if date_difference > 1:
-            continue
-        if abs(signature["distance_km"] - distance_km) > 0.6:
-            continue
-        if haversine_km(
-            [float(start["lat"]), float(start["lng"])],
-            signature["start"],
-        ) <= 3:
-            return True
-
-    return False
 
 
 def simplify_points(points):
@@ -299,7 +224,6 @@ def feature_for(activity, previous_feature=None):
 
 def sync(user_id):
     activities = fetch_public_activities(user_id)
-    tour_ids, signatures = existing_hike_index()
     previous = load_json(OUTPUT_GEOJSON, {"features": []})
     previous_by_id = {
         str((feature.get("properties") or {}).get("komoot_id")): feature
@@ -309,7 +233,6 @@ def sync(user_id):
         activity
         for activity in activities
         if is_australian_hike(activity_tour(activity))
-        and not is_existing_hike(activity_tour(activity), tour_ids, signatures)
     ]
     candidates.sort(key=lambda item: activity_tour(item).get("date") or "", reverse=True)
     features = []
@@ -334,7 +257,7 @@ def sync(user_id):
 
     OUTPUT_GEOJSON.write_text(json.dumps(geojson, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     OUTPUT_STATS.write_text(json.dumps(stats, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"Synced {len(features)} Komoot hikes not already present in the manual layer")
+    print(f"Synced {len(features)} public Australian Komoot hikes")
 
 
 def main():

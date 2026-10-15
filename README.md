@@ -144,7 +144,7 @@ Published entries in `poi.json` are always shown on the map. Draft POIs can stay
 
 Use the **Add hike** issue form. Add the hike details and media in the form.
 
-Public recorded hikes from Simon's Komoot profile are also imported automatically every 12 hours. The importer keeps only hikes whose start point is inside Australia, excludes activities already represented in the manual hike layer, and adds Komoot route geometry, statistics, descriptions, and photo galleries. It uses only publicly visible profile data and requires no account credentials or repository secrets.
+Public recorded hikes from Simon's Komoot profile are also imported automatically every 12 hours. The importer keeps hikes whose start point is inside Australia and adds Komoot route geometry, statistics, descriptions, and photo galleries. In the browser, matching manual and Komoot tracks are deduplicated by tour id or by date, distance, and trailhead, with the richer Komoot card preferred. It uses only publicly visible profile data and requires no account credentials or repository secrets.
 
 ## Fishing And Surf Logs
 

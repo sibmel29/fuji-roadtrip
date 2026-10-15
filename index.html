@@ -2783,13 +2783,69 @@ function hikeFeatureToStory(feature, storiesById) {
   };
 }
 
-function combineHikeStats(...sources) {
-  return sources.reduce((combined, source) => ({
-    hike_count: combined.hike_count + Number(source?.hike_count || 0),
-    distance_km: Math.round((combined.distance_km + Number(source?.distance_km || 0)) * 100) / 100,
-    ascent_m: combined.ascent_m + Number(source?.ascent_m || 0),
-    descent_m: combined.descent_m + Number(source?.descent_m || 0)
-  }), { hike_count: 0, distance_km: 0, ascent_m: 0, descent_m: 0 });
+function hikeStart(feature) {
+  let properties = feature.properties || {};
+  let coordinates = feature.geometry?.coordinates || [];
+  return properties.start || coordinates[0] || null;
+}
+
+function hikeDistanceBetween(first, second) {
+  let radius = 6371;
+  let lat1 = first[1] * Math.PI / 180;
+  let lat2 = second[1] * Math.PI / 180;
+  let deltaLat = lat2 - lat1;
+  let deltaLon = (second[0] - first[0]) * Math.PI / 180;
+  let value = Math.sin(deltaLat / 2) ** 2
+    + Math.cos(lat1) * Math.cos(lat2) * Math.sin(deltaLon / 2) ** 2;
+  return radius * 2 * Math.atan2(Math.sqrt(value), Math.sqrt(1 - value));
+}
+
+function hikesMatch(manualFeature, komootFeature) {
+  let manual = manualFeature.properties || {};
+  let komoot = komootFeature.properties || {};
+  let komootId = String(komoot.komoot_id || "");
+
+  if (komootId && String(manual.id || "").includes(komootId)) return true;
+
+  let manualDate = Date.parse(`${String(manual.date || "").slice(0, 10)}T00:00:00Z`);
+  let komootDate = Date.parse(`${String(komoot.date || "").slice(0, 10)}T00:00:00Z`);
+  let manualDistance = Number(manual.distance_km);
+  let komootDistance = Number(komoot.distance_km);
+  let manualStart = hikeStart(manualFeature);
+  let komootStart = hikeStart(komootFeature);
+
+  if (!Number.isFinite(manualDate) || !Number.isFinite(komootDate)) return false;
+  if (!Number.isFinite(manualDistance) || !Number.isFinite(komootDistance)) return false;
+  if (!manualStart || !komootStart) return false;
+
+  return Math.abs(manualDate - komootDate) <= 24 * 60 * 60 * 1000
+    && Math.abs(manualDistance - komootDistance) <= 0.6
+    && hikeDistanceBetween(manualStart, komootStart) <= 3;
+}
+
+function mergeHikeFeatures(manualFeatures, komootFeatures) {
+  let uniqueManual = manualFeatures.filter(manualFeature =>
+    !komootFeatures.some(komootFeature => hikesMatch(manualFeature, komootFeature))
+  );
+  return [...uniqueManual, ...komootFeatures];
+}
+
+function hikeStatsFromFeatures(features) {
+  let stats = features.reduce((stats, feature) => {
+    let properties = feature.properties || {};
+    stats.hike_count += 1;
+    stats.distance_km += Number(properties.distance_km || 0);
+    stats.ascent_m += Number(properties.ascent_m || 0);
+    stats.descent_m += Number(properties.descent_m || 0);
+    return stats;
+  }, { hike_count: 0, distance_km: 0, ascent_m: 0, descent_m: 0 });
+
+  return {
+    hike_count: stats.hike_count,
+    distance_km: Math.round(stats.distance_km * 100) / 100,
+    ascent_m: Math.round(stats.ascent_m),
+    descent_m: Math.round(stats.descent_m)
+  };
 }
 
 function renderHikeStats(stats) {
@@ -2833,15 +2889,13 @@ function addHikes(data, storiesById = {}) {
 
 Promise.all([
   fetch('hikes.geojson').then(res => res.ok ? res.json() : { features: [] }),
-  fetch('hikes_stats.json').then(res => res.ok ? res.json() : {}),
   fetch('hike_stories.json').then(res => res.ok ? res.json() : {}),
-  fetch('komoot_hikes.geojson').then(res => res.ok ? res.json() : { features: [] }),
-  fetch('komoot_hikes_stats.json').then(res => res.ok ? res.json() : {})
-]).then(([hikes, stats, hikeStories, komootHikes, komootStats]) => {
-  addHikes(hikes, hikeStories || {});
-  addHikes(komootHikes);
-  renderHikeStats(combineHikeStats(stats, komootStats));
-  hikeToggle.disabled = (hikes.features || []).length + (komootHikes.features || []).length === 0;
+  fetch('komoot_hikes.geojson').then(res => res.ok ? res.json() : { features: [] })
+]).then(([hikes, hikeStories, komootHikes]) => {
+  let features = mergeHikeFeatures(hikes.features || [], komootHikes.features || []);
+  addHikes({ type: "FeatureCollection", features }, hikeStories || {});
+  renderHikeStats(hikeStatsFromFeatures(features));
+  hikeToggle.disabled = features.length === 0;
 }).catch(error => {
   console.warn("Hike data not loaded:", error);
   hikeStats.innerHTML = "<span>No hikes loaded</span>";
