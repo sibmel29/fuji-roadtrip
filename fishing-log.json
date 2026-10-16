@@ -1,5 +1,30 @@
 [
   {
+    "id": "rock-cod",
+    "type": "fishing",
+    "title": "Rock cod",
+    "date": "2026-10-16",
+    "coordinates": [
+      114.640524,
+      -28.861494
+    ],
+    "marker": "fish",
+    "summary": "",
+    "body": [],
+    "images": [],
+    "tags": [
+      "fishing"
+    ],
+    "details": {
+      "Catch details": "Small",
+      "Kept or released": "released",
+      "Bait or lure": "bait",
+      "Conditions": "low tide"
+    },
+    "published": true,
+    "source_mobile_id": "56f87903b743ebc1f9ed6f4e"
+  },
+  {
     "id": "queenfish",
     "type": "fishing",
     "title": "Queenfish",
