@@ -273,6 +273,15 @@
       "cost": 93.9,
       "note": "Geraldton",
       "id": "9f933ea60658"
+    },
+    {
+      "date": "2026-10-18",
+      "odometer": 162896,
+      "source": "macrodroid",
+      "liters": 58.0,
+      "cost": 145.0,
+      "note": "Jurien Bay",
+      "id": "22a8b5cf4db5"
     }
   ]
 }

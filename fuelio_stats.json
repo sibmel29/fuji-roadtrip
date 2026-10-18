@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-10-14T03:03:17Z",
+  "updated_at": "2026-10-18T02:57:49Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 72,
-  "current_odo": 162473,
+  "entries_count": 73,
+  "current_odo": 162896,
   "trip_start_odo": 144243,
-  "trip_distance_km": 18230,
+  "trip_distance_km": 18653,
   "latest_entry": {
-    "date": "2026-10-14",
-    "odometer": 162473,
-    "liters": 40.84,
-    "cost": 93.9,
-    "note": "Geraldton",
+    "date": "2026-10-18",
+    "odometer": 162896,
+    "liters": 58.0,
+    "cost": 145.0,
+    "note": "Jurien Bay",
     "source": "macrodroid",
-    "id": "9f933ea60658"
+    "id": "22a8b5cf4db5"
   },
   "history": [
+    {
+      "date": "2026-10-18",
+      "odometer": 162896,
+      "liters": 58.0,
+      "cost": 145.0,
+      "note": "Jurien Bay",
+      "source": "macrodroid",
+      "id": "22a8b5cf4db5"
+    },
     {
       "date": "2026-10-14",
       "odometer": 162473,
@@ -220,21 +229,12 @@
       "note": "Cammoweal",
       "source": "macrodroid",
       "id": "bd441f839137"
-    },
-    {
-      "date": "2026-09-04",
-      "odometer": 154164,
-      "liters": 39.5,
-      "cost": 88.26,
-      "note": "Lawnhill Jerries",
-      "source": "macrodroid",
-      "id": "910e561bb46b"
     }
   ],
   "fuel": {
-    "fills": 55,
-    "liters": 2172.54,
-    "cost": 4833.64,
+    "fills": 56,
+    "liters": 2230.54,
+    "cost": 4978.64,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
