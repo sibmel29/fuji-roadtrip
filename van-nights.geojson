@@ -18,6 +18,39 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          115.329502,
+          -31.012233
+        ]
+      },
+      "properties": {
+        "id": "2026-10-19-lancelin",
+        "type": "van-night",
+        "profile": "manual",
+        "source_profile": "manual",
+        "source_profiles": [
+          "manual"
+        ],
+        "title": "Lancelin",
+        "first_night": "2026-10-19",
+        "last_night": "2026-10-19",
+        "night_count": 1,
+        "nights": [
+          "2026-10-19"
+        ],
+        "note": "",
+        "vibe": "Close to the city ",
+        "facilities": "Nothing but good cell",
+        "warnings": "Leave early ",
+        "published": true,
+        "created_at": "2026-10-19T10:01:53.558532+00:00",
+        "source_mobile_id": "463aa4776a7ad35ddf7d53de"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           115.102755,
           -30.274478
         ]
