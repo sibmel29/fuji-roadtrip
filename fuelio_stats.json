@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-10-18T02:57:49Z",
+  "updated_at": "2026-10-20T08:04:54Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 73,
-  "current_odo": 162896,
+  "entries_count": 74,
+  "current_odo": 163213,
   "trip_start_odo": 144243,
-  "trip_distance_km": 18653,
+  "trip_distance_km": 18970,
   "latest_entry": {
-    "date": "2026-10-18",
-    "odometer": 162896,
-    "liters": 58.0,
-    "cost": 145.0,
-    "note": "Jurien Bay",
+    "date": "2026-10-20",
+    "odometer": 163213,
+    "liters": 43.26,
+    "cost": 92.53,
+    "note": "Yanchep",
     "source": "macrodroid",
-    "id": "22a8b5cf4db5"
+    "id": "81d441529961"
   },
   "history": [
+    {
+      "date": "2026-10-20",
+      "odometer": 163213,
+      "liters": 43.26,
+      "cost": 92.53,
+      "note": "Yanchep",
+      "source": "macrodroid",
+      "id": "81d441529961"
+    },
     {
       "date": "2026-10-18",
       "odometer": 162896,
@@ -220,21 +229,12 @@
       "note": "Barkley roadhouse",
       "source": "macrodroid",
       "id": "0330dc01897d"
-    },
-    {
-      "date": "2026-09-06",
-      "odometer": 154468,
-      "liters": 43.66,
-      "cost": 111.73,
-      "note": "Cammoweal",
-      "source": "macrodroid",
-      "id": "bd441f839137"
     }
   ],
   "fuel": {
-    "fills": 56,
-    "liters": 2230.54,
-    "cost": 4978.64,
+    "fills": 57,
+    "liters": 2273.8,
+    "cost": 5071.17,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }

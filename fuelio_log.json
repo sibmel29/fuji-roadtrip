@@ -282,6 +282,15 @@
       "cost": 145.0,
       "note": "Jurien Bay",
       "id": "22a8b5cf4db5"
+    },
+    {
+      "date": "2026-10-20",
+      "odometer": 163213,
+      "source": "macrodroid",
+      "liters": 43.26,
+      "cost": 92.53,
+      "note": "Yanchep",
+      "id": "81d441529961"
     }
   ]
 }
