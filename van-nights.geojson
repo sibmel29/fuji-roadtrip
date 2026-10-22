@@ -18,6 +18,39 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          115.873026,
+          -31.791689
+        ]
+      },
+      "properties": {
+        "id": "2026-10-23-lac-side-perth-outskirts",
+        "type": "van-night",
+        "profile": "manual",
+        "source_profile": "manual",
+        "source_profiles": [
+          "manual"
+        ],
+        "title": "Lac side, Perth outskirts",
+        "first_night": "2026-10-23",
+        "last_night": "2026-10-23",
+        "night_count": 1,
+        "nights": [
+          "2026-10-23"
+        ],
+        "note": "",
+        "vibe": "Easy enough ",
+        "facilities": "Good cell, nothing else",
+        "warnings": "Noisy close to highway, but calm overnight ",
+        "published": true,
+        "created_at": "2026-10-22T22:59:50.937868+00:00",
+        "source_mobile_id": "b9b4b9f072674b3b8950fda0"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           115.695634,
           -31.555452
         ]
