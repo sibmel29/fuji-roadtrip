@@ -1,5 +1,36 @@
 [
   {
+    "id": "jake-s-point",
+    "type": "surf",
+    "title": "Jake's point",
+    "date": "",
+    "coordinates": [
+      -93.3897729,
+      41.93831805
+    ],
+    "marker": "surf",
+    "summary": "Big waves, scary surf...",
+    "body": [
+      "This was big, very big. The paddle in/out are both sketchy, you gotta trust in the surf's gods not to throw a big set while you launch off the rocks. I found it hard to be the only boogy in the water (as always!!!) and to get the locals to let me catch waves. The bombs were always taken by the local guys, not sure I would've had the strenght to get on those massive lefts, over 3m and powerful. I caught maybe 3/4 medium size, but close to 2,5m. Overall, fun, but not fantastic because it was scarce and the contact in the water not too nice."
+    ],
+    "images": [],
+    "tags": [
+      "surf"
+    ],
+    "details": {
+      "Surf spot": "Jake's point",
+      "Wave size": "3m+",
+      "Wind": "Offshore",
+      "Tide": "Low incoming",
+      "Board": "Ben Payer Quad Conquave",
+      "Rating": "4/5",
+      "Crowd": "A little hostile..."
+    },
+    "published": true,
+    "source_issue": "70",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/70"
+  },
+  {
     "id": "exmouth-dunes-beach",
     "type": "surf",
     "title": "Exmouth - Dunes beach",
