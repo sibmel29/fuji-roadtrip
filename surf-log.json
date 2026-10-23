@@ -1,5 +1,34 @@
 [
   {
+    "id": "broome-cable-beach",
+    "type": "surf",
+    "title": "Broome - Cable Beach",
+    "date": "",
+    "coordinates": [
+      -93.6116224,
+      41.59369225
+    ],
+    "marker": "surf",
+    "summary": "Crocs & wavs",
+    "body": [
+      "Just a good feeling to be back in the water after crossing from the east.\nA bit scary to know there are saltwater crocodiles around here, but none were spotted during the time I spent here.\nHad a couple sessions, pretty bad waves but nice to feel the water."
+    ],
+    "images": [],
+    "tags": [
+      "surf"
+    ],
+    "details": {
+      "Surf spot": "Broome - Cable Beach",
+      "Wave size": "1m",
+      "Wind": "Onshore",
+      "Rating": "2/5",
+      "Crowd": "Some guys"
+    },
+    "published": true,
+    "source_issue": "68",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/68"
+  },
+  {
     "id": "angourie",
     "type": "surf",
     "title": "Angourie",
