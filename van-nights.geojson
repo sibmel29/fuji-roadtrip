@@ -18,6 +18,39 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          115.922299,
+          -31.896804
+        ]
+      },
+      "properties": {
+        "id": "2026-10-24-urban-night",
+        "type": "van-night",
+        "profile": "manual",
+        "source_profile": "manual",
+        "source_profiles": [
+          "manual"
+        ],
+        "title": "Urban night",
+        "first_night": "2026-10-24",
+        "last_night": "2026-10-24",
+        "night_count": 1,
+        "nights": [
+          "2026-10-24"
+        ],
+        "note": "Good place ",
+        "vibe": "Calm on a Friday night ",
+        "facilities": "Water ! ",
+        "warnings": "Na",
+        "published": true,
+        "created_at": "2026-10-23T23:33:42.552593+00:00",
+        "source_mobile_id": "f1b2a9bf49306ed9d5c925a2"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           115.873026,
           -31.791689
         ]
