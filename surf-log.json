@@ -1,5 +1,34 @@
 [
   {
+    "id": "red-bluff",
+    "type": "surf",
+    "title": "Red Bluff",
+    "date": "",
+    "coordinates": [
+      -119.5078446,
+      47.2938235
+    ],
+    "marker": "surf",
+    "summary": "Finally a fun little wave to play on together with more bodyboarders.",
+    "body": [
+      "Just a left over the reef, quick and fun. Nice area to walk aroud."
+    ],
+    "images": [],
+    "tags": [
+      "surf"
+    ],
+    "details": {
+      "Surf spot": "Red Bluff",
+      "Wave size": "1.5",
+      "Board": "The Tank - Funkshen",
+      "Rating": "4/5",
+      "Crowd": "Nice! More bodyboarders"
+    },
+    "published": true,
+    "source_issue": "71",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/71"
+  },
+  {
     "id": "jake-s-point",
     "type": "surf",
     "title": "Jake's point",
