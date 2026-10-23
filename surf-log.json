@@ -1,5 +1,33 @@
 [
   {
+    "id": "exmouth-dunes-beach",
+    "type": "surf",
+    "title": "Exmouth - Dunes beach",
+    "date": "",
+    "coordinates": [
+      114.1393833,
+      -21.8014366
+    ],
+    "marker": "surf",
+    "summary": "Nice little right",
+    "body": [
+      "The winds was well in when i jumped in the water. Blowing onshore, a bit too strong.\nYet, I caught a couple of a good waves and shared the water with only 1 other person whom I had a friendly chat with."
+    ],
+    "images": [],
+    "tags": [
+      "surf"
+    ],
+    "details": {
+      "Surf spot": "Exmouth - Dunes beach",
+      "Wave size": "1,5",
+      "Rating": "3/5",
+      "Crowd": "1 other person only"
+    },
+    "published": true,
+    "source_issue": "69",
+    "source_url": "https://github.com/sibmel29/fuji-roadtrip/issues/69"
+  },
+  {
     "id": "broome-cable-beach",
     "type": "surf",
     "title": "Broome - Cable Beach",
