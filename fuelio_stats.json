@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-10-20T08:04:54Z",
+  "updated_at": "2026-11-18T06:16:24Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 74,
-  "current_odo": 163213,
+  "entries_count": 75,
+  "current_odo": 163463,
   "trip_start_odo": 144243,
-  "trip_distance_km": 18970,
+  "trip_distance_km": 19220,
   "latest_entry": {
-    "date": "2026-10-20",
-    "odometer": 163213,
-    "liters": 43.26,
-    "cost": 92.53,
-    "note": "Yanchep",
+    "date": "2026-11-18",
+    "odometer": 163463,
+    "liters": 37.0,
+    "cost": 70.0,
+    "note": "Malaga",
     "source": "macrodroid",
-    "id": "81d441529961"
+    "id": "8d96cc49f00a"
   },
   "history": [
+    {
+      "date": "2026-11-18",
+      "odometer": 163463,
+      "liters": 37.0,
+      "cost": 70.0,
+      "note": "Malaga",
+      "source": "macrodroid",
+      "id": "8d96cc49f00a"
+    },
     {
       "date": "2026-10-20",
       "odometer": 163213,
@@ -220,21 +229,12 @@
       "note": "Three ways",
       "source": "macrodroid",
       "id": "ca8d481f9b57"
-    },
-    {
-      "date": "2026-09-06",
-      "odometer": 154740,
-      "liters": 36.5,
-      "cost": 94.17,
-      "note": "Barkley roadhouse",
-      "source": "macrodroid",
-      "id": "0330dc01897d"
     }
   ],
   "fuel": {
-    "fills": 57,
-    "liters": 2273.8,
-    "cost": 5071.17,
+    "fills": 58,
+    "liters": 2310.8,
+    "cost": 5141.17,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }

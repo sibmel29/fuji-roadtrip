@@ -291,6 +291,15 @@
       "cost": 92.53,
       "note": "Yanchep",
       "id": "81d441529961"
+    },
+    {
+      "date": "2026-11-18",
+      "odometer": 163463,
+      "source": "macrodroid",
+      "liters": 37.0,
+      "cost": 70.0,
+      "note": "Malaga",
+      "id": "8d96cc49f00a"
     }
   ]
 }
