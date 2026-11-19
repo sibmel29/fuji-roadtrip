@@ -18,6 +18,39 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          115.60528,
+          -31.491306
+        ]
+      },
+      "properties": {
+        "id": "2026-11-19-two-rocks-quiet-field",
+        "type": "van-night",
+        "profile": "manual",
+        "source_profile": "manual",
+        "source_profiles": [
+          "manual"
+        ],
+        "title": "Two rocks quiet field",
+        "first_night": "2026-11-19",
+        "last_night": "2026-11-19",
+        "night_count": 1,
+        "nights": [
+          "2026-11-19"
+        ],
+        "note": "Better get there daytime ",
+        "vibe": "dirty",
+        "facilities": "nothing good cell",
+        "warnings": "Bumpy and dumpu",
+        "published": true,
+        "created_at": "2026-11-19T00:34:30.716263+00:00",
+        "source_mobile_id": "d9c43425025c150d927bf75c"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           115.922299,
           -31.896804
         ]
