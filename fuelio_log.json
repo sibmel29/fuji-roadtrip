@@ -300,6 +300,15 @@
       "cost": 70.0,
       "note": "Malaga",
       "id": "8d96cc49f00a"
+    },
+    {
+      "date": "2026-11-20",
+      "odometer": 163639,
+      "source": "macrodroid",
+      "liters": 26.0,
+      "cost": 50.0,
+      "note": "Towards Sahaja",
+      "id": "4403a5b56b5c"
     }
   ]
 }

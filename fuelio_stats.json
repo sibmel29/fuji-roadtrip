@@ -1,23 +1,32 @@
 {
-  "updated_at": "2026-11-18T06:16:24Z",
+  "updated_at": "2026-11-20T08:34:56Z",
   "source_files": [
     "fuelio/exports/vehicle-1-sync.csv",
     "macrodroid"
   ],
-  "entries_count": 75,
-  "current_odo": 163463,
+  "entries_count": 76,
+  "current_odo": 163639,
   "trip_start_odo": 144243,
-  "trip_distance_km": 19220,
+  "trip_distance_km": 19396,
   "latest_entry": {
-    "date": "2026-11-18",
-    "odometer": 163463,
-    "liters": 37.0,
-    "cost": 70.0,
-    "note": "Malaga",
+    "date": "2026-11-20",
+    "odometer": 163639,
+    "liters": 26.0,
+    "cost": 50.0,
+    "note": "Towards Sahaja",
     "source": "macrodroid",
-    "id": "8d96cc49f00a"
+    "id": "4403a5b56b5c"
   },
   "history": [
+    {
+      "date": "2026-11-20",
+      "odometer": 163639,
+      "liters": 26.0,
+      "cost": 50.0,
+      "note": "Towards Sahaja",
+      "source": "macrodroid",
+      "id": "4403a5b56b5c"
+    },
     {
       "date": "2026-11-18",
       "odometer": 163463,
@@ -220,21 +229,12 @@
       "note": "Daly watets",
       "source": "macrodroid",
       "id": "3bb08881f311"
-    },
-    {
-      "date": "2026-09-07",
-      "odometer": 154935,
-      "liters": 28.0,
-      "cost": 72.0,
-      "note": "Three ways",
-      "source": "macrodroid",
-      "id": "ca8d481f9b57"
     }
   ],
   "fuel": {
-    "fills": 58,
-    "liters": 2310.8,
-    "cost": 5141.17,
+    "fills": 59,
+    "liters": 2336.8,
+    "cost": 5191.17,
     "average_l_per_100km": 14.12,
     "distance_km": null
   }
